@@ -5,6 +5,7 @@ stories:
 - story: bot_initiative_full
   steps:
   - intent: greet
+  - action: utter_greet
   - action: utter_intro
   - intent: bot_initiative_start
   - action: utter_definition_STD
@@ -22,6 +23,7 @@ stories:
 - story: bot_initiative_full2
   steps:
   - intent: greet
+  - action: utter_greet
   - action: utter_intro
   - intent: express_amusement
   - action: utter_shall_i_continue
@@ -43,6 +45,7 @@ stories:
 - story: bot_initiative_stopped1
   steps:
   - intent: greet
+  - action: utter_greet
   - action: utter_intro
   - intent: bot_initiative_start
   - action: utter_definition_STD
@@ -56,6 +59,7 @@ stories:
 - story: bot_initiative_stopped2
   steps:
   - intent: greet
+  - action: utter_greet
   - action: utter_intro
   - intent: bot_initiative_start
   - action: utter_definition_STD
@@ -68,6 +72,7 @@ stories:
 - story: bot_initiative_stopped3
   steps:
   - intent: greet
+  - action: utter_greet
   - action: utter_intro
   - intent: bot_initiative_start
   - action: utter_definition_STD
@@ -83,9 +88,11 @@ stories:
 - story: respond_to_second_greeting
   steps:
   - intent: greet
+  - action: utter_greet
   - action: utter_intro
   - intent: greet
-  - action: utter_second_greeting
+  - action: utter_greet
+  - action: utter_how_can_i_help
   # TO DO: CHECK HOW TO CARRY ON FROM HERE, OR IF IT ALREADY UNDERSTANDS THAT IT SHOULD CARRY ON
 
   #- intent: affirm

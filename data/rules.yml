@@ -48,6 +48,35 @@ rules:
   - intent: I_have_questions
   - action: utter_feel_free_to_ask
 
+- rule: Answer whenever user requests for a source with more information
+  steps:
+  - intent: find_more_info
+  - action: utter_find_more_info
+
+###
+# Out of scope
+
+- rule: handle_insults
+  steps:
+  - intent: insults
+  - action: utter_handle_insults
+
+- rule: radically_out_of_scope
+  steps:
+  - intent: radically_out_of_scope
+  - action: utter_cannot_help_with_that
+
+- rule: moderately_out_of_scope
+  steps:
+  - intent: moderately_out_of_scope
+  - action: utter_cannot_help_with_that
+
+- rule: slightly_out_of_scope
+  steps:
+  - intent: slightly_out_of_scope
+  - action: utter_cannot_help_with_that
+  - action: utter_find_more_info
+
 # - rule: Say 'I am a bot' anytime the user challenges
 #   steps:
 #   - intent: bot_challenge

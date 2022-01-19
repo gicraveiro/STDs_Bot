@@ -11,6 +11,12 @@ intents:
   - deny
   - express_amusement
   - I_have_questions
+
+  # Out of scope
+  - radically_out_of_scope
+  - moderately_out_of_scope
+  - slightly_out_of_scope
+  - insults
   
   # General questions
  # - intro
@@ -19,11 +25,12 @@ intents:
   - list_STD
   - transmission_STD
   - prevention_STD
+  - find_more_info
   # - diagnosis
   
   # Specific questions
-  - symptoms
-  - treatment
+ # - symptoms
+ # - treatment
   #- source # bacteria, fungus, virus
   #- consequences
 
@@ -55,6 +62,9 @@ responses:
 
 # Utils to keep conversation
 
+  utter_how_can_i_help:
+  - text: "How can I help?"
+
   utter_shall_i_continue:
   - text: "Shall I continue?"
 
@@ -68,28 +78,39 @@ responses:
   - text: "I'm sorry. I couldn't understand what you just said. Can you rephrase it, please?"
 
   utter_cannot_help_with_that:
-  - text: "I'm sorry. I can't help you with that. But you can find more information here: " # TO DO: ADD SOURCE
+  - text: "I'm sorry. I can't help you with that."
+
+  utter_find_more_info:
+  - text: "You can find more information here: " # TO DO: ADD SOURCE
+
   
   # utter_did_that_help:
   # - text: "Did that help you?"
 
 #####
+# Out of scope
+
+  utter_handle_insults:
+  - text: "I do not tolerate being disrespected. Talk to me when you are ready to be polite."
+
+
+#####
 # Greetings
 
   utter_intro:
-  - text: "Hey there! My name is Sexy. I was built to spread knowledge about STDs, so that everyone can have a healthy, safe and happy sex life."
+  - text: "My name is Sexy. I was built to spread knowledge about STDs, so that everyone can have a healthy, safe and happy sex life."
 
-  # utter_greet:
-  # - text: "Hey! How are you?"
-
-  utter_second_greeting:
-  - text: "Hey! How can I help?"
+  utter_greet:
+  - text: "Hey there!" #" How are you?"
 
   utter_conclusion:
   - text: "Then, that is all for now. If anything comes to mind, feel free to come back!"
 
   utter_goodbye:
   - text: "Bye-bye!" # If anything comes to mind, feel free to come back!"
+
+
+
 
 
 #####

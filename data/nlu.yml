@@ -84,6 +84,7 @@ nlu:
     - How to prevent sexually transmitted diseases?
     - what is necessary for the prevention of stds?
 
+# UTILS FOR CONVERSATION
 - intent: affirm
   examples: |
     - yes
@@ -116,6 +117,39 @@ nlu:
     - yes, i have 
     - i do have something to ask
     - i wanna ask you one thing
+
+- intent: radically_out_of_scope
+  examples: |
+    - I wanna be friends
+    - which is the distance between my position and the city center
+    - who would win at a battle: monica or mafalda
+    - who is the director of the movie star wars
+    - whats the weather
+    - do you know anything about covid
+    - should i break up with my boyfriend
+
+# TO DO: CHECK IF IT IS BETTER TO JOIN THESE 2
+- intent: moderately_out_of_scope
+  examples: |
+    - which country is best at preventing stds
+    - how can I get over my fear of having sex
+    - i wanna see statistics of sexually transmitted diseases
+
+- intent: slightly_out_of_scope
+  examples: |
+    - how can i get a diagnosis
+    - which sypmtoms would I feel if I had an std
+    - is it contagious
+    - am i gonna die from an std
+
+- intent: insults
+  examples: |
+    - stupid bot
+    - piece of shit 
+    - fuck you 
+    - useless robot
+    - you are ridiculous
+    - hey slave
 
 # - intent: mood_great
 #   examples: |
