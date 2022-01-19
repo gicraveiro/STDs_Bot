@@ -108,6 +108,15 @@ nlu:
     - no way
     - not really
 
+- intent: I_have_questions
+  examples: |
+    - I have a question
+    - I have some doubts
+    - so many 
+    - yes, i have 
+    - i do have something to ask
+    - i wanna ask you one thing
+
 # - intent: mood_great
 #   examples: |
 #     - perfect

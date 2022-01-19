@@ -10,6 +10,7 @@ intents:
   - affirm
   - deny
   - express_amusement
+  - I_have_questions
   
   # General questions
  # - intro
@@ -80,6 +81,9 @@ responses:
 
   # utter_greet:
   # - text: "Hey! How are you?"
+
+  utter_second_greeting:
+  - text: "Hey! How can I help?"
 
   utter_conclusion:
   - text: "Then, that is all for now. If anything comes to mind, feel free to come back!"
