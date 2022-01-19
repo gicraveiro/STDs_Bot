@@ -1,0 +1,44 @@
+version: "2.0"
+
+rules:
+
+# Greetings
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+# Questions
+
+- rule: Answer the definition of STDs anytime the user asks for it 
+  steps: 
+  - intent: definition_STD
+  - action: utter_definition_STD
+
+- rule: Answer the list of STDs anytime the user asks for it 
+  steps: 
+  - intent: list_STD
+  - action: utter_list_STD
+
+- rule: Answer the transmission of STDs anytime the user asks for it 
+  steps: 
+  - intent: transmission_STD
+  - action: utter_transmission_STD
+
+- rule: Answer the prevention of STDs anytime the user asks for it 
+  steps: 
+  - intent: prevention_STD
+  - action: utter_prevention_STD
+
+- rule: Incentivate the user to ask a question everytime the user says they have questions
+  steps: 
+  - action: utter_any_questions
+  - intent: affirm
+  - action: utter_feel_free_to_ask
+
+
+# - rule: Say 'I am a bot' anytime the user challenges
+#   steps:
+#   - intent: bot_challenge
+#   - action: utter_iamabot

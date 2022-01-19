@@ -1,0 +1,150 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - hey there
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+#    - let's go
+#    - moin
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+# starters?
+
+- intent: express_amusement # TO DO: IMPROVE NAME
+  examples: |
+    - cool 
+    - nice 
+    - amazing 
+    - seems pretty cool 
+    - awesomeeee
+
+- intent: bot_initiative_start # TO DO: IMPROVE NAME
+  examples: |
+    - what should I know?
+    - tell me everything
+    - what can you do
+    - you can start
+
+# QUESTIONS 
+
+- intent: definition_STD
+  examples: |
+    - What are STDs?
+    - What does STD stand for?
+    - what are sexually transmitted diseases
+    - uat r stds
+    - what are stis?
+
+- intent: list_STD
+  examples: |
+    - Name all STDs
+    - Give me a list of all sexually transmitted diseases
+    - can you list the STDs?
+    - what are all sexually transmitted diseases?
+    - which are all the stds
+
+# OBS GENERAL X SPECIFIC
+- intent: transmission_STD
+  examples: |
+    - how are they transmitted
+    - how can you catch an std
+    - What are the transmission conditions? 
+    - what r the conditions for transmission
+    - how does someone pass an std to someone else
+
+# OBS GENERAL X SPECIFIC
+- intent: prevention_STD
+  examples: |
+    - how can we protect ourselves? 
+    - what can i do to avoid catching one
+    - what are the protection measures one can take?
+    - How to prevent sexually transmitted diseases?
+    - what is necessary for the prevention of stds?
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - sure
+    - absolutely
+    - ok
+    - alright
+    - all right
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+# - intent: mood_great
+#   examples: |
+#     - perfect
+#     - great
+#     - amazing
+#     - feeling like a king
+#     - wonderful
+#     - I am feeling very good
+#     - I am great
+#     - I am amazing
+#     - I am going to save the world
+#     - super stoked
+#     - extremely good
+#     - so so perfect
+#     - so good
+#     - so perfect
+
+# - intent: mood_unhappy
+#   examples: |
+#     - my day was horrible
+#     - I am sad
+#     - I don't feel very well
+#     - I am disappointed
+#     - super sad
+#     - I'm so sad
+#     - sad
+#     - very sad
+#     - unhappy
+#     - not good
+#     - not very good
+#     - extremly sad
+#     - so saad
+#     - so sad
+
+# - intent: bot_challenge
+#   examples: |
+#     - are you a bot?
+#     - are you a human?
+#     - am I talking to a bot?
+#     - am I talking to a human?

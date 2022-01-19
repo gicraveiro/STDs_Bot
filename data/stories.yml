@@ -1,0 +1,109 @@
+version: "2.0"
+
+stories:
+
+- story: bot_initiative_full
+  steps:
+  - intent: greet
+  - action: utter_intro
+  - intent: bot_initiative_start
+  - action: utter_definition_STD
+  - action: utter_shall_i_continue
+  - intent: affirm
+  - action: utter_transmission_STD
+  - action: utter_shall_i_continue
+  - intent: affirm
+  - action: utter_prevention_STD
+  - action: utter_any_questions
+  - intent: deny
+  - action: utter_conclusion
+  - action: utter_goodbye
+
+- story: bot_initiative_full2
+  steps:
+  - intent: greet
+  - action: utter_intro
+  - intent: express_amusement
+  - action: utter_shall_i_continue
+  - intent: affirm
+  - action: utter_definition_STD
+  - action: utter_shall_i_continue
+  - intent: affirm
+  - action: utter_transmission_STD
+  - action: utter_shall_i_continue
+  - intent: affirm
+  - action: utter_prevention_STD
+  - action: utter_any_questions
+  - intent: deny
+  - action: utter_conclusion
+  - intent: affirm
+  - action: utter_goodbye
+
+
+- story: bot_initiative_stopped1
+  steps:
+  - intent: greet
+  - action: utter_intro
+  - intent: bot_initiative_start
+  - action: utter_definition_STD
+  - action: utter_shall_i_continue
+  - intent: deny
+  - action: utter_any_questions
+  - intent: deny
+  - action: utter_conclusion
+  - action: utter_goodbye
+
+- story: bot_initiative_stopped2
+  steps:
+  - intent: greet
+  - action: utter_intro
+  - intent: bot_initiative_start
+  - action: utter_definition_STD
+  - action: utter_shall_i_continue
+  - intent: deny
+  - action: utter_any_questions
+  #- intent: affirm
+  #- action: utter_feel_free_to_ask
+
+- story: bot_initiative_stopped3
+  steps:
+  - intent: greet
+  - action: utter_intro
+  - intent: bot_initiative_start
+  - action: utter_definition_STD
+  - action: utter_shall_i_continue
+  - intent: affirm
+  - action: utter_transmission_STD
+  - action: utter_shall_i_continue
+  - intent: deny
+  - action: utter_any_questions
+  #- intent: affirm
+  #- action: utter_feel_free_to_ask
+
+
+# - story: happy path
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_great
+#   - action: utter_happy
+
+# - story: sad path 1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: affirm
+#   - action: utter_happy
+
+# - story: sad path 2
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: deny
+#   - action: utter_goodbye

@@ -1,0 +1,106 @@
+version: "2.0"
+
+intents:
+
+  # Greetings
+  - greet
+  - goodbye
+
+  # Utils for conversation
+  - affirm
+  - deny
+  - express_amusement
+  
+  # General questions
+ # - intro
+  - bot_initiative_start
+  - definition_STD
+  - list_STD
+  - transmission_STD
+  - prevention_STD
+  # - diagnosis
+  
+  # Specific questions
+  - symptoms
+  - treatment
+  #- source # bacteria, fungus, virus
+  #- consequences
+
+  # Others
+  # - mood_great
+  # - mood_unhappy
+  # - bot_challenge
+  
+
+responses:
+
+#####
+# General questions
+
+  utter_definition_STD:
+  - text: "Here goes the definition of STD"
+  
+  utter_list_STD:
+  - text: "Here goes the list of STDs"
+
+  utter_transmission_STD:
+  - text: "Here goes the transmission of STDs in general"
+
+  utter_prevention_STD:
+  - text: "Here goes the prevention of STDs in general"
+
+######
+# Specific questions
+
+# Utils to keep conversation
+
+  utter_shall_i_continue:
+  - text: "Shall I continue?"
+
+  utter_any_questions:
+  - text: "Do you have any questions?"
+
+  utter_feel_free_to_ask:
+  - text: "Well, feel free to ask!"
+
+  utter_did_not_understand:
+  - text: "I'm sorry. I couldn't understand what you just said. Can you rephrase it, please?"
+
+  utter_cannot_help_with_that:
+  - text: "I'm sorry. I can't help you with that. But you can find more information here: " # TO DO: ADD SOURCE
+  
+  # utter_did_that_help:
+  # - text: "Did that help you?"
+
+#####
+# Greetings
+
+  utter_intro:
+  - text: "Hey there! My name is Sexy. I was built to spread knowledge about STDs, so that everyone can have a healthy, safe and happy sex life."
+
+  # utter_greet:
+  # - text: "Hey! How are you?"
+
+  utter_conclusion:
+  - text: "Then, that is all for now. If anything comes to mind, feel free to come back!"
+
+  utter_goodbye:
+  - text: "Bye-bye!" # If anything comes to mind, feel free to come back!"
+
+
+#####
+# Others 
+
+  # utter_cheer_up:
+  # - text: "Here is something to cheer you up:"
+  #   image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  # utter_happy:
+  # - text: "Great, carry on!"
+
+  # utter_iamabot:
+  # - text: "I am a bot, powered by Rasa."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
