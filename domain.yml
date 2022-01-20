@@ -47,6 +47,7 @@ responses:
 
   utter_definition_STD:
   - text: "Here goes the definition of STD"
+
   
   utter_list_STD:
   - text: "Here goes the list of STDs"
@@ -126,6 +127,10 @@ responses:
   # utter_iamabot:
   # - text: "I am a bot, powered by Rasa."
 
+
+actions:
+  - action_list_names
+  
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

@@ -26,6 +26,7 @@ rules:
   steps: 
   - intent: list_STD
   - action: utter_list_STD
+  - action: action_list_names #utter_list_STD
 
 - rule: Answer the transmission of STDs anytime the user asks for it 
   steps: 
