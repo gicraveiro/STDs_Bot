@@ -8,7 +8,4 @@ HPV Infection
 Pelvic Inflammatory Disease
 Syphilis
 Trichomoniasis
-Chancroid
-Lymphogranuloma Venereum
-Mycoplasma genitalium
-Ectoparasitic Infections
+

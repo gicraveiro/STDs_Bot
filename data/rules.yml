@@ -20,24 +20,27 @@ rules:
 - rule: Answer the definition of STDs anytime the user asks for it 
   steps: 
   - intent: definition_STD
-  - action: utter_definition_STD
+#  - action: utter_definition_STD
+  - action: action_specific_definition
 
 - rule: Answer the list of STDs anytime the user asks for it 
   steps: 
   - intent: list_STD
-  - action: utter_list_STD
+  - action: utter_list_STD_intro
   - action: action_list_names #utter_list_STD
+  - action: utter_list_STD_conclusion
 
 - rule: Answer the transmission of STDs anytime the user asks for it 
   steps: 
   - intent: transmission_STD
-  - action: utter_transmission_STD
+#  - action: utter_transmission_STD
   - action: action_specific_transmission # TO DO: CHANGE TO SPECIFIC TREATMENT THIS IS A TEST
 
 - rule: Answer the prevention of STDs anytime the user asks for it 
   steps: 
   - intent: prevention_STD
-  - action: utter_prevention_STD
+# - action: utter_prevention_STD
+  - action: action_specific_prevention
 
 - rule: Incentivate the user to ask a question everytime the user says they have questions 1
   steps: 

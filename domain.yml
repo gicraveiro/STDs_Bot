@@ -54,17 +54,19 @@ responses:
 
 # TEST
   utter_std_established:
-  - text: "The STD you are asking about is {STD_name}"
+  - text: "Sure! Feel free to ask questions about {STD_name}"
 
 #####
 # General questions
 
   utter_definition_STD:
-  - text: "Here goes the definition of STD"
+  - text: "Sexually transmitted diseases (STDs), also known as sexually transmitted infections (STIs), are very common. Millions of new infections occur every year in the United States.\nSTDs pass from one person to another through vaginal, oral, and anal sex. They also can spread through intimate physical contact like heavy petting, though this is not very common.\nSTDs don’t always cause symptoms or may only cause mild symptoms. Therefore, it is possible to have an infection and not know it. That is why getting an STD test is important if you are having sex. If you receive a positive STD diagnosis, know that all are treatable with medicine and some are curable entirely.\nSTDs are preventable. If you have sex, know how to protect yourself and your sex partner(s) from STDs." #"Here goes the definition of STD"
 
-  
-  utter_list_STD:
-  - text: "Here goes the list of STDs"
+  utter_list_STD_intro:
+  - text: "Here is the list of the STDs in my database:"
+
+  utter_list_STD_conclusion:
+  - text: "If you are looking for info on other STDs (like AIDS or Hepatitis), you can find it in the website of the Centers for Disease Control and Prevention, an agency within the Department of Health and Human Services of the United States. Here is the link: https://www.cdc.gov/std/general/other.htm"
 
   utter_transmission_STD:
   - text: "Here goes the transmission of STDs in general"
@@ -145,6 +147,11 @@ responses:
 actions:
   - action_list_names
   - action_specific_transmission
+  - action_specific_prevention
+  - action_specific_definition
+#  - action_extract_slots
+#  - action_validate_slot_mappings
+
   
 session_config:
   session_expiration_time: 60

@@ -207,6 +207,7 @@ nlu:
     - I'd like to know about [bacterial vaginosis]{"entity": "STD_name"}
     - i gotta learn stuff about [Pelvic Inflammatory Disease]{"entity": "STD_name"}
     - tell me details about [HPV Infection]{"entity": "STD_name"}
+    - i have doubts on [sifilis] {"entity": STD_name}
 
 #    - i want to know more about [clamidia]{"entity": "STD_name"}  # INCLUDE MISSPELLING?
 
@@ -219,11 +220,12 @@ nlu:
     - Gonorrhea
     - Hepatitis
     - HIV/AIDS
-    - HPV Infection
+    - HPV
     - Pelvic Inflammatory Disease
     - Syphilis
     - Trichomoniasis
-    - Chancroid
-    - Lymphogranuloma Venereum
-    - Mycoplasma genitalium
-    - Ectoparasitic Infections
+#    - Chancroid
+#    - Lymphogranuloma Venereum
+#    - Mycoplasma genitalium
+#    - Ectoparasitic Infections
+#    - sifilis
