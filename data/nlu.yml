@@ -87,7 +87,7 @@ nlu:
     - what are the protection measures one can take?
     - How to prevent sexually transmitted diseases?
     - what is necessary for the prevention of stds?
-    - how can I be protected from [Syphilis]{"entity": "STD_name"}
+    - how can I be protected from [Genital Herpes]{"entity": "STD_name"}
     - how does one prevent [HIV/AIDS]{"entity": "STD_name"}
 
 # UTILS FOR CONVERSATION
@@ -201,14 +201,17 @@ nlu:
 #     - am I talking to a human?
 - intent: establish_std_name # TO DO: SEE IF MISSPELLING, AND OTHER STD NAMES ARE SUPPOSED TO BE TREATED HERE
   examples: |
-    - I have questions about [gonorrhea]{"entity": "STD_name"}
+    - I have questions about [Genital Herpes]{"entity": "STD_name"}
     - can you give me info on [trichomoniasis]{"entity": "STD_name"}
     - [syphilis]{"entity": "STD_name"}
-    - I'd like to know about [bacterial vaginosis] {"entity": "STD_name"}
+    - I'd like to know about [bacterial vaginosis]{"entity": "STD_name"}
+    - i gotta learn stuff about [Pelvic Inflammatory Disease]{"entity": "STD_name"}
+    - tell me details about [HPV Infection]{"entity": "STD_name"}
 
 #    - i want to know more about [clamidia]{"entity": "STD_name"}  # INCLUDE MISSPELLING?
 
 - lookup: STD_name
+  # data/stds.txt # TO DO: comment examples and move lookup table to separate file for organization purposes
   examples: |
     - Bacterial Vaginosis
     - Chlamydia
