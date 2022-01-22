@@ -10,9 +10,10 @@
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
+from rasa_sdk.events import SlotSet
 #from rasa_sdk import ValidationAction
 #from rasa_sdk.types import DomainDict
-#from collections import Counter
+from collections import Counter
 
 import csv
 import pandas as pd
@@ -113,6 +114,48 @@ class ActionDefinition(Action):
                 dispatcher.utter_message(text=j['Name'])
         return []
 
+class ActionValidate_STD(Action):
+    def name(self) -> Text:
+        return "action_validate_std_name"
+    
+    def run(self, dispatcher: CollectingDispatcher, 
+    tracker: Tracker, 
+    domain: Dict[Text, Any]) -> List[Dict[Text,Any]]:
+
+        slot_value = tracker.get_slot('STD_name')
+        df = pd.read_csv('STDSDatabase.csv')
+
+        if (slot_value is not None):
+            best_match = 0
+            for i, j in df.iterrows():
+
+                std_ref = list(j['Name'].lower())
+                std_real = list(slot_value.lower())
+
+                equalChars = list((Counter(std_ref) & Counter(std_real)).elements())
+
+                if(len(equalChars)/len(std_real) > 0.7 and ( (len(equalChars)/len(std_real)) > best_match)): # TO DO: PERFORM OFFICIAL TESTS TO FIND OUT BEST VALUE/PERFORMANCE
+                    updated_slot = j['Name']
+                    best_match = len(equalChars)/len(std_real)
+
+                if best_match > 0:
+                    # validation succeeded, capitalize the value of the "std_name" slot
+                    print(best_match, updated_slot, "updated!")
+                    return[SlotSet("STD_name", updated_slot)]
+                    #return {"STD_name": updated_slot}#slot_value.capitalize()}
+
+        # validation failed, set this slot to None
+        #print("best match was given as = or less than 0")
+        dispatcher.utter_message(text="{STD_name} was not recognized as one of the STDs present in the dataset. Please try spelling the STD exactly like in the list below.")
+        print("passed uttering back wrong name")
+        for i, j in df.iterrows():
+            dispatcher.utter_message(text=j['Name'])
+        print("passed list of stds")
+        dispatcher.utter_message(text="TO DO: utter_list_STD_conclusion")
+        print("passed conclusion, now is setting to none")
+        #return {"STD_name": None}
+        return[SlotSet("STD_name", None)]
+        #return []
 
 # class ValidatePredefinedSlots(ValidationAction):
 #     def validate_std_name(

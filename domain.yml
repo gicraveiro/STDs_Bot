@@ -127,9 +127,6 @@ responses:
   - text: "Bye-bye!" # If anything comes to mind, feel free to come back!"
 
 
-
-
-
 #####
 # Others 
 
@@ -149,6 +146,7 @@ actions:
   - action_specific_transmission
   - action_specific_prevention
   - action_specific_definition
+  - action_validate_std_name
 #  - action_extract_slots
 #  - action_validate_slot_mappings
 

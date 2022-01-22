@@ -62,6 +62,7 @@ rules:
 - rule: Test entity implementation
   steps: 
   - intent: establish_std_name
+  - action: action_validate_std_name
   - action: utter_std_established
 ###
 # Out of scope

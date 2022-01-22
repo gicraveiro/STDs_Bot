@@ -88,7 +88,8 @@ nlu:
     - How to prevent sexually transmitted diseases?
     - what is necessary for the prevention of stds?
     - how can I be protected from [Genital Herpes]{"entity": "STD_name"}
-    - how does one prevent [HIV/AIDS]{"entity": "STD_name"}
+    - how does one prevent [chlamydia]{"entity": "STD_name"}
+    - prevention of [hpv]{"entity": "STD_name"}
 
 # UTILS FOR CONVERSATION
 - intent: affirm
@@ -104,6 +105,12 @@ nlu:
     - ok
     - alright
     - all right
+    - YES 
+    - go ahead
+    - go on
+    - I'm listening 
+    - anything you think I should know
+    - please do
 
 - intent: deny
   examples: |
@@ -112,8 +119,15 @@ nlu:
     - never
     - I don't think so
     - don't like that
-    - no way
+    - NO WAY
     - not really
+    - ABSOLUTELY NOT 
+    - NO 
+    - I would never 
+    - I really don't think it is a good idea
+    - don't think so 
+    - not today
+    - nope
 
 - intent: I_have_questions
   examples: |
@@ -126,6 +140,20 @@ nlu:
     - I have questions about [Chancroid]{"entity": "STD_name"}
     - i wanna ask you one thing about [Chlamydia]{"entity": "STD_name"}
 
+
+- intent: establish_std_name # TO DO: SEE IF MISSPELLING, AND OTHER STD NAMES ARE SUPPOSED TO BE TREATED HERE
+  examples: |
+    - I have questions about [Genital Herpes]{"entity": "STD_name"}
+    - can you give me info on [trichomoniasis]{"entity": "STD_name"}
+    - [syphilis]{"entity": "STD_name"}
+    - I'd like to know about [bacterial vaginosis]{"entity": "STD_name"}
+    - i gotta learn stuff about [Pelvic Inflammatory Disease]{"entity": "STD_name"}
+    - tell me details about [HPV Infection]{"entity": "STD_name"}
+    - i have doubts on [sifilis] {"entity": STD_name}
+
+#    - i want to know more about [clamidia]{"entity": "STD_name"}  # INCLUDE MISSPELLING?
+
+###### BONUSSSS
 - intent: radically_out_of_scope
   examples: |
     - I wanna be friends
@@ -158,6 +186,39 @@ nlu:
     - useless robot
     - you are ridiculous
     - hey slave
+
+- lookup: STD_name
+  # data/stds.txt # TO DO: comment examples and move lookup table to separate file for organization purposes
+  examples: |
+    - Bacterial Vaginosis
+    - Chlamydia
+    - Genital Herpes
+    - Gonorrhea
+    - HPV Infection
+    - Pelvic Inflammatory Disease
+    - Syphilis
+    - Trichomoniasis
+# - bv 
+# - sifilis 
+# - siphyllis
+# - clamidia 
+# - chlmydia
+# - gonorrea 
+# - trichoniasi 
+# - hpv 
+# - HPV 
+# - PID 
+# - pelvic inflamatory diseae 
+# - herpes    
+#   - Hepatitis
+#   - HIV/AIDS
+#    - Chancroid
+#    - Lymphogranuloma Venereum
+#    - Mycoplasma genitalium
+#    - Ectoparasitic Infections
+#    - sifilis
+
+
 
 # - intent: mood_great
 #   examples: |
@@ -199,33 +260,3 @@ nlu:
 #     - are you a human?
 #     - am I talking to a bot?
 #     - am I talking to a human?
-- intent: establish_std_name # TO DO: SEE IF MISSPELLING, AND OTHER STD NAMES ARE SUPPOSED TO BE TREATED HERE
-  examples: |
-    - I have questions about [Genital Herpes]{"entity": "STD_name"}
-    - can you give me info on [trichomoniasis]{"entity": "STD_name"}
-    - [syphilis]{"entity": "STD_name"}
-    - I'd like to know about [bacterial vaginosis]{"entity": "STD_name"}
-    - i gotta learn stuff about [Pelvic Inflammatory Disease]{"entity": "STD_name"}
-    - tell me details about [HPV Infection]{"entity": "STD_name"}
-    - i have doubts on [sifilis] {"entity": STD_name}
-
-#    - i want to know more about [clamidia]{"entity": "STD_name"}  # INCLUDE MISSPELLING?
-
-- lookup: STD_name
-  # data/stds.txt # TO DO: comment examples and move lookup table to separate file for organization purposes
-  examples: |
-    - Bacterial Vaginosis
-    - Chlamydia
-    - Genital Herpes
-    - Gonorrhea
-    - Hepatitis
-    - HIV/AIDS
-    - HPV
-    - Pelvic Inflammatory Disease
-    - Syphilis
-    - Trichomoniasis
-#    - Chancroid
-#    - Lymphogranuloma Venereum
-#    - Mycoplasma genitalium
-#    - Ectoparasitic Infections
-#    - sifilis
