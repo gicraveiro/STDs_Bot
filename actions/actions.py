@@ -139,23 +139,16 @@ class ActionValidate_STD(Action):
                     best_match = len(equalChars)/len(std_real)
 
                 if best_match > 0:
-                    # validation succeeded, capitalize the value of the "std_name" slot
+                    # validation succeeded
                     print(best_match, updated_slot, "updated!")
                     return[SlotSet("STD_name", updated_slot)]
-                    #return {"STD_name": updated_slot}#slot_value.capitalize()}
 
         # validation failed, set this slot to None
-        #print("best match was given as = or less than 0")
         dispatcher.utter_message(text="This name was not recognized as one of the STDs present in the dataset. Please try spelling the STD exactly like in the list below.") # TO DO: replace it with the actual name
-        #print("passed uttering back wrong name")
         for i, j in df.iterrows():
             dispatcher.utter_message(text=j['Name'])
-        #print("passed list of stds")
         dispatcher.utter_message(text="TO DO: utter_list_STD_conclusion")
-        #print("passed conclusion, now is setting to none")
-        #return {"STD_name": None}
         return[SlotSet("STD_name", None)]
-        #return []
 
 # class ValidatePredefinedSlots(ValidationAction):
 #     def validate_std_name(

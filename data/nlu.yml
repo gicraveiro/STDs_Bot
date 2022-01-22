@@ -14,7 +14,7 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
-#    - let's go
+    - let's go
 #    - moin
 
 - intent: goodbye
