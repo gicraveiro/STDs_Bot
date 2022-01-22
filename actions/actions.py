@@ -146,13 +146,13 @@ class ActionValidate_STD(Action):
 
         # validation failed, set this slot to None
         #print("best match was given as = or less than 0")
-        dispatcher.utter_message(text="{STD_name} was not recognized as one of the STDs present in the dataset. Please try spelling the STD exactly like in the list below.")
-        print("passed uttering back wrong name")
+        dispatcher.utter_message(text="This name was not recognized as one of the STDs present in the dataset. Please try spelling the STD exactly like in the list below.") # TO DO: replace it with the actual name
+        #print("passed uttering back wrong name")
         for i, j in df.iterrows():
             dispatcher.utter_message(text=j['Name'])
-        print("passed list of stds")
+        #print("passed list of stds")
         dispatcher.utter_message(text="TO DO: utter_list_STD_conclusion")
-        print("passed conclusion, now is setting to none")
+        #print("passed conclusion, now is setting to none")
         #return {"STD_name": None}
         return[SlotSet("STD_name", None)]
         #return []
