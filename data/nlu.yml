@@ -47,9 +47,11 @@ nlu:
     - tell me everything
     - what can you do
     - you can start
+    - what info can you tell me on [HEPATITIS]{"entity": "STD_name"}
 
 # QUESTIONS 
 
+# TO DO: INCLUDE ENTITY EXTRACTION ON THESE EXAMPLES?
 - intent: definition_STD
   examples: |
     - What are STDs?
@@ -74,6 +76,8 @@ nlu:
     - What are the transmission conditions? 
     - what r the conditions for transmission
     - how does someone pass an std to someone else
+    - how is [HPV Infection]{"entity": "STD_name"} transmitted?
+    - can I get [Chlamydia]{"entity": "STD_name"} from kissing?
 
 # OBS GENERAL X SPECIFIC
 - intent: prevention_STD
@@ -83,6 +87,8 @@ nlu:
     - what are the protection measures one can take?
     - How to prevent sexually transmitted diseases?
     - what is necessary for the prevention of stds?
+    - how can I be protected from [Syphilis]{"entity": "STD_name"}
+    - how does one prevent [HIV/AIDS]{"entity": "STD_name"}
 
 # UTILS FOR CONVERSATION
 - intent: affirm
@@ -117,6 +123,8 @@ nlu:
     - yes, i have 
     - i do have something to ask
     - i wanna ask you one thing
+    - I have questions about [Chancroid]{"entity": "STD_name"}
+    - i wanna ask you one thing about [Chlamydia]{"entity": "STD_name"}
 
 - intent: radically_out_of_scope
   examples: |
@@ -191,3 +199,28 @@ nlu:
 #     - are you a human?
 #     - am I talking to a bot?
 #     - am I talking to a human?
+- intent: establish_std_name # TO DO: SEE IF MISSPELLING, AND OTHER STD NAMES ARE SUPPOSED TO BE TREATED HERE
+  examples: |
+    - I have questions about [gonorrhea]{"entity": "STD_name"}
+    - can you give me info on [trichomoniasis]{"entity": "STD_name"}
+    - [syphilis]{"entity": "STD_name"}
+    - I'd like to know about [bacterial vaginosis] {"entity": "STD_name"}
+
+#    - i want to know more about [clamidia]{"entity": "STD_name"}  # INCLUDE MISSPELLING?
+
+- lookup: STD_name
+  examples: |
+    - Bacterial Vaginosis
+    - Chlamydia
+    - Genital Herpes
+    - Gonorrhea
+    - Hepatitis
+    - HIV/AIDS
+    - HPV Infection
+    - Pelvic Inflammatory Disease
+    - Syphilis
+    - Trichomoniasis
+    - Chancroid
+    - Lymphogranuloma Venereum
+    - Mycoplasma genitalium
+    - Ectoparasitic Infections

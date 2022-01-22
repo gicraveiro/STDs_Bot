@@ -30,3 +30,17 @@ class ActionListNames(Action):
                 dispatcher.utter_message(text=j['Name'])
             
             return []
+
+class ActionTransmission(Action):
+
+    def name(self) -> Text:
+        return "action_specific_transmission"
+
+    def run(self, dispatcher: CollectingDispatcher,
+    tracker: Tracker,
+    domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        df = pd.read_csv('STDSDatabase.csv')
+
+        for i, j in df.iterrows():
+            if(j['Name'] == tracker.get_slot('std_name')): # TO DO : TREATMENT FOR MISPELLING/NON EXISTENT DISEASES
+                 dispatcher.utter_message(text=j['Transmission'])

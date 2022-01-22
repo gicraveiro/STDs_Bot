@@ -32,6 +32,7 @@ rules:
   steps: 
   - intent: transmission_STD
   - action: utter_transmission_STD
+  - action: action_specific_transmission # TO DO: CHANGE TO SPECIFIC TREATMENT THIS IS A TEST
 
 - rule: Answer the prevention of STDs anytime the user asks for it 
   steps: 
@@ -54,6 +55,11 @@ rules:
   - intent: find_more_info
   - action: utter_find_more_info
 
+# TEST ENTITY IMPLEMENTATION, DELETE IT AFTERWARDS
+- rule: Test entity implementation
+  steps: 
+  - intent: establish_std_name
+  - action: utter_std_established
 ###
 # Out of scope
 

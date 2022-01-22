@@ -38,9 +38,23 @@ intents:
   # - mood_great
   # - mood_unhappy
   # - bot_challenge
-  
+
+  - establish_std_name:
+      use_entities: true
+
+entities: 
+- STD_name
+
+slots:
+  STD_name:
+    type: text
+    influence_conversation: true
 
 responses:
+
+# TEST
+  utter_std_established:
+  - text: "The STD you are asking about is {STD_name}"
 
 #####
 # General questions
@@ -130,6 +144,7 @@ responses:
 
 actions:
   - action_list_names
+  - action_specific_transmission
   
 session_config:
   session_expiration_time: 60
