@@ -47,7 +47,7 @@ nlu:
     - tell me everything
     - what can you do
     - you can start
-    - what info can you tell me on [HEPATITIS]{"entity": "STD_name"}
+    
 
 # QUESTIONS 
 
@@ -59,14 +59,41 @@ nlu:
     - what are sexually transmitted diseases
     - uat r stds
     - what are stis?
+    - can you say the definition of stis
+    - what is sexually transmitted infection
+    - whats the difference between sti and std 
+    - sexually transmissed diseases are ?
+    - definition of std
+    - what does std mean?
+    - meaning of stis 
+    - explain what stds are 
+    - whats that 
+    - what is [genital herpes]{"entity": "STD_name"} 
+    - definition of [clamidia]{"entity": "STD_name"}
+    - description of [pelvic inflammatory disease]{"entity": "STD_name"} 
+    - is [herpes]{"entity": "STD_name"} an std?
 
 - intent: list_STD
   examples: |
     - Name all STDs
-    - Give me a list of all sexually transmitted diseases
+    - Give me a list of sexually transmitted diseases
     - can you list the STDs?
     - what are all sexually transmitted diseases?
     - which are all the stds
+    - list of stis 
+    - names of sexually transmitted infections 
+    - which stds exist
+    - do you have information on which stis 
+    - what diseases can be transmitted through sex?
+    - which infections can be passed with sexual contact?
+    - what stis do you have on the database 
+    - help me, which stds are there 
+    - list all stds, then tell me about [chlamydia]{"entity": "STD_name"}
+    - i want to know specifically about [Syphilis]{"entity": "STD_name"}, but first list the stis
+    - I know there's [aids]{"entity": "STD_name"}, [chlamydia]{"entity": "STD_name"} and [hpv infection]{"entity": "STD_name"} but are there others?
+    - how many stds are there 
+    - list stis, like [AIDS]{"entity": "STD_name"}
+    - list of diseases 
 
 # OBS GENERAL X SPECIFIC
 - intent: transmission_STD
@@ -78,6 +105,19 @@ nlu:
     - how does someone pass an std to someone else
     - how is [HPV Infection]{"entity": "STD_name"} transmitted?
     - can I get [Chlamydia]{"entity": "STD_name"} from kissing?
+    - are stds transmitted through sex 
+    - can stis be transmitted through oral sex?
+    - can I catch [Genital Herpes]{"entity": "STD_name"} from anal sex?
+    - is it possible to catch [hpv]{"entity": "STD_name"} with just skin contact?
+    - which are all the fluids that contaminate with an std
+    - which are all the conditions that must be met to transmit an sti
+    - can you get [pelvic inflammatory disease]{"entity": "STD_name"} without having sex 
+    - are stds only transmitted through sex?
+    - does kissing pass [herpes]{"entity": "STD_name"}?
+    - transmission
+    - transmission of [bacterial vaginosis]{"entity": "STD_name"}
+    - is touching enough to pass [syphilis]{"entity": "STD_name"}
+    - TRANSMISSION OF STDS
 
 # OBS GENERAL X SPECIFIC
 - intent: prevention_STD
@@ -90,6 +130,19 @@ nlu:
     - how can I be protected from [Genital Herpes]{"entity": "STD_name"}
     - how does one prevent [chlamydia]{"entity": "STD_name"}
     - prevention of [hpv]{"entity": "STD_name"}
+    - are condoms enough to protect from stis?
+    - can I pass  [clamydia]{"entity": "STD_name"} if I wear a condom
+    - how to avoid stis
+    - what can I do to protect myself from stis 
+    - prevention of sexual transmitted infections
+    - the only way to be protected from stds is to not have sex?
+    - are there vaccinations for stis
+    - is there a vaccine for [HPV]{"entity": "STD_name"}
+    - if you use a condom, you are not at risk for an std, right?
+    - help me, is it possible to catch an std if I wear a condom?
+    - do condoms protect fully from stis?
+    - how much protection do condoms offer
+    - prevention of [bacterial vaginosis]{"entity": "STD_name"}
 
 # UTILS FOR CONVERSATION
 - intent: affirm
@@ -111,6 +164,10 @@ nlu:
     - I'm listening 
     - anything you think I should know
     - please do
+    - agreed
+    - yes, more about [trichomoniasis]{"entity": "STD_name"} 
+    - please tell me about [AIDS]{"entity": "STD_name"} 
+    - sure, but focus on [genital herpes]{"entity": "STD_name"} 
 
 - intent: deny
   examples: |
@@ -128,7 +185,10 @@ nlu:
     - don't think so 
     - not today
     - nope
+    - please don't
+    - stop
 
+################# UNCERTAIN ABOUT THESE 2
 - intent: I_have_questions
   examples: |
     - I have a question
@@ -150,6 +210,7 @@ nlu:
     - i gotta learn stuff about [Pelvic Inflammatory Disease]{"entity": "STD_name"}
     - tell me details about [HPV Infection]{"entity": "STD_name"}
     - i have doubts on [sifilis] {"entity": STD_name}
+    - what info can you tell me on [HEPATITIS]{"entity": "STD_name"}
 
 #    - i want to know more about [clamidia]{"entity": "STD_name"}  # INCLUDE MISSPELLING?
 
@@ -186,6 +247,7 @@ nlu:
     - useless robot
     - you are ridiculous
     - hey slave
+    - why are you so stupid
 
 - lookup: STD_name
   # data/stds.txt # TO DO: comment examples and move lookup table to separate file for organization purposes
