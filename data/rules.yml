@@ -20,7 +20,6 @@ rules:
 - rule: Answer the definition of STDs anytime the user asks for it 
   steps: 
   - intent: definition_STD
-#  - action: utter_definition_STD
   - action: validate_std_name
   - action: action_specific_definition
 
@@ -34,21 +33,21 @@ rules:
 - rule: Answer the transmission of STDs anytime the user asks for it 
   steps: 
   - intent: transmission_STD
-#  - action: utter_transmission_STD
   - action: validate_std_name
-  - action: action_specific_transmission # TO DO: CHANGE TO SPECIFIC TREATMENT THIS IS A TEST
+  - action: action_specific_transmission 
 
 - rule: Answer the prevention of STDs anytime the user asks for it 
   steps: 
   - intent: prevention_STD
-# - action: utter_prevention_STD
   - action: validate_std_name
   - action: action_specific_prevention
 
 - rule: Incentivate the user to ask a question everytime the user says they have questions 1
   steps: 
   - action: utter_any_questions
-  - intent: affirm OR I_have_questions # TO DO: CHECK IF I CAN PUT AN OR HERE or I_have_questions
+  - or:
+    - intent: affirm
+    - intent: I_have_questions 
   - action: utter_feel_free_to_ask
 
 # - rule: Incentivate the user to ask a question everytime the user says they have questions 2
@@ -63,7 +62,9 @@ rules:
 
 - rule: Answer source whenever user asks for it
   steps:
-  - intent: ask_source OR find_more_info
+  - or:
+    - intent: ask_source
+    - intent: find_more_info
   - action: utter_source
   - action: utter_find_more_info
 

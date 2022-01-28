@@ -4,20 +4,16 @@
 # See this guide on how to implement these action:
 # https://rasa.com/docs/rasa/custom-actions
 
-
-# This is a simple example for a custom action which utters "Hello World!"
-
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker, FormValidationAction
 from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.events import SlotSet, FollowupAction
+from rasa_sdk.events import SlotSet #, FollowupAction
 #from rasa_sdk import ValidationAction
 #from rasa_sdk.types import DomainDict
 from collections import Counter
 
 import csv
 import pandas as pd
-
     
 
 class ActionListNames(Action):
@@ -45,17 +41,14 @@ class ActionTransmission(Action):
     tracker: Tracker,
     domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        #tracker.trigger_followup_action('validate_std_name') # TESTIIIIIIIING
-        #return [FollowupAction('validate_std_name')]
-
         df = pd.read_csv('STDSDatabase.csv')
         flag = 0
         if tracker.get_slot('STD_name') is None:
-            dispatcher.utter_message(text="Place here the transmission of STDs in general")
+            dispatcher.utter_message(response="utter_transmission_STD")
             return []
         for i, j in df.iterrows():
-            #dispatcher.utter_message(text=j['Transmission'])
-            if(j['Name'] == tracker.get_slot('STD_name')): # TO DO : TREATMENT FOR MISPELLING/NON EXISTENT DISEASES - I dont think its here
+
+            if(j['Name'] == tracker.get_slot('STD_name')): 
                 specific_transmission = j['Transmission']
                 flag = 1
 
@@ -76,17 +69,14 @@ class ActionPrevention(Action):
     tracker: Tracker,
     domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        #tracker.trigger_followup_action('validate_std_name') # TESTIIIIIIIING
-
         df = pd.read_csv('STDSDatabase.csv')
         flag = 0
         if tracker.get_slot('STD_name') is None:
-            # TO DO: prevention
-            dispatcher.utter_message(text="Place here the prevention of STDs in general")
+            dispatcher.utter_message(response="utter_prevention_STD")
             return []
         for i, j in df.iterrows():
-            #dispatcher.utter_message(text=j['Prevention'])
-            if(j['Name'] == tracker.get_slot('STD_name')): # TO DO : TREATMENT FOR MISPELLING/NON EXISTENT DISEASES - I dont think its here
+
+            if(j['Name'] == tracker.get_slot('STD_name')):
                 specific_prevention = j['Prevention']
                 flag = 1
 
@@ -107,17 +97,14 @@ class ActionDefinition(Action):
     tracker: Tracker,
     domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        #tracker.trigger_followup_action('validate_std_name') # TESTIIIIIIIING
-
         df = pd.read_csv('STDSDatabase.csv')
         flag = 0
-        if tracker.get_slot('STD_name') is None:
-            # TO DO: refer to the official utter_definition
-            dispatcher.utter_message(text="Sexually transmitted diseases (STDs), also known as sexually transmitted infections (STIs), are very common. Millions of new infections occur every year in the United States.\nSTDs pass from one person to another through vaginal, oral, and anal sex. They also can spread through intimate physical contact like heavy petting, though this is not very common.\nSTDs don’t always cause symptoms or may only cause mild symptoms. Therefore, it is possible to have an infection and not know it. That is why getting an STD test is important if you are having sex. If you receive a positive STD diagnosis, know that all are treatable with medicine and some are curable entirely.\nSTDs are preventable. If you have sex, know how to protect yourself and your sex partner(s) from STDs.")
+        if tracker.get_slot('STD_name') is None:            
+            dispatcher.utter_message(response="utter_definition_STD")
             return []
         for i, j in df.iterrows():
-            #dispatcher.utter_message(text=j['Definition'])
-            if(j['Name'] == tracker.get_slot('STD_name')): # TO DO : TREATMENT FOR MISPELLING/NON EXISTENT DISEASES - I dont think its here
+
+            if(j['Name'] == tracker.get_slot('STD_name')): 
                 specific_definition = j['Definition']
                 flag = 1
 
