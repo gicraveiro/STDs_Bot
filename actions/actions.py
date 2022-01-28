@@ -8,9 +8,9 @@
 # This is a simple example for a custom action which utters "Hello World!"
 
 from typing import Any, Text, Dict, List
-from rasa_sdk import Action, Tracker
+from rasa_sdk import Action, Tracker, FormValidationAction
 from rasa_sdk.executor import CollectingDispatcher
-from rasa_sdk.events import SlotSet
+from rasa_sdk.events import SlotSet, FollowupAction
 #from rasa_sdk import ValidationAction
 #from rasa_sdk.types import DomainDict
 from collections import Counter
@@ -44,10 +44,15 @@ class ActionTransmission(Action):
     def run(self, dispatcher: CollectingDispatcher,
     tracker: Tracker,
     domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        #tracker.trigger_followup_action('validate_std_name') # TESTIIIIIIIING
+        #return [FollowupAction('validate_std_name')]
+
         df = pd.read_csv('STDSDatabase.csv')
         flag = 0
         if tracker.get_slot('STD_name') is None:
             dispatcher.utter_message(text="Place here the transmission of STDs in general")
+            return []
         for i, j in df.iterrows():
             #dispatcher.utter_message(text=j['Transmission'])
             if(j['Name'] == tracker.get_slot('STD_name')): # TO DO : TREATMENT FOR MISPELLING/NON EXISTENT DISEASES - I dont think its here
@@ -70,10 +75,15 @@ class ActionPrevention(Action):
     def run(self, dispatcher: CollectingDispatcher,
     tracker: Tracker,
     domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        #tracker.trigger_followup_action('validate_std_name') # TESTIIIIIIIING
+
         df = pd.read_csv('STDSDatabase.csv')
         flag = 0
         if tracker.get_slot('STD_name') is None:
+            # TO DO: prevention
             dispatcher.utter_message(text="Place here the prevention of STDs in general")
+            return []
         for i, j in df.iterrows():
             #dispatcher.utter_message(text=j['Prevention'])
             if(j['Name'] == tracker.get_slot('STD_name')): # TO DO : TREATMENT FOR MISPELLING/NON EXISTENT DISEASES - I dont think its here
@@ -96,10 +106,15 @@ class ActionDefinition(Action):
     def run(self, dispatcher: CollectingDispatcher,
     tracker: Tracker,
     domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        #tracker.trigger_followup_action('validate_std_name') # TESTIIIIIIIING
+
         df = pd.read_csv('STDSDatabase.csv')
         flag = 0
         if tracker.get_slot('STD_name') is None:
+            # TO DO: refer to the official utter_definition
             dispatcher.utter_message(text="Sexually transmitted diseases (STDs), also known as sexually transmitted infections (STIs), are very common. Millions of new infections occur every year in the United States.\nSTDs pass from one person to another through vaginal, oral, and anal sex. They also can spread through intimate physical contact like heavy petting, though this is not very common.\nSTDs don’t always cause symptoms or may only cause mild symptoms. Therefore, it is possible to have an infection and not know it. That is why getting an STD test is important if you are having sex. If you receive a positive STD diagnosis, know that all are treatable with medicine and some are curable entirely.\nSTDs are preventable. If you have sex, know how to protect yourself and your sex partner(s) from STDs.")
+            return []
         for i, j in df.iterrows():
             #dispatcher.utter_message(text=j['Definition'])
             if(j['Name'] == tracker.get_slot('STD_name')): # TO DO : TREATMENT FOR MISPELLING/NON EXISTENT DISEASES - I dont think its here
@@ -109,14 +124,14 @@ class ActionDefinition(Action):
         if flag == 1:
             dispatcher.utter_message(text=specific_definition)
         else:
-            dispatcher.utter_message(text="It seems this name wasn't found in the database, please try spelling the STD exactly like in the list below")
+            dispatcher.utter_message(text="It seems this std name wasn't found in the database, please try spelling the STD exactly like in the list below")
             for i, j in df.iterrows():
                 dispatcher.utter_message(text=j['Name'])
         return []
 
-class ActionValidate_STD(Action):
+class ActionValidate_STD(FormValidationAction): #(Action):
     def name(self) -> Text:
-        return "action_validate_std_name"
+        return "validate_std_name"
     
     def run(self, dispatcher: CollectingDispatcher, 
     tracker: Tracker, 
@@ -138,17 +153,19 @@ class ActionValidate_STD(Action):
                     updated_slot = j['Name']
                     best_match = len(equalChars)/len(std_real)
 
-                if best_match > 0:
-                    # validation succeeded
-                    print(best_match, updated_slot, "updated!")
-                    return[SlotSet("STD_name", updated_slot)]
+            if best_match > 0:
+                # validation succeeded
+                print(best_match, updated_slot, "updated!")
+                return[SlotSet("STD_name", updated_slot)]
 
         # validation failed, set this slot to None
-        dispatcher.utter_message(text="This name was not recognized as one of the STDs present in the dataset. Please try spelling the STD exactly like in the list below.") # TO DO: replace it with the actual name
-        for i, j in df.iterrows():
-            dispatcher.utter_message(text=j['Name'])
-        dispatcher.utter_message(text="TO DO: utter_list_STD_conclusion")
+        #dispatcher.utter_message(text="This name was not recognized as one of the STDs present in the dataset. Please try spelling the STD exactly like in the list below.") # TO DO: replace it with the actual name
+        #for i, j in df.iterrows():
+        #    dispatcher.utter_message(text=j['Name'])
+        #dispatcher.utter_message(text="TO DO: utter_list_STD_conclusion")
         return[SlotSet("STD_name", None)]
+
+         
 
 # class ValidatePredefinedSlots(ValidationAction):
 #     def validate_std_name(

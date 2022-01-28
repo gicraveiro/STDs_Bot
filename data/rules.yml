@@ -21,6 +21,7 @@ rules:
   steps: 
   - intent: definition_STD
 #  - action: utter_definition_STD
+  - action: validate_std_name
   - action: action_specific_definition
 
 - rule: Answer the list of STDs anytime the user asks for it 
@@ -34,59 +35,68 @@ rules:
   steps: 
   - intent: transmission_STD
 #  - action: utter_transmission_STD
+  - action: validate_std_name
   - action: action_specific_transmission # TO DO: CHANGE TO SPECIFIC TREATMENT THIS IS A TEST
 
 - rule: Answer the prevention of STDs anytime the user asks for it 
   steps: 
   - intent: prevention_STD
 # - action: utter_prevention_STD
+  - action: validate_std_name
   - action: action_specific_prevention
 
 - rule: Incentivate the user to ask a question everytime the user says they have questions 1
   steps: 
   - action: utter_any_questions
-  - intent: affirm # TO DO: CHECK IF I CAN PUT AN OR HERE or I_have_questions
+  - intent: affirm OR I_have_questions # TO DO: CHECK IF I CAN PUT AN OR HERE or I_have_questions
   - action: utter_feel_free_to_ask
 
-- rule: Incentivate the user to ask a question everytime the user says they have questions 2
-  steps: 
-  - intent: I_have_questions
-  - action: utter_feel_free_to_ask
+# - rule: Incentivate the user to ask a question everytime the user says they have questions 2
+#   steps: 
+#   - intent: I_have_questions
+#   - action: utter_feel_free_to_ask
 
-- rule: Answer whenever user requests for a source with more information
+# - rule: Answer whenever user requests for a source with more information
+#   steps:
+#   - intent: find_more_info
+#   - action: utter_find_more_info
+
+- rule: Answer source whenever user asks for it
   steps:
-  - intent: find_more_info
+  - intent: ask_source OR find_more_info
+  - action: utter_source
   - action: utter_find_more_info
 
 # TEST ENTITY IMPLEMENTATION, DELETE IT AFTERWARDS
 - rule: Test entity implementation
   steps: 
   - intent: establish_std_name
-  - action: action_validate_std_name
+#  - action: action_validate_std_name
   - action: utter_std_established
 ###
 # Out of scope
 
-- rule: handle_insults
-  steps:
-  - intent: insults
-  - action: utter_handle_insults
+#### TO DO: ACTIVATE WHEN BOT BECOMES BETTER
+# - rule: handle_insults
+#   steps:
+#   - intent: insults
+#   - action: utter_handle_insults
 
-- rule: radically_out_of_scope
-  steps:
-  - intent: radically_out_of_scope
-  - action: utter_cannot_help_with_that
+# - rule: radically_out_of_scope
+#   steps:
+#   - intent: radically_out_of_scope
+#   - action: utter_cannot_help_with_that
 
-- rule: moderately_out_of_scope
-  steps:
-  - intent: moderately_out_of_scope
-  - action: utter_cannot_help_with_that
+# - rule: moderately_out_of_scope
+#   steps:
+#   - intent: moderately_out_of_scope
+#   - action: utter_cannot_help_with_that
 
-- rule: slightly_out_of_scope
-  steps:
-  - intent: slightly_out_of_scope
-  - action: utter_cannot_help_with_that
-  - action: utter_find_more_info
+# - rule: slightly_out_of_scope
+#   steps:
+#   - intent: slightly_out_of_scope
+#   - action: utter_cannot_help_with_that
+#   - action: utter_find_more_info
 
 # - rule: Say 'I am a bot' anytime the user challenges
 #   steps:

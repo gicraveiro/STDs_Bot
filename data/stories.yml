@@ -11,13 +11,16 @@ stories:
   - action: utter_definition_STD
   - action: utter_shall_i_continue
   - intent: affirm
-  - action: utter_transmission_STD
+  - action: utter_prevention_STD #utter_transmission_STD
   - action: utter_shall_i_continue
   - intent: affirm
-  - action: utter_prevention_STD
+  - action: utter_testing_recommendations #utter_prevention_STD
   - action: utter_any_questions
   - intent: deny
   - action: utter_conclusion
+  - action: utter_source
+  - action: utter_additionally_cant_answer
+  - action: utter_find_more_info
   - action: utter_goodbye
 
 - story: bot_initiative_full2
@@ -31,13 +34,16 @@ stories:
   - action: utter_definition_STD
   - action: utter_shall_i_continue
   - intent: affirm
-  - action: utter_transmission_STD
+  - action: utter_prevention_STD # utter_transmission_STD
   - action: utter_shall_i_continue
   - intent: affirm
-  - action: utter_prevention_STD
+  - action: utter_testing_recommendations #utter_prevention_STD
   - action: utter_any_questions
   - intent: deny
   - action: utter_conclusion
+  - action: utter_source
+  - action: utter_additionally_cant_answer
+  - action: utter_find_more_info
   - intent: affirm
   - action: utter_goodbye
 
@@ -54,6 +60,9 @@ stories:
   - action: utter_any_questions
   - intent: deny
   - action: utter_conclusion
+  - action: utter_source
+  - action: utter_additionally_cant_answer
+  - action: utter_find_more_info
   - action: utter_goodbye
 
 - story: bot_initiative_stopped2
@@ -66,8 +75,8 @@ stories:
   - action: utter_shall_i_continue
   - intent: deny
   - action: utter_any_questions
-  #- intent: affirm
-  #- action: utter_feel_free_to_ask
+  - intent: affirm
+  - action: utter_feel_free_to_ask
 
 - story: bot_initiative_stopped3
   steps:
@@ -82,8 +91,8 @@ stories:
   - action: utter_shall_i_continue
   - intent: deny
   - action: utter_any_questions
-  #- intent: affirm
-  #- action: utter_feel_free_to_ask
+  - intent: affirm
+  - action: utter_feel_free_to_ask
 
 - story: respond_to_second_greeting
   steps:
