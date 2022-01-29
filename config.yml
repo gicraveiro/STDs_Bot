@@ -20,7 +20,7 @@ pipeline:
      entity_recognition: True #False
      epochs: 100
      constrain_similarities: True
-   - name: CRFEntityExtractor # MULTIPLE ENTITIES EXTRACTION OCCURS, LAST VALUE IS THE ONE THAT REMAINS, BUT THAT'S OK SO FAR
+   - name: CRFEntityExtractor # MULTIPLE ENTITIES EXTRACTION OCCURS, LAST VALUE IS THE ONE THAT REMAINS, BUT THAT'S OK SO FAR, I just want them to be recognized
    - name: EntitySynonymMapper
    - name: ResponseSelector
      epochs: 100

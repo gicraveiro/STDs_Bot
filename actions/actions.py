@@ -152,7 +152,15 @@ class ActionValidate_STD(Action):
         #print("no std was recognized")
         return[] #SlotSet("STD_name", None)]
 
-         
+class ActionSetEntityNone(Action):
+    def name(self) -> Text:
+        return "action_set_entity_none"
+    
+    def run(self, dispatcher: CollectingDispatcher, 
+    tracker: Tracker, 
+    domain: Dict[Text, Any]) -> List[Dict[Text,Any]]:
+    
+        return[SlotSet("STD_name", None)]  
 
 # class ValidatePredefinedSlots(ValidationAction):
 #     def validate_std_name(

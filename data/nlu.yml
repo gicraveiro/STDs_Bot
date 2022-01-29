@@ -90,6 +90,7 @@ nlu:
     - what is stds
     - can you talk about [chlamydia]{"entity": "STD_name"} 
     - define [gonorrhea]{"entity": "STD_name"} 
+    - generally describe them
 
 - intent: list_STD
   examples: |
@@ -136,6 +137,7 @@ nlu:
     - transmission of [bacterial vaginosis]{"entity": "STD_name"}
     - is touching enough to pass [syphilis]{"entity": "STD_name"}
     - TRANSMISSION OF STDS
+    - in general, how are they transmitted
 
 # OBS GENERAL X SPECIFIC
 - intent: prevention_STD
@@ -162,6 +164,7 @@ nlu:
     - how much protection do condoms offer
     - prevention of [bacterial vaginosis]{"entity": "STD_name"}
     - prevention
+    - prevention in general
 
 # UTILS FOR CONVERSATION
 - intent: affirm

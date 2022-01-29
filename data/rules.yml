@@ -22,6 +22,7 @@ rules:
   - intent: definition_STD
   - action: validate_std_name
   - action: action_specific_definition
+  - action: action_set_entity_none
 
 - rule: Answer the list of STDs anytime the user asks for it 
   steps: 
@@ -35,14 +36,16 @@ rules:
   - intent: transmission_STD
   - action: validate_std_name
   - action: action_specific_transmission  
+  - action: action_set_entity_none
 
 - rule: Answer the prevention of STDs anytime the user asks for it 
   steps: 
   - intent: prevention_STD
   - action: validate_std_name
   - action: action_specific_prevention
+  - action: action_set_entity_none
 
-- rule: Incentivate the user to ask a question everytime the user says they have questions 1
+- rule: Incentivate the user to ask a question everytime the user says they have questions
   steps: 
   - action: utter_any_questions
   - or:
@@ -72,7 +75,7 @@ rules:
 - rule: Test entity implementation
   steps: 
   - intent: establish_std_name
-#  - action: action_validate_std_name
+  - action: validate_std_name
   - action: utter_std_established
 ###
 # Out of scope
