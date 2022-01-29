@@ -84,7 +84,7 @@ nlu:
     - explain what stds are 
     - whats that 
     - what is [genital herpes]{"entity": "STD_name"} 
-    - definition of [chlamidia]{"entity": "STD_name"}
+    - definition of [chlamydia]{"entity": "STD_name"}
     - description of [pelvic inflammatory disease]{"entity": "STD_name"} 
     - is [herpes]{"entity": "STD_name"} an std?
     - what is stds
@@ -122,10 +122,10 @@ nlu:
     - what r the conditions for transmission
     - how does someone pass an std to someone else
     - how is [HPV Infection]{"entity": "STD_name"} transmitted?
-    - can I get [Chlamydia]{"entity": "STD_name"} from kissing?
+    - can I get [aids]{"entity": "STD_name"} from kissing?
     - are stds transmitted through sex 
     - can stis be transmitted through oral sex?
-    - can I catch [Genital Herpes]{"entity": "STD_name"} from anal sex?
+    - can I catch [genital herpes]{"entity": "STD_name"} from anal sex?
     - is it possible to catch [hpv]{"entity": "STD_name"} with just skin contact?
     - which are all the fluids that contaminate with an std
     - which are all the conditions that must be met to transmit an sti
@@ -149,7 +149,7 @@ nlu:
     - how does one prevent [chlamydia]{"entity": "STD_name"}
     - prevention of [hpv]{"entity": "STD_name"}
     - are condoms enough to protect from stis?
-    - can I pass  [clamydia]{"entity": "STD_name"} if I wear a condom
+    - can I pass  [chlamydia]{"entity": "STD_name"} if I wear a condom
     - how to avoid stis
     - what can I do to protect myself from stis 
     - prevention of sexual transmitted infections
@@ -228,7 +228,7 @@ nlu:
     - I'd like to know about [bacterial vaginosis]{"entity": "STD_name"}
     - i gotta learn stuff about [Pelvic Inflammatory Disease]{"entity": "STD_name"}
     - tell me details about [HPV Infection]{"entity": "STD_name"}
-    - i have doubts on [sifilis]{"entity": "STD_name"}
+    - i have doubts on [syphilis]{"entity": "STD_name"}
     - what info can you tell me on [HEPATITIS]{"entity": "STD_name"}
 #    - i want to know more about [clamidia]{"entity": "STD_name"}  # INCLUDE MISSPELLING?
 
@@ -290,7 +290,7 @@ nlu:
 - synonym: Bacterial Vaginosis
   examples: |
     - bv 
-    - BV 
+#    - BV 
 
 - synonym: Genital Herpes
   examples: |
@@ -299,29 +299,33 @@ nlu:
 - synonym: HPV Infection
   examples: |
     - hpv
-    - HPV 
+#    - HPV 
 
 - synonym: Pelvic Inflammatory Disease
   examples: |
     - pid
-    - PID 
-    - pelvic inflammatory
+#    - PID 
+# - pelvic inflammatory
 
-- synonym: Syphilis
+- synonym: AIDs
   examples: |
-    - syfilis
-    - sifilis
-    - syphillis
-    - siphylis
-    - sífilis
+    - hiv
 
-- synonym: Chlamydia
-  examples: |
-    - clamidia
-    - chlamidia
-    - clamydia
-    - chlamidya
-    - clamídia
+# - synonym: Syphilis
+#   examples: |
+#     - syfilis
+#     - sifilis
+#     - syphillis
+#     - siphylis
+#     - sífilis
+
+# - synonym: Chlamydia
+#   examples: |
+#     - clamidia
+#     - chlamidia
+#     - clamydia
+#     - chlamidya
+#     - clamídia
   
 
 - lookup: STD_name
@@ -334,28 +338,13 @@ nlu:
     - HPV Infection
     - Pelvic Inflammatory Disease
     - Syphilis
-    - Trichomoniasis
-# - bv 
-# - sifilis 
-# - siphyllis
-# - clamidia 
-# - chlmydia
-# - gonorrea 
-# - trichoniasi 
-# - hpv 
-# - HPV 
-# - PID 
-# - pelvic inflamatory diseae 
-# - herpes    
-#   - Hepatitis
-#   - HIV/AIDS
-#    - Chancroid
+    - Trichomoniasis   
+    - Hepatitis
+    - AIDS
+    - Chancroid
 #    - Lymphogranuloma Venereum
 #    - Mycoplasma genitalium
 #    - Ectoparasitic Infections
-#    - sifilis
-
-
 
 # - intent: mood_great
 #   examples: |
