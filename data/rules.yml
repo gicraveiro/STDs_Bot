@@ -77,6 +77,13 @@ rules:
   - intent: establish_std_name
   - action: validate_std_name
   - action: utter_std_established
+
+- rule: Handle an out of scope question( a message with low NLU confidence)
+  steps:
+  - intent: nlu_fallback
+  - action: utter_cannot_help_with_that
+  - action: utter_but
+  - action: utter_find_more_info
 ###
 # Out of scope
 

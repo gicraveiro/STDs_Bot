@@ -121,6 +121,9 @@ responses:
   utter_cannot_help_with_that:
   - text: "I'm sorry. I can't help you with that.\n"
 
+  utter_but:
+  - text: "But"
+
   utter_additionally_cant_answer:
   - text: "Additionally, if you have questions that I can't answer yet:\n\n"
 
