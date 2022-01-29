@@ -84,7 +84,7 @@ nlu:
     - explain what stds are 
     - whats that 
     - what is [genital herpes]{"entity": "STD_name"} 
-    - definition of [clamidia]{"entity": "STD_name"}
+    - definition of [chlamidia]{"entity": "STD_name"}
     - description of [pelvic inflammatory disease]{"entity": "STD_name"} 
     - is [herpes]{"entity": "STD_name"} an std?
     - what is stds
@@ -228,7 +228,7 @@ nlu:
     - I'd like to know about [bacterial vaginosis]{"entity": "STD_name"}
     - i gotta learn stuff about [Pelvic Inflammatory Disease]{"entity": "STD_name"}
     - tell me details about [HPV Infection]{"entity": "STD_name"}
-    - i have doubts on [sifilis] {"entity": STD_name}
+    - i have doubts on [sifilis]{"entity": "STD_name"}
     - what info can you tell me on [HEPATITIS]{"entity": "STD_name"}
 #    - i want to know more about [clamidia]{"entity": "STD_name"}  # INCLUDE MISSPELLING?
 

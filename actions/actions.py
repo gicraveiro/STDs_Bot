@@ -119,7 +119,7 @@ class ActionDefinition(Action):
                 dispatcher.utter_message(text=j['Name'])
         return []
 
-class ActionValidate_STD(FormValidationAction): #(Action):
+class ActionValidate_STD(Action): 
     def name(self) -> Text:
         return "validate_std_name"
     
@@ -139,7 +139,8 @@ class ActionValidate_STD(FormValidationAction): #(Action):
 
                 equalChars = list((Counter(std_ref) & Counter(std_real)).elements())
 
-                if(len(equalChars)/len(std_real) > 0.7 and ( (len(equalChars)/len(std_real)) > best_match)): # TO DO: PERFORM OFFICIAL TESTS TO FIND OUT BEST VALUE/PERFORMANCE
+                # enough characters have to be the same + real and reference cant have a big diference of number of letters... to try to fix the pelvic inflammatory disease which matches everyone...
+                if(len(equalChars)/len(std_real) > 0.7 and ( (len(equalChars)/len(std_real)) > best_match) and len(std_ref) - len(std_real) < 5): # TO DO: PERFORM OFFICIAL TESTS TO FIND OUT BEST VALUE/PERFORMANCE
                     updated_slot = j['Name']
                     best_match = len(equalChars)/len(std_real)
 
@@ -148,13 +149,8 @@ class ActionValidate_STD(FormValidationAction): #(Action):
                 print(best_match, updated_slot, "updated!")
                 return[SlotSet("STD_name", updated_slot)]
 
-        # validation failed, set this slot to None
-        #dispatcher.utter_message(text="This name was not recognized as one of the STDs present in the dataset. Please try spelling the STD exactly like in the list below.") # TO DO: replace it with the actual name
-        #for i, j in df.iterrows():
-        #    dispatcher.utter_message(text=j['Name'])
-        #dispatcher.utter_message(text="TO DO: utter_list_STD_conclusion")
         #print("no std was recognized")
-        return[SlotSet("STD_name", None)]
+        return[] #SlotSet("STD_name", None)]
 
          
 

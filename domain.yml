@@ -178,9 +178,6 @@ actions:
   - action_specific_prevention
   - action_specific_definition
   - validate_std_name
-#  - action_extract_slots
-#  - action_validate_slot_mappings
-
   
 session_config:
   session_expiration_time: 60

@@ -27,16 +27,14 @@ rules:
   steps: 
   - intent: list_STD
   - action: utter_list_STD_intro
-  - action: action_list_names #utter_list_STD
+  - action: action_list_names 
   - action: utter_list_STD_conclusion
 
 - rule: Answer the transmission of STDs anytime the user asks for it 
   steps: 
   - intent: transmission_STD
   - action: validate_std_name
-  - action: action_specific_transmission 
-#  - action: utter_cannot_help_with_that
-#  
+  - action: action_specific_transmission  
 
 - rule: Answer the prevention of STDs anytime the user asks for it 
   steps: 
