@@ -27,7 +27,7 @@ intents:
   - prevention_STD
   - find_more_info
   - testing_STD
-  - treatment_STD4
+  - treatment_STD
   - ask_source
   # - diagnosis
   

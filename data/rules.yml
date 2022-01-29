@@ -35,6 +35,8 @@ rules:
   - intent: transmission_STD
   - action: validate_std_name
   - action: action_specific_transmission 
+#  - action: utter_cannot_help_with_that
+#  
 
 - rule: Answer the prevention of STDs anytime the user asks for it 
   steps: 

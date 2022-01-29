@@ -11,8 +11,7 @@ from rasa_sdk.events import SlotSet #, FollowupAction
 #from rasa_sdk import ValidationAction
 #from rasa_sdk.types import DomainDict
 from collections import Counter
-
-import csv
+#import csv
 import pandas as pd
     
 
@@ -32,6 +31,7 @@ class ActionListNames(Action):
             
             return []
 
+
 class ActionTransmission(Action):
 
     def name(self) -> Text:
@@ -41,14 +41,15 @@ class ActionTransmission(Action):
     tracker: Tracker,
     domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        df = pd.read_csv('STDSDatabase.csv')
-        flag = 0
         if tracker.get_slot('STD_name') is None:
             dispatcher.utter_message(response="utter_transmission_STD")
             return []
+
+        df = pd.read_csv('STDSDatabase.csv')
+        flag = 0
         for i, j in df.iterrows():
 
-            if(j['Name'] == tracker.get_slot('STD_name')): 
+            if(j['Name'] == tracker.get_slot('STD_name')):
                 specific_transmission = j['Transmission']
                 flag = 1
 
@@ -69,11 +70,12 @@ class ActionPrevention(Action):
     tracker: Tracker,
     domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        df = pd.read_csv('STDSDatabase.csv')
-        flag = 0
         if tracker.get_slot('STD_name') is None:
             dispatcher.utter_message(response="utter_prevention_STD")
             return []
+
+        df = pd.read_csv('STDSDatabase.csv')
+        flag = 0
         for i, j in df.iterrows():
 
             if(j['Name'] == tracker.get_slot('STD_name')):
@@ -97,11 +99,12 @@ class ActionDefinition(Action):
     tracker: Tracker,
     domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        df = pd.read_csv('STDSDatabase.csv')
-        flag = 0
         if tracker.get_slot('STD_name') is None:            
             dispatcher.utter_message(response="utter_definition_STD")
             return []
+
+        df = pd.read_csv('STDSDatabase.csv')
+        flag = 0
         for i, j in df.iterrows():
 
             if(j['Name'] == tracker.get_slot('STD_name')): 
@@ -150,6 +153,7 @@ class ActionValidate_STD(FormValidationAction): #(Action):
         #for i, j in df.iterrows():
         #    dispatcher.utter_message(text=j['Name'])
         #dispatcher.utter_message(text="TO DO: utter_list_STD_conclusion")
+        #print("no std was recognized")
         return[SlotSet("STD_name", None)]
 
          
