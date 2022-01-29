@@ -1,3 +1,4 @@
+# CONFIGURATION WITH BOTH CLASSIFIERS DOING ENTITY RECOGNITION
 
 #recipe: default.v1 # rasa 3
 # Configuration for Rasa NLU.
