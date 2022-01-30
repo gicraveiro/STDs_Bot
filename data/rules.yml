@@ -17,6 +17,16 @@ rules:
 #  - action: utter_second_greeting
 # Questions
 
+- rule: Answer scope everytime user asks for it
+  steps:
+  - intent: ask_scope
+  - action: utter_scope
+
+- rule: Give testing recommendations everytime user asks for it
+  steps:
+  - intent: testing_recommendations
+  - action: utter_testing_recommendations
+
 - rule: Answer the definition of STDs anytime the user asks for it 
   steps: 
   - intent: definition_STD

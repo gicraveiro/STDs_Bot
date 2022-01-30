@@ -9,8 +9,9 @@ intents:
   - I_have_questions
   - thank
   - bot_initiative_start   # General questions  # - intro
+  - ask_scope
   - list_STD
-  - testing_STD
+  - testing_recommendations
   - ask_source
   - find_more_info
   - definition_STD
@@ -45,8 +46,8 @@ slots:
 responses:
 
 # TEST
-  utter_std_established:
-  - text: "Sure! Feel free to ask questions about {STD_name}"
+#   utter_std_established:
+#   - text: "Sure! Feel free to ask questions about {STD_name}"
 
 #####
 # General questions
@@ -142,6 +143,8 @@ responses:
   utter_find_more_info: 
   - text: "You can find more information here: https://www.cdc.gov/std/default.htm\n\n" # TO DO: ADD SOURCE
 
+  utter_scope:
+  - text: "I can answer questions regarding definition, transmission, prevention, treatment, diagnosis, symptoms and possible health consequences of the stds in my database.\n\nI can also answer these questions without specifying an std, list the stis in my database and give testing recommendations.\n\nFinally, I can tell you the source of my database."
   
   # utter_did_that_help:
   # - text: "Did that help you?"

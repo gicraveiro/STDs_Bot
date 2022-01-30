@@ -48,8 +48,6 @@ nlu:
     - thats all then, thank you so much
     - tks very much
 
-# starters?
-
 - intent: express_amusement # TO DO: IMPROVE NAME
   examples: |
     - cool 
@@ -85,9 +83,36 @@ nlu:
     - tell me details about [HPV Infection]{"entity": "STD_name"}
     - tell me about [bv]{"entity": "STD_name"}
 
+- intent: ask_scope
+  examples: |
+    - what types of questions can you answer?
+    - what can you tell me 
+    - do you know about other types of diseases?
+    - can you answer stuff about [herpes]{"entity": "STD_name"}
+    - what kinds of questions can I make?
+    - what do you know 
+    - are there limits to your knowledge
+    - whats in your database 
+    - kinds of questions you answer 
+    - what do you know about stis? 
+    - is [BV]{"entity": "STD_name"} in your database?
+
 # QUESTIONS 
 
-# TO DO: INCLUDE ENTITY EXTRACTION ON THESE EXAMPLES?
+- intent: testing_recommendations
+  examples: |
+    - when should I test myself?
+    - do I need to test for stds
+    - with which frequency should I get tested
+    - testing recommendations 
+    - advice for frequency of sti testing
+    - if I don't have sex, do I still have to test for stds?
+    - I never had sex, am I at risk for stds? 
+    - what are the risk groups for stis
+    - what's the recommended frequency to do tests for [GONORRHEA]{"entity": "STD_name"}
+    - should I test every year for [hiv]{"entity": "STD_name"}
+    - give me recommendations
+
 - intent: definition_STD
   examples: |
     - What are STDs?
@@ -138,7 +163,6 @@ nlu:
     - interesting, now give me a list of diseases
     - and which are the stis
 
-# OBS GENERAL X SPECIFIC
 - intent: transmission_STD
   examples: |
     - how are they transmitted
@@ -164,7 +188,6 @@ nlu:
     - in general, how are they transmitted
     - ok, and how do you catch that?
 
-# OBS GENERAL X SPECIFIC
 - intent: prevention_STD
   examples: |
     - how can we protect ourselves? 
@@ -201,6 +224,10 @@ nlu:
     - are there any tests that show the presence of an infection 
     - how to tell if I'm contaminated 
     - what are the tests to be diagnosed with an sti
+    - how do I know if I have an std
+    - how to test myself
+    - do pharmacys perform tests?
+    - how can my doctor find out if I have an std
 
 - intent: symptoms_STD
   examples: |
@@ -208,6 +235,13 @@ nlu:
     - are there any symptoms
     - what will I feel if I have [bv]{"entity": "STD_name"}
     - are there visible signs of the disease?
+    - symptoms
+    - does it include any symptom
+    - i wanna know the symptoms for [pid]{"entity": "STD_name"}
+    - does anything change in my body if I have an std
+    - which signs appear
+    - can I know if I have it 
+    - what in my body could indicate an infection
 
 - intent: treatment_STD
   examples: |
@@ -285,7 +319,6 @@ nlu:
     - please don't
     - stop
 
-################# UNCERTAIN ABOUT THESE 2
 - intent: I_have_questions
   examples: |
     - I have a question
@@ -303,10 +336,6 @@ nlu:
     - [syphilis]{"entity": "STD_name"}
     - i have doubts on [syphilis]{"entity": "STD_name"}
     
-
-# - intent: establish_std_name # TO DO: SEE IF MISSPELLING, AND OTHER STD NAMES ARE SUPPOSED TO BE TREATED HERE
-#   examples: |
-
 - intent: ask_source
   examples: |
     - what's your source
@@ -385,23 +414,6 @@ nlu:
 - synonym: AIDs
   examples: |
     - hiv
-
-# - synonym: Syphilis
-#   examples: |
-#     - syfilis
-#     - sifilis
-#     - syphillis
-#     - siphylis
-#     - sífilis
-
-# - synonym: Chlamydia
-#   examples: |
-#     - clamidia
-#     - chlamidia
-#     - clamydia
-#     - chlamidya
-#     - clamídia
-  
 
 - lookup: STD_name
   # data/stds.txt # TO DO: comment examples and move lookup table to separate file for organization purposes
