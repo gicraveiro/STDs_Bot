@@ -52,6 +52,9 @@ nlu:
     - amazing 
     - seems pretty cool 
     - awesomeeee
+    - interesting
+    - i like that!
+    - such a smart idea
 
 - intent: bot_initiative_start # TO DO: IMPROVE NAME
   examples: |
@@ -63,6 +66,7 @@ nlu:
     - begin 
     - play
     - start please
+    - how can you help me?
 
 # QUESTIONS 
 
@@ -91,6 +95,7 @@ nlu:
     - can you talk about [chlamydia]{"entity": "STD_name"} 
     - define [gonorrhea]{"entity": "STD_name"} 
     - generally describe them
+    - makes sense, whats the definition again?
 
 - intent: list_STD
   examples: |
@@ -113,6 +118,8 @@ nlu:
     - how many stds are there 
     - list stis, like [AIDS]{"entity": "STD_name"}
     - list of diseases 
+    - interesting, now give me a list of diseases
+    - and which are the stis
 
 # OBS GENERAL X SPECIFIC
 - intent: transmission_STD
@@ -138,6 +145,7 @@ nlu:
     - is touching enough to pass [syphilis]{"entity": "STD_name"}
     - TRANSMISSION OF STDS
     - in general, how are they transmitted
+    - ok, and how do you catch that?
 
 # OBS GENERAL X SPECIFIC
 - intent: prevention_STD
@@ -165,6 +173,7 @@ nlu:
     - prevention of [bacterial vaginosis]{"entity": "STD_name"}
     - prevention
     - prevention in general
+    - cool, and whats a way to avoid it
 
 # UTILS FOR CONVERSATION
 - intent: affirm
@@ -190,6 +199,9 @@ nlu:
     - yes, more about [trichomoniasis]{"entity": "STD_name"} 
     - please tell me about [AIDS]{"entity": "STD_name"} 
     - sure, but focus on [genital herpes]{"entity": "STD_name"} 
+    - uhum 
+    - right, but only about [bv]{"entity": "STD_name"}
+    - ok, but specifically about [pid]{"entity": "STD_name"}
 
 - intent: deny
   examples: |
