@@ -22,6 +22,7 @@ rules:
   - intent: definition_STD
   - action: validate_std_name
   - action: action_specific_definition
+  - action: action_set_entity_none
 
 - rule: Answer the list of STDs anytime the user asks for it 
   steps: 
@@ -35,30 +36,56 @@ rules:
   - intent: transmission_STD
   - action: validate_std_name
   - action: action_specific_transmission  
+  - action: action_set_entity_none
 
 - rule: Answer the prevention of STDs anytime the user asks for it 
   steps: 
   - intent: prevention_STD
   - action: validate_std_name
   - action: action_specific_prevention
+  - action: action_set_entity_none
 
-- rule: Incentivate the user to ask a question everytime the user says they have questions 1
+- rule: Answer the diagnosis of STDs anytime the user asks for it 
   steps: 
-  - action: utter_any_questions
-  - or:
-    - intent: affirm
-    - intent: I_have_questions 
+  - intent: diagnosis_STD
+  - action: validate_std_name
+  - action: action_specific_diagnosis
+  - action: action_set_entity_none
+
+- rule: Answer the symptoms of STDs anytime the user asks for it 
+  steps: 
+  - intent: symptoms_STD
+  - action: validate_std_name
+  - action: action_specific_symptoms
+  - action: action_set_entity_none
+
+- rule: Answer the treatment of STDs anytime the user asks for it 
+  steps: 
+  - intent: treatment_STD
+  - action: validate_std_name
+  - action: action_specific_treatment
+  - action: action_set_entity_none
+
+- rule: Answer the consequences of STDs anytime the user asks for it 
+  steps: 
+  - intent: consequences_STD
+  - action: validate_std_name
+  - action: action_specific_consequences
+  - action: action_set_entity_none
+
+- rule: Incentivate the user to ask a question everytime the user says they have questions
+  steps: 
+#  - action: utter_any_questions
+#  - or:
+#    - intent: affirm
+  - intent: I_have_questions 
+  - action: validate_std_name
   - action: utter_feel_free_to_ask
 
 # - rule: Incentivate the user to ask a question everytime the user says they have questions 2
 #   steps: 
 #   - intent: I_have_questions
 #   - action: utter_feel_free_to_ask
-
-# - rule: Answer whenever user requests for a source with more information
-#   steps:
-#   - intent: find_more_info
-#   - action: utter_find_more_info
 
 - rule: Answer source whenever user asks for it
   steps:
@@ -68,12 +95,19 @@ rules:
   - action: utter_source
   - action: utter_find_more_info
 
-# TEST ENTITY IMPLEMENTATION, DELETE IT AFTERWARDS
-- rule: Test entity implementation
-  steps: 
-  - intent: establish_std_name
-#  - action: action_validate_std_name
-  - action: utter_std_established
+# # TEST ENTITY IMPLEMENTATION, DELETE IT AFTERWARDS
+# - rule: Test entity implementation
+#   steps: 
+#   - intent: establish_std_name
+#   - action: validate_std_name
+#   - action: utter_std_established
+
+- rule: Handle nlu fallback (a message with low NLU confidence ) gracefully
+  steps:
+  - intent: nlu_fallback
+  - action: utter_cannot_help_with_that
+  - action: utter_but
+  - action: utter_find_more_info
 ###
 # Out of scope
 

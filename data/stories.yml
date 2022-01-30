@@ -8,9 +8,11 @@ stories:
   - action: utter_greet
   - action: utter_intro
   - intent: bot_initiative_start
+  - action: validate_std_name
   - action: utter_definition_STD
   - action: utter_shall_i_continue
   - intent: affirm
+  - action: validate_std_name
   - action: utter_prevention_STD #utter_transmission_STD
   - action: utter_shall_i_continue
   - intent: affirm
@@ -31,9 +33,11 @@ stories:
   - intent: express_amusement
   - action: utter_shall_i_continue
   - intent: affirm
+  - action: validate_std_name
   - action: utter_definition_STD
   - action: utter_shall_i_continue
   - intent: affirm
+  - action: validate_std_name
   - action: utter_prevention_STD # utter_transmission_STD
   - action: utter_shall_i_continue
   - intent: affirm
@@ -54,6 +58,7 @@ stories:
   - action: utter_greet
   - action: utter_intro
   - intent: bot_initiative_start
+  - action: validate_std_name
   - action: utter_definition_STD
   - action: utter_shall_i_continue
   - intent: deny
@@ -71,11 +76,15 @@ stories:
   - action: utter_greet
   - action: utter_intro
   - intent: bot_initiative_start
+  - action: validate_std_name
   - action: utter_definition_STD
   - action: utter_shall_i_continue
   - intent: deny
   - action: utter_any_questions
-  - intent: affirm
+  - or:
+    - intent: affirm
+    - intent: I_have_questions
+  - action: validate_std_name
   - action: utter_feel_free_to_ask
 
 - story: bot_initiative_stopped3
@@ -84,14 +93,19 @@ stories:
   - action: utter_greet
   - action: utter_intro
   - intent: bot_initiative_start
+  - action: validate_std_name
   - action: utter_definition_STD
   - action: utter_shall_i_continue
   - intent: affirm
+  - action: validate_std_name
   - action: utter_transmission_STD
   - action: utter_shall_i_continue
   - intent: deny
   - action: utter_any_questions
-  - intent: affirm
+  - or:
+    - intent: affirm
+    - intent: I_have_questions
+  - action: validate_std_name
   - action: utter_feel_free_to_ask
 
 - story: respond_to_second_greeting
@@ -106,6 +120,67 @@ stories:
 
   #- intent: affirm
   #- action: utter_feel_free_to_ask
+
+- story: bot_initiative_starting_questions
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_intro
+  - intent: I_have_questions
+  - action: validate_std_name
+  - action: utter_feel_free_to_ask
+  - intent: bot_initiative_start
+  - action: validate_std_name
+  - action: utter_definition_STD #utter_transmission_STD
+  - action: utter_shall_i_continue
+  - intent: affirm
+  - action: validate_std_name
+  - action: action_specific_transmission  
+  - action: utter_shall_i_continue
+  - intent: affirm
+  - action: validate_std_name
+  - action: utter_prevention_STD #utter_prevention_STD
+  - action: utter_any_questions
+  - intent: deny
+  - action: utter_conclusion
+  - action: utter_source
+  - action: utter_additionally_cant_answer
+  - action: utter_find_more_info
+  - action: utter_goodbye
+
+- story: mixed_initiative
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_intro
+  - intent: I_have_questions
+  - action: validate_std_name
+  - action: utter_feel_free_to_ask
+  - intent: transmission_STD
+  - action: validate_std_name
+  - action: action_specific_transmission  
+  - action: action_set_entity_none
+#  - action: utter_any_questions
+  - intent: ask_source
+  - action: utter_source
+  - action: utter_find_more_info
+#  - action: utter_any_questions
+  - intent: bot_initiative_start 
+  - action: utter_definition_STD 
+  - action: utter_shall_i_continue
+  - intent: affirm
+  - action: validate_std_name
+  - action: utter_prevention_STD 
+  - action: utter_shall_i_continue
+  - intent: affirm
+  - action: utter_testing_recommendations 
+  - action: utter_any_questions
+  - intent: deny
+  - action: utter_conclusion
+  - action: utter_source
+  - action: utter_additionally_cant_answer
+  - action: utter_find_more_info
+  - action: utter_goodbye
 
 
 

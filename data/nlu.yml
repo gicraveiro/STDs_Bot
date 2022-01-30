@@ -33,6 +33,7 @@ nlu:
     - bye bye
     - see you later
     - BYE
+    - i'm going
 
 - intent: thank
   examples: |
@@ -42,6 +43,10 @@ nlu:
     - ok tks 
     - THANK YOU!!
     - Thanks a lot
+    - thanks for helping
+    - I appreciate your infos
+    - thats all then, thank you so much
+    - tks very much
 
 # starters?
 
@@ -52,6 +57,9 @@ nlu:
     - amazing 
     - seems pretty cool 
     - awesomeeee
+    - interesting
+    - i like that!
+    - such a smart idea
 
 - intent: bot_initiative_start # TO DO: IMPROVE NAME
   examples: |
@@ -63,6 +71,19 @@ nlu:
     - begin 
     - play
     - start please
+    - how can you help me?
+    - can you tell me things about [pid]{"entity": "STD_name"}
+    - give me info on [bv]{"entity": "STD_name"}
+    - must-knows of stis
+    - relevant info
+    - important topics of stds
+    - i wanna learn
+    - can you give me info on [trichomoniasis]{"entity": "STD_name"}
+    - I'd like to know about [bacterial vaginosis]{"entity": "STD_name"}
+    - i gotta learn stuff about [Pelvic Inflammatory Disease]{"entity": "STD_name"}
+    - what info can you tell me on [HEPATITIS]{"entity": "STD_name"}
+    - tell me details about [HPV Infection]{"entity": "STD_name"}
+    - tell me about [bv]{"entity": "STD_name"}
 
 # QUESTIONS 
 
@@ -84,12 +105,14 @@ nlu:
     - explain what stds are 
     - whats that 
     - what is [genital herpes]{"entity": "STD_name"} 
-    - definition of [chlamidia]{"entity": "STD_name"}
+    - definition of [chlamydia]{"entity": "STD_name"}
     - description of [pelvic inflammatory disease]{"entity": "STD_name"} 
     - is [herpes]{"entity": "STD_name"} an std?
     - what is stds
     - can you talk about [chlamydia]{"entity": "STD_name"} 
     - define [gonorrhea]{"entity": "STD_name"} 
+    - generally describe them
+    - makes sense, whats the definition again?
 
 - intent: list_STD
   examples: |
@@ -112,6 +135,8 @@ nlu:
     - how many stds are there 
     - list stis, like [AIDS]{"entity": "STD_name"}
     - list of diseases 
+    - interesting, now give me a list of diseases
+    - and which are the stis
 
 # OBS GENERAL X SPECIFIC
 - intent: transmission_STD
@@ -122,10 +147,10 @@ nlu:
     - what r the conditions for transmission
     - how does someone pass an std to someone else
     - how is [HPV Infection]{"entity": "STD_name"} transmitted?
-    - can I get [Chlamydia]{"entity": "STD_name"} from kissing?
+    - can I get [aids]{"entity": "STD_name"} from kissing?
     - are stds transmitted through sex 
     - can stis be transmitted through oral sex?
-    - can I catch [Genital Herpes]{"entity": "STD_name"} from anal sex?
+    - can I catch [genital herpes]{"entity": "STD_name"} from anal sex?
     - is it possible to catch [hpv]{"entity": "STD_name"} with just skin contact?
     - which are all the fluids that contaminate with an std
     - which are all the conditions that must be met to transmit an sti
@@ -136,6 +161,8 @@ nlu:
     - transmission of [bacterial vaginosis]{"entity": "STD_name"}
     - is touching enough to pass [syphilis]{"entity": "STD_name"}
     - TRANSMISSION OF STDS
+    - in general, how are they transmitted
+    - ok, and how do you catch that?
 
 # OBS GENERAL X SPECIFIC
 - intent: prevention_STD
@@ -149,7 +176,7 @@ nlu:
     - how does one prevent [chlamydia]{"entity": "STD_name"}
     - prevention of [hpv]{"entity": "STD_name"}
     - are condoms enough to protect from stis?
-    - can I pass  [clamydia]{"entity": "STD_name"} if I wear a condom
+    - can I pass  [chlamydia]{"entity": "STD_name"} if I wear a condom
     - how to avoid stis
     - what can I do to protect myself from stis 
     - prevention of sexual transmitted infections
@@ -162,6 +189,54 @@ nlu:
     - how much protection do condoms offer
     - prevention of [bacterial vaginosis]{"entity": "STD_name"}
     - prevention
+    - prevention in general
+    - cool, and whats a way to avoid it
+
+- intent: diagnosis_STD
+  examples: |
+    - diagnosis
+    - how can I diagnose an std
+    - how will I know if I have it 
+    - find out if I have [pid]{"entity": "STD_name"}
+    - are there any tests that show the presence of an infection 
+    - how to tell if I'm contaminated 
+    - what are the tests to be diagnosed with an sti
+
+- intent: symptoms_STD
+  examples: |
+    - what are the symptoms?
+    - are there any symptoms
+    - what will I feel if I have [bv]{"entity": "STD_name"}
+    - are there visible signs of the disease?
+
+- intent: treatment_STD
+  examples: |
+    - is there a cure?
+    - what is the treatment 
+    - is [aids]{"entity": "STD_name"} curable
+    - has the cure for [hpv]{"entity": "STD_name"} been invented yet?
+    - what medicine can I take 
+    - what can I do if I know I have an std 
+    - what if I am [hiv]{"entity": "STD_name"} positive 
+    - what are the measures once I test positive?
+    - how to treat [herpes]{"entity": "STD_name"}
+    - how to avoid complications
+
+- intent: consequences_STD
+  examples: |
+    - am I gonna die?
+    - what are the consequences 
+    - are there any health problems that come with [pid]{"entity": "STD_name"}
+    - does it weaken the immune system?
+    - do I become more vulnerable to more stds if I already have one
+    - is it lethal
+    - whats the death rate for who catches stds
+    - is it possible to live normally after getting an std
+    - what happens if I don't do anything about my std?
+    - does it go away with time
+    - are there complications
+    - do people die of [hpv]{"entity": "STD_name"}
+    - can it give me cancer?
 
 # UTILS FOR CONVERSATION
 - intent: affirm
@@ -187,6 +262,9 @@ nlu:
     - yes, more about [trichomoniasis]{"entity": "STD_name"} 
     - please tell me about [AIDS]{"entity": "STD_name"} 
     - sure, but focus on [genital herpes]{"entity": "STD_name"} 
+    - uhum 
+    - right, but only about [bv]{"entity": "STD_name"}
+    - ok, but specifically about [pid]{"entity": "STD_name"}
 
 - intent: deny
   examples: |
@@ -218,19 +296,16 @@ nlu:
     - i wanna ask you one thing
     - I have questions about [Chancroid]{"entity": "STD_name"}
     - i wanna ask you one thing about [Chlamydia]{"entity": "STD_name"}
-
-
-- intent: establish_std_name # TO DO: SEE IF MISSPELLING, AND OTHER STD NAMES ARE SUPPOSED TO BE TREATED HERE
-  examples: |
+    - can I ask you?
+    - how does this work? can I start asking?
+    - may I start?
     - I have questions about [Genital Herpes]{"entity": "STD_name"}
-    - can you give me info on [trichomoniasis]{"entity": "STD_name"}
     - [syphilis]{"entity": "STD_name"}
-    - I'd like to know about [bacterial vaginosis]{"entity": "STD_name"}
-    - i gotta learn stuff about [Pelvic Inflammatory Disease]{"entity": "STD_name"}
-    - tell me details about [HPV Infection]{"entity": "STD_name"}
-    - i have doubts on [sifilis]{"entity": "STD_name"}
-    - what info can you tell me on [HEPATITIS]{"entity": "STD_name"}
-#    - i want to know more about [clamidia]{"entity": "STD_name"}  # INCLUDE MISSPELLING?
+    - i have doubts on [syphilis]{"entity": "STD_name"}
+    
+
+# - intent: establish_std_name # TO DO: SEE IF MISSPELLING, AND OTHER STD NAMES ARE SUPPOSED TO BE TREATED HERE
+#   examples: |
 
 - intent: ask_source
   examples: |
@@ -290,7 +365,7 @@ nlu:
 - synonym: Bacterial Vaginosis
   examples: |
     - bv 
-    - BV 
+#    - BV 
 
 - synonym: Genital Herpes
   examples: |
@@ -299,29 +374,33 @@ nlu:
 - synonym: HPV Infection
   examples: |
     - hpv
-    - HPV 
+#    - HPV 
 
 - synonym: Pelvic Inflammatory Disease
   examples: |
     - pid
-    - PID 
-    - pelvic inflammatory
+#    - PID 
+# - pelvic inflammatory
 
-- synonym: Syphilis
+- synonym: AIDs
   examples: |
-    - syfilis
-    - sifilis
-    - syphillis
-    - siphylis
-    - sífilis
+    - hiv
 
-- synonym: Chlamydia
-  examples: |
-    - clamidia
-    - chlamidia
-    - clamydia
-    - chlamidya
-    - clamídia
+# - synonym: Syphilis
+#   examples: |
+#     - syfilis
+#     - sifilis
+#     - syphillis
+#     - siphylis
+#     - sífilis
+
+# - synonym: Chlamydia
+#   examples: |
+#     - clamidia
+#     - chlamidia
+#     - clamydia
+#     - chlamidya
+#     - clamídia
   
 
 - lookup: STD_name
@@ -334,28 +413,13 @@ nlu:
     - HPV Infection
     - Pelvic Inflammatory Disease
     - Syphilis
-    - Trichomoniasis
-# - bv 
-# - sifilis 
-# - siphyllis
-# - clamidia 
-# - chlmydia
-# - gonorrea 
-# - trichoniasi 
-# - hpv 
-# - HPV 
-# - PID 
-# - pelvic inflamatory diseae 
-# - herpes    
-#   - Hepatitis
-#   - HIV/AIDS
-#    - Chancroid
+    - Trichomoniasis   
+    - Hepatitis
+    - AIDS
+    - Chancroid
 #    - Lymphogranuloma Venereum
 #    - Mycoplasma genitalium
 #    - Ectoparasitic Infections
-#    - sifilis
-
-
 
 # - intent: mood_great
 #   examples: |
