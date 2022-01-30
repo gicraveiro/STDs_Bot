@@ -24,7 +24,7 @@ class ActionListNames(Action):
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
             #df = pd.read_csv('FinalProject/data/STDSDatabase.csv')
-            df = pd.read_csv('STDSDatabase.csv')
+            df = pd.read_csv('data/STDSDatabase.csv')
 
             for i, j in df.iterrows():
                 dispatcher.utter_message(text=j['Name'])
@@ -45,7 +45,7 @@ class ActionTransmission(Action):
             dispatcher.utter_message(response="utter_transmission_STD")
             return []
 
-        df = pd.read_csv('STDSDatabase.csv')
+        df = pd.read_csv('data/STDSDatabase.csv')
         flag = 0
         for i, j in df.iterrows():
 
@@ -75,7 +75,7 @@ class ActionPrevention(Action):
             dispatcher.utter_message(response="utter_prevention_STD")
             return []
 
-        df = pd.read_csv('STDSDatabase.csv')
+        df = pd.read_csv('data/STDSDatabase.csv')
         flag = 0
         for i, j in df.iterrows():
 
@@ -105,7 +105,7 @@ class ActionDefinition(Action):
             dispatcher.utter_message(response="utter_definition_STD")
             return []
 
-        df = pd.read_csv('STDSDatabase.csv')
+        df = pd.read_csv('data/STDSDatabase.csv')
         flag = 0
         for i, j in df.iterrows():
 
@@ -131,7 +131,7 @@ class ActionValidate_STD(Action):
     domain: Dict[Text, Any]) -> List[Dict[Text,Any]]:
 
         slot_value = tracker.get_slot('STD_name')
-        df = pd.read_csv('STDSDatabase.csv')
+        df = pd.read_csv('data/STDSDatabase.csv')
 
         if (slot_value is not None):
             best_match = 0

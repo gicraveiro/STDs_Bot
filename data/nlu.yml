@@ -33,6 +33,7 @@ nlu:
     - bye bye
     - see you later
     - BYE
+    - i'm going
 
 - intent: thank
   examples: |
@@ -42,6 +43,10 @@ nlu:
     - ok tks 
     - THANK YOU!!
     - Thanks a lot
+    - thanks for helping
+    - I appreciate your infos
+    - thats all then, thank you so much
+    - tks very much
 
 # starters?
 
@@ -67,6 +72,17 @@ nlu:
     - play
     - start please
     - how can you help me?
+    - can you tell me things about [pid]{"entity": "STD_name"}
+    - give me info on [bv]{"entity": "STD_name"}
+    - must-knows of stis
+    - relevant info
+    - important topics of stds
+    - i wanna learn
+    - can you give me info on [trichomoniasis]{"entity": "STD_name"}
+    - I'd like to know about [bacterial vaginosis]{"entity": "STD_name"}
+    - i gotta learn stuff about [Pelvic Inflammatory Disease]{"entity": "STD_name"}
+    - what info can you tell me on [HEPATITIS]{"entity": "STD_name"}
+    - tell me details about [HPV Infection]{"entity": "STD_name"}
 
 # QUESTIONS 
 
@@ -233,19 +249,16 @@ nlu:
     - i wanna ask you one thing
     - I have questions about [Chancroid]{"entity": "STD_name"}
     - i wanna ask you one thing about [Chlamydia]{"entity": "STD_name"}
-
-
-- intent: establish_std_name # TO DO: SEE IF MISSPELLING, AND OTHER STD NAMES ARE SUPPOSED TO BE TREATED HERE
-  examples: |
+    - can I ask you?
+    - how does this work? can I start asking?
+    - may I start?
     - I have questions about [Genital Herpes]{"entity": "STD_name"}
-    - can you give me info on [trichomoniasis]{"entity": "STD_name"}
     - [syphilis]{"entity": "STD_name"}
-    - I'd like to know about [bacterial vaginosis]{"entity": "STD_name"}
-    - i gotta learn stuff about [Pelvic Inflammatory Disease]{"entity": "STD_name"}
-    - tell me details about [HPV Infection]{"entity": "STD_name"}
     - i have doubts on [syphilis]{"entity": "STD_name"}
-    - what info can you tell me on [HEPATITIS]{"entity": "STD_name"}
-#    - i want to know more about [clamidia]{"entity": "STD_name"}  # INCLUDE MISSPELLING?
+    
+
+# - intent: establish_std_name # TO DO: SEE IF MISSPELLING, AND OTHER STD NAMES ARE SUPPOSED TO BE TREATED HERE
+#   examples: |
 
 - intent: ask_source
   examples: |

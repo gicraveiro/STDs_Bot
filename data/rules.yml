@@ -51,17 +51,13 @@ rules:
   - or:
     - intent: affirm
     - intent: I_have_questions 
+#  - action: validate_std_name
   - action: utter_feel_free_to_ask
 
 # - rule: Incentivate the user to ask a question everytime the user says they have questions 2
 #   steps: 
 #   - intent: I_have_questions
 #   - action: utter_feel_free_to_ask
-
-# - rule: Answer whenever user requests for a source with more information
-#   steps:
-#   - intent: find_more_info
-#   - action: utter_find_more_info
 
 - rule: Answer source whenever user asks for it
   steps:
@@ -71,14 +67,14 @@ rules:
   - action: utter_source
   - action: utter_find_more_info
 
-# TEST ENTITY IMPLEMENTATION, DELETE IT AFTERWARDS
-- rule: Test entity implementation
-  steps: 
-  - intent: establish_std_name
-  - action: validate_std_name
-  - action: utter_std_established
+# # TEST ENTITY IMPLEMENTATION, DELETE IT AFTERWARDS
+# - rule: Test entity implementation
+#   steps: 
+#   - intent: establish_std_name
+#   - action: validate_std_name
+#   - action: utter_std_established
 
-- rule: Handle an out of scope question( a message with low NLU confidence)
+- rule: Handle nlu fallback (a message with low NLU confidence ) gracefully
   steps:
   - intent: nlu_fallback
   - action: utter_cannot_help_with_that

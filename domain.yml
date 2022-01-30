@@ -43,8 +43,8 @@ intents:
   # - mood_unhappy
   # - bot_challenge
 
-  - establish_std_name:
-      use_entities: true
+#   - establish_std_name:
+#       use_entities: true
 
 entities: 
 - STD_name
