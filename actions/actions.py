@@ -59,6 +59,7 @@ class ActionTransmission(Action):
             dispatcher.utter_message(text="It seems this name wasn't found in the database, please try spelling the STD exactly like in the list below")
             for i, j in df.iterrows():
                 dispatcher.utter_message(text=j['Name'])
+            dispatcher.utter_message(response="utter_list_STD_conclusion")
         return []
 
 class ActionPrevention(Action):
@@ -88,6 +89,7 @@ class ActionPrevention(Action):
             dispatcher.utter_message(text="It seems this name wasn't found in the database, please try spelling the STD exactly like in the list below")
             for i, j in df.iterrows():
                 dispatcher.utter_message(text=j['Name'])
+            dispatcher.utter_message(response="utter_list_STD_conclusion")
         return []
 
 class ActionDefinition(Action):
@@ -117,6 +119,7 @@ class ActionDefinition(Action):
             dispatcher.utter_message(text="It seems this std name wasn't found in the database, please try spelling the STD exactly like in the list below")
             for i, j in df.iterrows():
                 dispatcher.utter_message(text=j['Name'])
+            dispatcher.utter_message(response="utter_list_STD_conclusion")
         return []
 
 class ActionValidate_STD(Action): 
@@ -161,44 +164,3 @@ class ActionSetEntityNone(Action):
     domain: Dict[Text, Any]) -> List[Dict[Text,Any]]:
     
         return[SlotSet("STD_name", None)]  
-
-# class ValidatePredefinedSlots(ValidationAction):
-#     def validate_std_name(
-#         self,
-#         slot_value: Any,
-#         dispatcher: CollectingDispatcher, 
-#         tracker: Tracker,
-#         domain: DomainDict,
-#     ) -> Dict[Text, Any]:
-#         """Validate std name value."""
-#         df = pd.read_csv('STDSDatabase.csv')
-
-#         print("we're in")
-
-#         for i, j in df.iterrows():
-#             std_ref = j['Name']
-#             best_match = 0
-#             #equalChars = 0
-#             #for charRef,charReal in zip(std_title.lower(), slot_value.lower()):
-#             #    if charRef == charReal:
-#             #        equalChars += 1
-#             std_ref = list(j['Name'].lower())
-#             std_real = list(slot_value.lower())
-
-#             equalChars = list((Counter(std_ref) & Counter(std_real)).elements())
-
-#             print(equalChars)
-
-#             if(len(equalChars)/len(std_real) > 0.6 and len(equalChars)/len(std_real) > best_match): # TO DO: PERFORM OFFICIAL TESTS TO FIND OUT BEST VALUE/PERFORMANCE
-#                 updated_slot = j['Name']
-#                 best_match = len(equalChars)/len(std_real)
-#                 print(updated_slot, best_match)
-#         #if isinstance(slot_value, str):
-#         if best_match > 0:
-#             # validation succeeded, capitalize the value of the "std_name" slot
-#             print(best_match, updated_slot, "updated!")
-#             return {"STD_name": updated_slot}#slot_value.capitalize()}
-#         else:
-#             # validation failed, set this slot to None
-#             print("returning None")
-#             return {"STD_name": None}
