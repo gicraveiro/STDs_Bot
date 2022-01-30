@@ -83,6 +83,7 @@ nlu:
     - i gotta learn stuff about [Pelvic Inflammatory Disease]{"entity": "STD_name"}
     - what info can you tell me on [HEPATITIS]{"entity": "STD_name"}
     - tell me details about [HPV Infection]{"entity": "STD_name"}
+    - tell me about [bv]{"entity": "STD_name"}
 
 # QUESTIONS 
 
@@ -190,6 +191,52 @@ nlu:
     - prevention
     - prevention in general
     - cool, and whats a way to avoid it
+
+- intent: diagnosis_STD
+  examples: |
+    - diagnosis
+    - how can I diagnose an std
+    - how will I know if I have it 
+    - find out if I have [pid]{"entity": "STD_name"}
+    - are there any tests that show the presence of an infection 
+    - how to tell if I'm contaminated 
+    - what are the tests to be diagnosed with an sti
+
+- intent: symptoms_STD
+  examples: |
+    - what are the symptoms?
+    - are there any symptoms
+    - what will I feel if I have [bv]{"entity": "STD_name"}
+    - are there visible signs of the disease?
+
+- intent: treatment_STD
+  examples: |
+    - is there a cure?
+    - what is the treatment 
+    - is [aids]{"entity": "STD_name"} curable
+    - has the cure for [hpv]{"entity": "STD_name"} been invented yet?
+    - what medicine can I take 
+    - what can I do if I know I have an std 
+    - what if I am [hiv]{"entity": "STD_name"} positive 
+    - what are the measures once I test positive?
+    - how to treat [herpes]{"entity": "STD_name"}
+    - how to avoid complications
+
+- intent: consequences_STD
+  examples: |
+    - am I gonna die?
+    - what are the consequences 
+    - are there any health problems that come with [pid]{"entity": "STD_name"}
+    - does it weaken the immune system?
+    - do I become more vulnerable to more stds if I already have one
+    - is it lethal
+    - whats the death rate for who catches stds
+    - is it possible to live normally after getting an std
+    - what happens if I don't do anything about my std?
+    - does it go away with time
+    - are there complications
+    - do people die of [hpv]{"entity": "STD_name"}
+    - can it give me cancer?
 
 # UTILS FOR CONVERSATION
 - intent: affirm

@@ -45,13 +45,41 @@ rules:
   - action: action_specific_prevention
   - action: action_set_entity_none
 
+- rule: Answer the diagnosis of STDs anytime the user asks for it 
+  steps: 
+  - intent: diagnosis_STD
+  - action: validate_std_name
+  - action: action_specific_diagnosis
+  - action: action_set_entity_none
+
+- rule: Answer the symptoms of STDs anytime the user asks for it 
+  steps: 
+  - intent: symptoms_STD
+  - action: validate_std_name
+  - action: action_specific_symptoms
+  - action: action_set_entity_none
+
+- rule: Answer the treatment of STDs anytime the user asks for it 
+  steps: 
+  - intent: treatment_STD
+  - action: validate_std_name
+  - action: action_specific_treatment
+  - action: action_set_entity_none
+
+- rule: Answer the consequences of STDs anytime the user asks for it 
+  steps: 
+  - intent: consequences_STD
+  - action: validate_std_name
+  - action: action_specific_consequences
+  - action: action_set_entity_none
+
 - rule: Incentivate the user to ask a question everytime the user says they have questions
   steps: 
-  - action: utter_any_questions
-  - or:
-    - intent: affirm
-    - intent: I_have_questions 
-#  - action: validate_std_name
+#  - action: utter_any_questions
+#  - or:
+#    - intent: affirm
+  - intent: I_have_questions 
+  - action: validate_std_name
   - action: utter_feel_free_to_ask
 
 # - rule: Incentivate the user to ask a question everytime the user says they have questions 2
