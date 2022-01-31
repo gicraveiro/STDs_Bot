@@ -162,8 +162,47 @@ nlu:
     - I have questions about [Genital Herpes](STD_name)
     - [syphilis](STD_name)
     - i have doubts on [syphilis](STD_name)
+
+- intent: lost_user
+  examples: | 
+    - i have a problem
+    - i don't know 
+    - I'm lost 
+    - I didn't understand 
+    - I'm not following 
+    - I didn't get how you function
+    - i have no idea what you are talking about 
+    - i need help 
+    - help me 
+    - help me deal with my condition
+    - idk what I'm doing here 
+    - I didn't follow. 
+    - But, how are you useful?
+    - how can you help me
+    - what??
   
   # BOT GENERAL
+- intent: ask_scope
+  examples: |
+    - what types of questions can you answer?
+    - what can you tell me
+    - do you know about other types of diseases?
+    - can you answer stuff about [herpes](STD_name)
+    - what kinds of questions can I make?
+    - what do you know
+    - are there limits to your knowledge
+    - whats in your database
+    - kinds of questions you answer
+    - what do you know about stis?
+    - is [BV](STD_name) in your database?
+    - you can't talk about [aids](STD_name)?
+    - can you answer sex education questions?
+    - can I ask sexual habits questions?
+    - what should I ask?
+    - I don't know what to ask...
+    - What can I ask you?
+    - Can I ask about [Bacterial Vaginosis](STD_name)?
+    - what is your scope?
 
 - intent: ask_source
   examples: |
@@ -202,7 +241,6 @@ nlu:
     - begin
     - play
     - start please
-    - how can you help me?
     - can you tell me things about [pid](STD_name)
     - give me info on [bv](STD_name)
     - must-knows of stis
@@ -216,28 +254,8 @@ nlu:
     - tell me details about [HPV Infection](STD_name)
     - tell me about [bv](STD_name)
     - I don't have any questions
-
-- intent: ask_scope
-  examples: |
-    - what types of questions can you answer?
-    - what can you tell me
-    - do you know about other types of diseases?
-    - can you answer stuff about [herpes](STD_name)
-    - what kinds of questions can I make?
-    - what do you know
-    - are there limits to your knowledge
-    - whats in your database
-    - kinds of questions you answer
-    - what do you know about stis?
-    - is [BV](STD_name) in your database?
-    - you can't talk about [aids](STD_name)?
-    - can you answer sex education questions?
-    - can I ask sexual habits questions?
-    - what should I ask?
-    - I don't know what to ask...
-    - What can I ask you?
-    - Can I ask about [Bacterial Vaginosis](STD_name)?
-    - what is your scope?
+    - enlighten my doubts
+    - teach me 
 
 - intent: testing_recommendations
   examples: |
@@ -434,6 +452,7 @@ nlu:
     - what should I do now that I'm infected?
     - my partner passed me [syphilis](STD_name). What do I do?
     - I had sex with someone who had [chlamydia](STD_name). How do I heal?
+    - I'm worried, is it bad?
 
 - intent: consequences_STD
   examples: |
@@ -455,6 +474,7 @@ nlu:
     - if I don't know I have an std, what happens?
     - what are the dangers of not being diagnosed?
     - are there major problems for [pelvic inflammatory disease](STD_name)
+    - is it a permanent condition?
 
 # OUT OF SCOPE 
 

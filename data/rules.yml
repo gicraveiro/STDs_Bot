@@ -32,9 +32,11 @@ rules:
 #  - action: utter_second_greeting
 # Questions
 
-- rule: Answer scope everytime user asks for it
+- rule: Answer scope everytime user asks for it or the user seems lost
   steps:
-  - intent: ask_scope
+  - or: 
+    - intent: ask_scope
+    - intent: lost_user
   - action: utter_scope
 
 - rule: Give testing recommendations everytime user asks for it
