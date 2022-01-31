@@ -53,6 +53,13 @@ nlu:
     - see you tomorrow
     - I'm done with my questions
     - it was a pleasure to have this conversation
+    - thank you, bye 
+    - Thanks for your help, bye bye 
+    - ok, tks, goodbye
+    - cool, thanks, see you
+    - enjoy your day
+    - Have a good week!
+    - gotta go
 
 - intent: thank
   examples: |
