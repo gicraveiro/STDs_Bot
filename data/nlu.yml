@@ -1,6 +1,6 @@
 version: "2.0"
-
 nlu:
+# UTILS FOR CONVERSATION
 - intent: greet
   examples: |
     - hey
@@ -15,9 +15,18 @@ nlu:
     - goodevening
     - good afternoon
     - let's go
-    - HI 
+    - HI
     - whats up
-#    - moin
+    - how are you
+    - HEY, HOW ARE YOU DOING?
+    - hello!!
+    - how r u?
+    - who are you?
+    - whats your name
+    - are you a robot
+    - am I talking to a human
+    - Hey! How are you?
+    - Hi, Sexy
 
 - intent: goodbye
   examples: |
@@ -34,245 +43,58 @@ nlu:
     - see you later
     - BYE
     - i'm going
+    - ok, bye
+    - I'll come back
+    - nice, goodbye
+    - cool talking with you
+    - I'm glad we talked
+    - that's all
+    - good night then
+    - see you tomorrow
+    - I'm done with my questions
+    - it was a pleasure to have this conversation
 
 - intent: thank
   examples: |
     - thank you
     - thanks
-    - tks 
-    - ok tks 
+    - tks
+    - ok tks
     - THANK YOU!!
     - Thanks a lot
     - thanks for helping
     - I appreciate your infos
     - thats all then, thank you so much
     - tks very much
+    - Ok, thank you for your help
+    - cool, tks
+    - perfect, thank you
+    - allright, thanks
 
-- intent: express_amusement # TO DO: IMPROVE NAME
+- intent: express_amusement
   examples: |
-    - cool 
-    - nice 
-    - amazing 
-    - seems pretty cool 
+    - cool
+    - nice
+    - amazing
+    - seems pretty cool
     - awesomeeee
     - interesting
     - i like that!
     - such a smart idea
-
-- intent: bot_initiative_start # TO DO: IMPROVE NAME
-  examples: |
-    - what should I know?
-    - tell me everything
-    - what can you do
-    - you can start
-    - all I need to know please
-    - begin 
-    - play
-    - start please
-    - how can you help me?
-    - can you tell me things about [pid]{"entity": "STD_name"}
-    - give me info on [bv]{"entity": "STD_name"}
-    - must-knows of stis
-    - relevant info
-    - important topics of stds
-    - i wanna learn
-    - can you give me info on [trichomoniasis]{"entity": "STD_name"}
-    - I'd like to know about [bacterial vaginosis]{"entity": "STD_name"}
-    - i gotta learn stuff about [Pelvic Inflammatory Disease]{"entity": "STD_name"}
-    - what info can you tell me on [HEPATITIS]{"entity": "STD_name"}
-    - tell me details about [HPV Infection]{"entity": "STD_name"}
-    - tell me about [bv]{"entity": "STD_name"}
-
-- intent: ask_scope
-  examples: |
-    - what types of questions can you answer?
-    - what can you tell me 
-    - do you know about other types of diseases?
-    - can you answer stuff about [herpes]{"entity": "STD_name"}
-    - what kinds of questions can I make?
-    - what do you know 
-    - are there limits to your knowledge
-    - whats in your database 
-    - kinds of questions you answer 
-    - what do you know about stis? 
-    - is [BV]{"entity": "STD_name"} in your database?
-
-# QUESTIONS 
-
-- intent: testing_recommendations
-  examples: |
-    - when should I test myself?
-    - do I need to test for stds
-    - with which frequency should I get tested
-    - testing recommendations 
-    - advice for frequency of sti testing
-    - if I don't have sex, do I still have to test for stds?
-    - I never had sex, am I at risk for stds? 
-    - what are the risk groups for stis
-    - what's the recommended frequency to do tests for [GONORRHEA]{"entity": "STD_name"}
-    - should I test every year for [hiv]{"entity": "STD_name"}
-    - give me recommendations
-
-- intent: definition_STD
-  examples: |
-    - What are STDs?
-    - What does STD stand for?
-    - what are sexually transmitted diseases
-    - uat r stds
-    - what are stis?
-    - can you say the definition of stis
-    - what is sexually transmitted infection
-    - whats the difference between sti and std 
-    - sexually transmissed diseases are ?
-    - definition of std
-    - what does std mean?
-    - meaning of stis 
-    - explain what stds are 
-    - whats that 
-    - what is [genital herpes]{"entity": "STD_name"} 
-    - definition of [chlamydia]{"entity": "STD_name"}
-    - description of [pelvic inflammatory disease]{"entity": "STD_name"} 
-    - is [herpes]{"entity": "STD_name"} an std?
-    - what is stds
-    - can you talk about [chlamydia]{"entity": "STD_name"} 
-    - define [gonorrhea]{"entity": "STD_name"} 
-    - generally describe them
-    - makes sense, whats the definition again?
-
-- intent: list_STD
-  examples: |
-    - Name all STDs
-    - Give me a list of sexually transmitted diseases
-    - can you list the STDs?
-    - what are all sexually transmitted diseases?
-    - which are all the stds
-    - list of stis 
-    - names of sexually transmitted infections 
-    - which stds exist
-    - do you have information on which stis 
-    - what diseases can be transmitted through sex?
-    - which infections can be passed with sexual contact?
-    - what stis do you have on the database 
-    - help me, which stds are there 
-    - list all stds, then tell me about [chlamydia]{"entity": "STD_name"}
-    - i want to know specifically about [Syphilis]{"entity": "STD_name"}, but first list the stis
-    - I know there's [aids]{"entity": "STD_name"}, [chlamydia]{"entity": "STD_name"} and [hpv infection]{"entity": "STD_name"} but are there others?
-    - how many stds are there 
-    - list stis, like [AIDS]{"entity": "STD_name"}
-    - list of diseases 
-    - interesting, now give me a list of diseases
-    - and which are the stis
-
-- intent: transmission_STD
-  examples: |
-    - how are they transmitted
-    - how can you catch an std
-    - What are the transmission conditions? 
-    - what r the conditions for transmission
-    - how does someone pass an std to someone else
-    - how is [HPV Infection]{"entity": "STD_name"} transmitted?
-    - can I get [aids]{"entity": "STD_name"} from kissing?
-    - are stds transmitted through sex 
-    - can stis be transmitted through oral sex?
-    - can I catch [genital herpes]{"entity": "STD_name"} from anal sex?
-    - is it possible to catch [hpv]{"entity": "STD_name"} with just skin contact?
-    - which are all the fluids that contaminate with an std
-    - which are all the conditions that must be met to transmit an sti
-    - can you get [pelvic inflammatory disease]{"entity": "STD_name"} without having sex 
-    - are stds only transmitted through sex?
-    - does kissing pass [herpes]{"entity": "STD_name"}?
-    - transmission
-    - transmission of [bacterial vaginosis]{"entity": "STD_name"}
-    - is touching enough to pass [syphilis]{"entity": "STD_name"}
-    - TRANSMISSION OF STDS
-    - in general, how are they transmitted
-    - ok, and how do you catch that?
-
-- intent: prevention_STD
-  examples: |
-    - how can we protect ourselves? 
-    - what can i do to avoid catching one
-    - what are the protection measures one can take?
-    - How to prevent sexually transmitted diseases?
-    - what is necessary for the prevention of stds?
-    - how can I be protected from [Genital Herpes]{"entity": "STD_name"}
-    - how does one prevent [chlamydia]{"entity": "STD_name"}
-    - prevention of [hpv]{"entity": "STD_name"}
-    - are condoms enough to protect from stis?
-    - can I pass  [chlamydia]{"entity": "STD_name"} if I wear a condom
-    - how to avoid stis
-    - what can I do to protect myself from stis 
-    - prevention of sexual transmitted infections
-    - the only way to be protected from stds is to not have sex?
-    - are there vaccinations for stis
-    - is there a vaccine for [HPV]{"entity": "STD_name"}
-    - if you use a condom, you are not at risk for an std, right?
-    - help me, is it possible to catch an std if I wear a condom?
-    - do condoms protect fully from stis?
-    - how much protection do condoms offer
-    - prevention of [bacterial vaginosis]{"entity": "STD_name"}
-    - prevention
-    - prevention in general
-    - cool, and whats a way to avoid it
-
-- intent: diagnosis_STD
-  examples: |
-    - diagnosis
-    - how can I diagnose an std
-    - how will I know if I have it 
-    - find out if I have [pid]{"entity": "STD_name"}
-    - are there any tests that show the presence of an infection 
-    - how to tell if I'm contaminated 
-    - what are the tests to be diagnosed with an sti
-    - how do I know if I have an std
-    - how to test myself
-    - do pharmacys perform tests?
-    - how can my doctor find out if I have an std
-
-- intent: symptoms_STD
-  examples: |
-    - what are the symptoms?
-    - are there any symptoms
-    - what will I feel if I have [bv]{"entity": "STD_name"}
-    - are there visible signs of the disease?
-    - symptoms
-    - does it include any symptom
-    - i wanna know the symptoms for [pid]{"entity": "STD_name"}
-    - does anything change in my body if I have an std
-    - which signs appear
-    - can I know if I have it 
-    - what in my body could indicate an infection
-
-- intent: treatment_STD
-  examples: |
-    - is there a cure?
-    - what is the treatment 
-    - is [aids]{"entity": "STD_name"} curable
-    - has the cure for [hpv]{"entity": "STD_name"} been invented yet?
-    - what medicine can I take 
-    - what can I do if I know I have an std 
-    - what if I am [hiv]{"entity": "STD_name"} positive 
-    - what are the measures once I test positive?
-    - how to treat [herpes]{"entity": "STD_name"}
-    - how to avoid complications
-
-- intent: consequences_STD
-  examples: |
-    - am I gonna die?
-    - what are the consequences 
-    - are there any health problems that come with [pid]{"entity": "STD_name"}
-    - does it weaken the immune system?
-    - do I become more vulnerable to more stds if I already have one
-    - is it lethal
-    - whats the death rate for who catches stds
-    - is it possible to live normally after getting an std
-    - what happens if I don't do anything about my std?
-    - does it go away with time
-    - are there complications
-    - do people die of [hpv]{"entity": "STD_name"}
-    - can it give me cancer?
-
-# UTILS FOR CONVERSATION
+    - sounds super cool
+    - wow
+    - omg so nice
+    - love it!
+    - I'm impressed
+    - extraordinary
+    - excelent!
+    - very good
+    - you seem super helpful
+    - congrats!
+    - I like this so much
+    - incredible goal
+    - perfect!
+    - I'm glad
 - intent: affirm
   examples: |
     - yes
@@ -286,20 +108,19 @@ nlu:
     - ok
     - alright
     - all right
-    - YES 
+    - YES
     - go ahead
     - go on
-    - I'm listening 
+    - I'm listening
     - anything you think I should know
     - please do
     - agreed
-    - yes, more about [trichomoniasis]{"entity": "STD_name"} 
-    - please tell me about [AIDS]{"entity": "STD_name"} 
-    - sure, but focus on [genital herpes]{"entity": "STD_name"} 
-    - uhum 
-    - right, but only about [bv]{"entity": "STD_name"}
-    - ok, but specifically about [pid]{"entity": "STD_name"}
-
+    - yes, more about [trichomoniasis](STD_name)
+    - please tell me about [AIDS](STD_name)
+    - sure, but focus on [genital herpes](STD_name)
+    - uhum
+    - right, but only about [bv](STD_name)
+    - ok, but specifically about [pid](STD_name)
 - intent: deny
   examples: |
     - no
@@ -309,33 +130,34 @@ nlu:
     - don't like that
     - NO WAY
     - not really
-    - ABSOLUTELY NOT 
-    - NO 
-    - I would never 
+    - ABSOLUTELY NOT
+    - NO
+    - I would never
     - I really don't think it is a good idea
-    - don't think so 
+    - don't think so
     - not today
     - nope
     - please don't
     - stop
-
 - intent: I_have_questions
   examples: |
     - I have a question
     - I have some doubts
-    - so many 
-    - yes, i have 
+    - so many
+    - yes, i have
     - i do have something to ask
     - i wanna ask you one thing
-    - I have questions about [Chancroid]{"entity": "STD_name"}
-    - i wanna ask you one thing about [Chlamydia]{"entity": "STD_name"}
+    - I have questions about [Chancroid](STD_name)
+    - i wanna ask you one thing about [Chlamydia](STD_name)
     - can I ask you?
     - how does this work? can I start asking?
     - may I start?
-    - I have questions about [Genital Herpes]{"entity": "STD_name"}
-    - [syphilis]{"entity": "STD_name"}
-    - i have doubts on [syphilis]{"entity": "STD_name"}
-    
+    - I have questions about [Genital Herpes](STD_name)
+    - [syphilis](STD_name)
+    - i have doubts on [syphilis](STD_name)
+  
+  # BOT GENERAL
+
 - intent: ask_source
   examples: |
     - what's your source
@@ -348,75 +170,350 @@ nlu:
     - whats the source of the data
     - are your sources reliable
     - how can I know if what you are saying is true
-    - is this fake news 
+    - is this fake news
     - please give me the link to your sources
-    - how do you know? 
+    - how do you know?
     - who are you to say
-    - sources 
+    - sources
     - references
+    - what is CDC
+    - is that info from a doctor?
+    - what are the articles that sustain these informations?
+    - whats the center for disease control
+    - who are the CDC?
+    - whats the link for the database
+    - where did you learn that?
+    - how do you know so much?
 
+- intent: bot_initiative_start
+  examples: |
+    - what should I know?
+    - tell me everything
+    - what can you do
+    - you can start
+    - all I need to know please
+    - begin
+    - play
+    - start please
+    - how can you help me?
+    - can you tell me things about [pid](STD_name)
+    - give me info on [bv](STD_name)
+    - must-knows of stis
+    - relevant info
+    - important topics of stds
+    - i wanna learn
+    - can you give me info on [trichomoniasis](STD_name)
+    - I'd like to know about [bacterial vaginosis](STD_name)
+    - i gotta learn stuff about [Pelvic Inflammatory Disease](STD_name)
+    - what info can you tell me on [HEPATITIS](STD_name)
+    - tell me details about [HPV Infection](STD_name)
+    - tell me about [bv](STD_name)
+    - I don't have any questions
 
-###### BONUSSSS
-# - intent: radically_out_of_scope
-#   examples: |
-#     - I wanna be friends
-#     - which is the distance between my position and the city center
-#     - who would win at a battle: monica or mafalda
-#     - who is the director of the movie star wars
-#     - whats the weather
-#     - do you know anything about covid
-#     - should i break up with my boyfriend
+- intent: ask_scope
+  examples: |
+    - what types of questions can you answer?
+    - what can you tell me
+    - do you know about other types of diseases?
+    - can you answer stuff about [herpes](STD_name)
+    - what kinds of questions can I make?
+    - what do you know
+    - are there limits to your knowledge
+    - whats in your database
+    - kinds of questions you answer
+    - what do you know about stis?
+    - is [BV](STD_name) in your database?
+    - you can't talk about [aids](STD_name)?
+    - can you answer sex education questions?
+    - can I ask sexual habits questions?
+    - what should I ask?
+    - I don't know what to ask...
 
-# TO DO: CHECK IF IT IS BETTER TO JOIN THESE 2
-# - intent: moderately_out_of_scope
-#   examples: |
-#     - which country is best at preventing stds
-#     - how can I get over my fear of having sex
-#     - i wanna see statistics of sexually transmitted diseases
+- intent: testing_recommendations
+  examples: |
+    - when should I test myself?
+    - do I need to test for stds
+    - with which frequency should I get tested
+    - testing recommendations
+    - advice for frequency of sti testing
+    - if I don't have sex, do I still have to test for stds?
+    - I never had sex, am I at risk for stds?
+    - what are the risk groups for stis
+    - what's the recommended frequency to do tests for [GONORRHEA](STD_name)
+    - should I test every year for [hiv](STD_name)
+    - give me recommendations
+    - I'm worried because there is a red spot in my penis
+    - I don't have any symptoms, do I still need to test myself?
 
-# - intent: slightly_out_of_scope
-#   examples: |
-#     - how can i get a diagnosis
-#     - which sypmtoms would I feel if I had an std
-#     - is it contagious
-#     - am i gonna die from an std
+- intent: list_STD
+  examples: |
+    - Name all STDs
+    - Give me a list of sexually transmitted diseases
+    - can you list the STDs?
+    - what are all sexually transmitted diseases?
+    - which are all the stds
+    - list of stis
+    - names of sexually transmitted infections
+    - which stds exist
+    - do you have information on which stis
+    - what diseases can be transmitted through sex?
+    - which infections can be passed with sexual contact?
+    - what stis do you have on the database
+    - help me, which stds are there
+    - list all stds, then tell me about [chlamydia](STD_name)
+    - i want to know specifically about [Syphilis](STD_name), but first list the stis
+    - I know there's [aids](STD_name), [chlamydia](STD_name) and [hpv infection](STD_name) but are there others?
+    - how many stds are there
+    - list stis, like [AIDS](STD_name)
+    - list of diseases
+    - interesting, now give me a list of diseases
+    - and which are the stis
+    - show me names of stds
 
-# - intent: insults
-#   examples: |
-#     - stupid bot
-#     - piece of shit 
-#     - fuck you 
-#     - useless robot
-#     - you are ridiculous
-#     - hey slave
-#     - why are you so stupid
+# STD QUESTIONS THAT CAN BE GENERAL AND FOR AN SPECIFIC STD
+
+- intent: definition_STD
+  examples: |
+    - What are STDs?
+    - What does STD stand for?
+    - what are sexually transmitted diseases
+    - uat r stds
+    - what are stis?
+    - can you say the definition of stis
+    - what is sexually transmitted infection
+    - whats the difference between sti and std
+    - sexually transmissed diseases are ?
+    - definition of std
+    - what does std mean?
+    - meaning of stis
+    - explain what stds are
+    - whats that
+    - what is [genital herpes](STD_name)
+    - definition of [chlamydia](STD_name)
+    - description of [pelvic inflammatory disease](STD_name)
+    - is [herpes](STD_name) an std?
+    - what is stds
+    - can you talk about [chlamydia](STD_name)
+    - define [gonorrhea](STD_name)
+    - generally describe them
+    - makes sense, whats the definition again?
+    - whats [AIDS](STD_name)
+
+- intent: transmission_STD
+  examples: |
+    - how are they transmitted
+    - how can you catch an std
+    - What are the transmission conditions?
+    - what r the conditions for transmission
+    - how does someone pass an std to someone else
+    - how is [HPV Infection](STD_name) transmitted?
+    - can I get [aids](STD_name) from kissing?
+    - are stds transmitted through sex
+    - can stis be transmitted through oral sex?
+    - can I catch [genital herpes](STD_name) from anal sex?
+    - is it possible to catch [hpv](STD_name) with just skin contact?
+    - which are all the fluids that contaminate with an std
+    - which are all the conditions that must be met to transmit an sti
+    - can you get [pelvic inflammatory disease](STD_name) without having sex
+    - are stds only transmitted through sex?
+    - does kissing pass [herpes](STD_name)?
+    - transmission
+    - transmission of [bacterial vaginosis](STD_name)
+    - is touching enough to pass [syphilis](STD_name)
+    - TRANSMISSION OF STDS
+    - in general, how are they transmitted
+    - ok, and how do you catch that?
+    - there's no way of getting infected if I don't fuck, right?
+    - is [aids](STD_name) contagious?
+    - I had sex with someone who had [chlamydia](STD_name). Could I be infected?
+    - I did a blowjob to someone who was [HIV](STD_name) positive. Am I at risk?
+
+- intent: prevention_STD
+  examples: |
+    - how can we protect ourselves?
+    - what can i do to avoid catching one
+    - what are the protection measures one can take?
+    - How to prevent sexually transmitted diseases?
+    - what is necessary for the prevention of stds?
+    - how can I be protected from [Genital Herpes](STD_name)
+    - how does one prevent [chlamydia](STD_name)
+    - prevention of [hpv](STD_name)
+    - are condoms enough to protect from stis?
+    - can I pass  [chlamydia](STD_name) if I wear a condom
+    - how to avoid stis
+    - what can I do to protect myself from stis
+    - prevention of sexual transmitted infections
+    - the only way to be protected from stds is to not have sex?
+    - are there vaccinations for stis
+    - is there a vaccine for [HPV](STD_name)
+    - if you use a condom, you are not at risk for an std, right?
+    - help me, is it possible to catch an std if I wear a condom?
+    - do condoms protect fully from stis?
+    - how much protection do condoms offer
+    - prevention of [bacterial vaginosis](STD_name)
+    - prevention
+    - prevention in general
+    - cool, and whats a way to avoid it
+
+- intent: diagnosis_STD
+  examples: |
+    - diagnosis
+    - how can I diagnose an std?
+    - how will I know if I have it
+    - find out if I have [pid](STD_name)
+    - are there any tests that show the presence of an infection
+    - how to tell if I'm contaminated
+    - what are the tests to be diagnosed with an sti
+    - how do I know if I have an std
+    - how to test myself
+    - do pharmacys perform tests?
+    - how can my doctor find out if I have an std
+    - show me how to discover if I'm infected
+    - how to diagnose [hepatitis b]["entity": "STD_name"]
+    - how to know if I'm [HIV]["entity": "STD_name"] positive
+    - how can I test for [bv]["entity": "STD_name"]
+    - I had sex with someone who had [chlamydia](STD_name). Am I infected?
+    - My boyfriend has [hpv infection](STD_name). How do I know if I do too?
+
+- intent: symptoms_STD
+  examples: |
+    - what are the symptoms?
+    - are there any symptoms
+    - what will I feel if I have [bv](STD_name)
+    - are there visible signs of the disease?
+    - symptoms
+    - does it include any symptom
+    - i wanna know the symptoms for [pid](STD_name)
+    - does anything change in my body if I have an std
+    - which signs appear
+    - can I know if I have it
+    - what in my body could indicate an infection
+    - show me the symptoms
+    - how to know if I have an std without a doctor
+    - how do I find out by myself if I have an sti
+    - do stds give a sore throat?
+    - is headache a possible side effect of having [syphilis](STD_name)
+    - my muscles hurt, could it be an std?
+    - I have diarrhea, is it a symptom for [gonorrhea](STD_name)
+    - A wart appeared in my vulva, is it an sti?
+    - do sexually transmitted diseases have symptoms?
+    - is it possible to have an std without any symptoms?
+    - is [chlamydia](STD_name) asymptomatic?
+    - is [gonorrhea](STD_name) symptomless?
+
+- intent: treatment_STD
+  examples: |
+    - is there a cure?
+    - what is the treatment
+    - is [aids](STD_name) curable
+    - has the cure for [hpv](STD_name) been invented yet?
+    - what medicine can I take
+    - what can I do if I know I have an std
+    - what if I am [hiv](STD_name) positive
+    - what are the measures once I test positive?
+    - how to treat [herpes](STD_name)
+    - how to avoid complications
+    - are all stds treatable?
+    - can I heal from [hpv infection](STD_name)
+    - how to heal
+    - measures to cure [bacterial vaginosis](STD_name)
+    - what do I do if I have an sti
+    - what should I do now that I'm infected?
+    - my partner passed me [syphilis](STD_name). What do I do?
+    - I had sex with someone who had [chlamydia](STD_name). How do I heal?
+
+- intent: consequences_STD
+  examples: |
+    - am I gonna die?
+    - what are the consequences
+    - are there any health problems that come with [pid](STD_name)
+    - does it weaken the immune system?
+    - do I become more vulnerable to more stds if I already have one
+    - is it lethal
+    - is it possible to live normally after getting an std
+    - what happens if I don't do anything about my std?
+    - does it go away with time
+    - are there complications
+    - do people die of [hpv](STD_name)
+    - can it give me cancer?
+    - what happens after I get an std?
+    - how much time do I have after catching an sti?
+    - can I live normally with [hpv infection](STD_name)
+    - if I don't know I have an std, what happens?
+    - what are the dangers of not being diagnosed?
+    - are there major problems for [pelvic inflammatory disease](STD_name)
+
+# OUT OF SCOPE 
+
+- intent: out_of_scope
+  examples: |
+    - is it normal to have 3 stds at the same time?
+    - can I have stds in different parts of the body?
+    - which fluids can infect with stds
+    - can stds affect my baby's health?
+    - where can I get tested?
+    - is it free to get tested for stds?
+    - how much does testing cost
+    - are std tests part of the public health system?
+    - what are the statistics for stds in Brazil?
+    - are stis more common for gay people?
+    - what is the rate of contamination
+    - how common is to have [gonorrhea](STD_name)
+    - can I get reinfected?
+    - when can I have sex again after being cured from [syphilis](STD_name)
+    - what happens if I'm pregnant and get an std?
+    - which medicine should I take for [herpes](STD_name)
+    - is [bacterial vaginosis](STD_name) from a virus?
+    - is it a fungus that causes [pelvic inflammatory disease](STD_name)
+    - whats the source of [hpv infection](STD_name)? bacteria?
+    - whats the death rate for [trichomoniasis](STD_name)
+    - whats the death rate for who catches stds
+
+- intent: insults
+  examples: |
+    - stupid bot
+    - piece of shit
+    - fuck you
+    - useless robot
+    - you are ridiculous
+    - hey slave
+    - why are you so stupid
+    - bitch
+    - you idiot
+    - oh great, you can't even answer that, is there anything you're capable of at all??
+    - ridiculous bitch
+    - you're awful
+    - tell me, bitch, what can you do for me
+    - you're so sexy
+    - hi hottie
+    - you are hot, be my girlfriend
+    - blow me
+    - show me your ass
+    - how do you know so much, you must be a slut
+    - I bet you've had a lot of sex
+    - bots are slaves of humans
+
+  # SYNONYMS 
 
 - synonym: Bacterial Vaginosis
   examples: |
-    - bv 
-#    - BV 
-
+    - bv
 - synonym: Genital Herpes
   examples: |
     - herpes
-
 - synonym: HPV Infection
   examples: |
     - hpv
-#    - HPV 
-
 - synonym: Pelvic Inflammatory Disease
   examples: |
     - pid
-#    - PID 
-# - pelvic inflammatory
-
 - synonym: AIDs
   examples: |
     - hiv
 
+  # LOOKUP TABLE
+
 - lookup: STD_name
-  # data/stds.txt # TO DO: comment examples and move lookup table to separate file for organization purposes
   examples: |
     - Bacterial Vaginosis
     - Chlamydia
@@ -425,51 +522,7 @@ nlu:
     - HPV Infection
     - Pelvic Inflammatory Disease
     - Syphilis
-    - Trichomoniasis   
+    - Trichomoniasis
     - Hepatitis
     - AIDS
     - Chancroid
-#    - Lymphogranuloma Venereum
-#    - Mycoplasma genitalium
-#    - Ectoparasitic Infections
-
-# - intent: mood_great
-#   examples: |
-#     - perfect
-#     - great
-#     - amazing
-#     - feeling like a king
-#     - wonderful
-#     - I am feeling very good
-#     - I am great
-#     - I am amazing
-#     - I am going to save the world
-#     - super stoked
-#     - extremely good
-#     - so so perfect
-#     - so good
-#     - so perfect
-
-# - intent: mood_unhappy
-#   examples: |
-#     - my day was horrible
-#     - I am sad
-#     - I don't feel very well
-#     - I am disappointed
-#     - super sad
-#     - I'm so sad
-#     - sad
-#     - very sad
-#     - unhappy
-#     - not good
-#     - not very good
-#     - extremly sad
-#     - so saad
-#     - so sad
-
-# - intent: bot_challenge
-#   examples: |
-#     - are you a bot?
-#     - are you a human?
-#     - am I talking to a bot?
-#     - am I talking to a human?
