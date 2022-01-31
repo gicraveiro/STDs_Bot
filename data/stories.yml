@@ -182,21 +182,21 @@ stories:
   # - action: utter_it_was_a_pleasure
   # - action: utter_goodbye
 
-  - story: thanking story with questions
-    steps:
-    - intent: thank 
-    - action: utter_thank_response
-    - action: utter_any_questions
-    - or:
-      - intent: affirm 
-      - intent: I_have_questions
-    - action: utter_feel_free_to_ask
+- story: thanking story with questions
+  steps:
+  - intent: thank 
+  - action: utter_thank_response
+  - action: utter_any_questions
+  - or:
+    - intent: affirm 
+    - intent: I_have_questions
+  - action: utter_feel_free_to_ask
 
-  - story: thanking story without questions
-    steps:
-    - intent: thank 
-    - action: utter_thank_response
-    - action: check_flow_finished
+- story: thanking story without questions
+  steps:
+  - intent: thank 
+  - action: utter_thank_response
+  - action: check_flow_finished
 
 
 # - story: mixed_initiative

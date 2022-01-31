@@ -21,6 +21,9 @@ intents:
   - diagnosis_STD
   - symptoms_STD
   - consequences_STD
+  # out of scope
+  - out_of_scope
+  - insults
   #- source # bacteria, fungus, virus
   
   #   - establish_std_name:
