@@ -104,7 +104,7 @@ rules:
 #  - or:
 #    - intent: affirm
   - intent: I_have_questions 
-  - action: validate_std_name
+#  - action: validate_std_name
   - action: utter_feel_free_to_ask
 
 # - rule: Incentivate the user to ask a question everytime the user says they have questions 2
