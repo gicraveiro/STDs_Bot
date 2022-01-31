@@ -354,6 +354,9 @@ nlu:
     - prevention
     - prevention in general
     - cool, and whats a way to avoid it
+    - how can I avoid diseases transmitted through oral sex?
+    - is oral sex with preservatives effective?
+    - are preservatives enough to prevent an sti infection?
 
 - intent: diagnosis_STD
   examples: |
