@@ -228,6 +228,9 @@ nlu:
     - can I ask sexual habits questions?
     - what should I ask?
     - I don't know what to ask...
+    - What can I ask you?
+    - Can I ask about [Bacterial Vaginosis](STD_name)?
+    - what is your scope?
 
 - intent: testing_recommendations
   examples: |
