@@ -158,7 +158,7 @@ stories:
   - intent: I_have_questions
     entities:
     - STD_name 
-  - action: validate_std_name
+  #- action: validate_std_name
   - action: utter_feel_free_to_ask
   - intent: bot_initiative_start # TO DO: include entity establishment?
   - action: validate_std_name
@@ -196,7 +196,7 @@ stories:
   steps:
   - intent: thank 
   - action: utter_thank_response
-  - action: check_flow_finished
+  - checkpoint: check_flow_finished
 
 
 # - story: mixed_initiative
