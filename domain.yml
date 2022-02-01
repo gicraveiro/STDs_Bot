@@ -8,7 +8,7 @@ intents:
   - express_amusement
   - I_have_questions
   - thank
-  - bot_initiative_start   # General questions  # - intro
+  - advance_plot   # General questions  # - intro
   - ask_scope
   - list_STD
   - testing_recommendations

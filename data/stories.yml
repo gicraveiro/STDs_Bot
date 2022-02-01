@@ -11,7 +11,7 @@ stories:
   - action: utter_greet
   - action: utter_intro
   - or:
-    - intent: bot_initiative_start
+    - intent: advance_plot
     - intent: definition_STD
   - checkpoint: continue_flow_with_definition_of_STD
 
@@ -20,7 +20,9 @@ stories:
   - intent: greet
   - action: utter_greet
   - action: utter_intro
-  - intent: express_amusement
+  - or:
+    - intent: express_amusement
+    - intent: affirm
   - action: utter_shall_i_continue
   - or:
     - intent: affirm
@@ -34,7 +36,7 @@ stories:
     - STD_name 
   - action: utter_feel_free_to_ask
   - or: 
-    - intent: bot_initiative_start 
+    - intent: advance_plot 
     - intent: definition_STD
   - checkpoint: continue_flow_with_definition_of_STD
 
@@ -50,10 +52,12 @@ stories:
     - intent: affirm
     - intent: thank 
     - intent: express_amusement
+    - intent: advance_plot
   - action: utter_shall_i_continue
   - or:
     - intent: affirm
     - intent: prevention_STD
+    - intent: advance_plot
   - action: validate_std_name
   - action: action_specific_prevention
   - action: action_set_entity_none
@@ -61,6 +65,7 @@ stories:
   - or:
     - intent: affirm
     - intent: testing_recommendations
+    - intent: advance_plot
   - action: utter_testing_recommendations 
   - checkpoint: check_flow_finished
 
@@ -73,7 +78,10 @@ stories:
   - intent: deny
   - action: utter_conclusion
   - action: utter_feel_free_come_back
-
+  - or:
+    - intent: goodbye
+    - intent: thank 
+    - intent: affirm
 
 # - story: pick up from a deviation from story asking if the user would like to hear bot flow
 #   steps:
@@ -81,7 +89,7 @@ stories:
 #   - intent: deny
 #   - action: utter_would_like_to_begin_flow
 #   - or:
-#     - intent: bot_initiative_start
+#     - intent: advance_plot
 #     - intent: affirm
 #   - checkpoint: continue_flow_with_definition_of_STD
 
@@ -95,7 +103,7 @@ stories:
   steps:
   - intent: thank 
   - action: utter_thank_response
-  - action: utter_any_questions
+#  - action: utter_any_questions
 
 - story: user has questions - when user answers positively
   steps:
@@ -164,7 +172,7 @@ stories:
 
 # - story: bot_initiative_stopped1
 #   steps:
-#   - intent: bot_initiative_start
+#   - intent: advance_plot
 #   - action: utter_definition_STD
 #   - action: utter_shall_i_continue
 #   - intent: deny
@@ -175,7 +183,7 @@ stories:
 #   # - intent: greet
 #   # - action: utter_greet
 #   # - action: utter_intro
-#   - intent: bot_initiative_start
+#   - intent: advance_plot
 #   - action: validate_std_name
 #   - action: utter_definition_STD
 #   - action: utter_shall_i_continue
@@ -194,7 +202,7 @@ stories:
 #   # - intent: greet
 #   # - action: utter_greet
 #   # - action: utter_intro
-#   - intent: bot_initiative_start
+#   - intent: advance_plot
 #   - action: validate_std_name
 #   - action: utter_definition_STD
 #   - action: utter_shall_i_continue
@@ -269,7 +277,7 @@ stories:
 
 # - story: user stops bot initiative flow to ask testing recommendations which was what the bot was going to say
 #   steps:
-#   - intent: bot_initiative_start
+#   - intent: advance_plot
 #   - action: utter_definition_STD # TO DO: CHANGE TO SPECIFIC ACTION
 #   - action: utter_shall_i_continue
 #   - intent: affirm
@@ -298,7 +306,7 @@ stories:
 #   - action: utter_source
 #   - action: utter_find_more_info
 # #  - action: utter_any_questions
-#   - intent: bot_initiative_start 
+#   - intent: advance_plot 
 #   - action: utter_definition_STD 
 #   - action: utter_shall_i_continue
 #   - intent: affirm
