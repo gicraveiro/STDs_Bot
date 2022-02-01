@@ -7,6 +7,8 @@ stories:
 
 - story: begin with bot initiative start
   steps:
+  - intent: greet
+  - action: utter_greet
   - action: utter_intro
   - or:
     - intent: bot_initiative_start
@@ -15,6 +17,8 @@ stories:
 
 - story: begin with express amusement
   steps:
+  - intent: greet
+  - action: utter_greet
   - action: utter_intro
   - intent: express_amusement
   - action: utter_shall_i_continue
