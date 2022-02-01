@@ -7,7 +7,7 @@ rules:
 - rule: user wants to remove entity set 
   steps: 
   - intent: set_entity_none
-  - action: set_entity_none
+  - action: action_set_entity_none
 
 - rule: Say goodbye anytime the user says goodbye
   steps:
@@ -57,7 +57,7 @@ rules:
   - action: validate_std_name
   - action: action_specific_definition
 #  - action: action_set_entity_none
-  #wait_for_user_input: false
+  wait_for_user_input: false
 
 - rule: Answer the list of STDs anytime the user asks for it 
   steps: 
@@ -73,7 +73,7 @@ rules:
   - action: validate_std_name
   - action: action_specific_transmission  
  # - action: action_set_entity_none
-  #wait_for_user_input: false
+  wait_for_user_input: false
 
 - rule: Answer the prevention of STDs anytime the user asks for it 
   steps: 
