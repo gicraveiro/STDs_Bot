@@ -4,6 +4,11 @@ rules:
 
 # Greetings
 
+- rule: user wants to remove entity set 
+  steps: 
+  - intent: set_entity_none
+  - action: set_entity_none
+
 - rule: Say goodbye anytime the user says goodbye
   steps:
   - intent: goodbye
@@ -51,7 +56,7 @@ rules:
   - intent: definition_STD
   - action: validate_std_name
   - action: action_specific_definition
-  - action: action_set_entity_none
+#  - action: action_set_entity_none
   #wait_for_user_input: false
 
 - rule: Answer the list of STDs anytime the user asks for it 
@@ -67,7 +72,7 @@ rules:
   - intent: transmission_STD
   - action: validate_std_name
   - action: action_specific_transmission  
-  - action: action_set_entity_none
+ # - action: action_set_entity_none
   #wait_for_user_input: false
 
 - rule: Answer the prevention of STDs anytime the user asks for it 
@@ -75,7 +80,7 @@ rules:
   - intent: prevention_STD
   - action: validate_std_name
   - action: action_specific_prevention
-  - action: action_set_entity_none
+ # - action: action_set_entity_none
   wait_for_user_input: false
 
 - rule: Answer the diagnosis of STDs anytime the user asks for it 
@@ -83,7 +88,7 @@ rules:
   - intent: diagnosis_STD
   - action: validate_std_name
   - action: action_specific_diagnosis
-  - action: action_set_entity_none
+#  - action: action_set_entity_none
   #wait_for_user_input: false
 
 - rule: Answer the symptoms of STDs anytime the user asks for it 
@@ -91,7 +96,7 @@ rules:
   - intent: symptoms_STD
   - action: validate_std_name
   - action: action_specific_symptoms
-  - action: action_set_entity_none
+#  - action: action_set_entity_none
   #wait_for_user_input: false
 
 - rule: Answer the treatment of STDs anytime the user asks for it 
@@ -99,7 +104,7 @@ rules:
   - intent: treatment_STD
   - action: validate_std_name
   - action: action_specific_treatment
-  - action: action_set_entity_none
+#  - action: action_set_entity_none
   #wait_for_user_input: false
 
 - rule: Answer the consequences of STDs anytime the user asks for it 
@@ -107,7 +112,7 @@ rules:
   - intent: consequences_STD
   - action: validate_std_name
   - action: action_specific_consequences
-  - action: action_set_entity_none
+#  - action: action_set_entity_none
   #wait_for_user_input: false
 
 - rule: Incentivate the user to ask a question everytime the user says they have questions

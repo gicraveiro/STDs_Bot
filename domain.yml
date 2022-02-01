@@ -24,6 +24,7 @@ intents:
   # out of scope
   - out_of_scope
   - insults
+  - set_entity_none
   #- source # bacteria, fungus, virus
   
   #   - establish_std_name:

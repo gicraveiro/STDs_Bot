@@ -499,6 +499,26 @@ nlu:
     - are there major problems for [pelvic inflammatory disease](STD_name)
     - is it a permanent condition?
 
+- intent: set_entity_none
+  examples: |
+    - stop talking about [syphilis]{"STD_name"}
+    - I'm not interested in [aids]{"STD_name"} anymore
+    - I want to know in general 
+    - regarding all stds please 
+    - not about a specific sti 
+    - what about in general? 
+    - can you answer it for all stds? 
+    - not [Bacterial Vaginosis]{"STD_name"}
+    - for all stds 
+    - I'm asking generally 
+    - for the most common ones 
+    - in general 
+    - about stds 
+    - is this for other sexually transmitted diseases as well?
+    - does it apply for all sexually transmitted infections?
+    - how about others?
+    - are there more dangerous stds, other than [PID]{"STD_name}?
+
 # OUT OF SCOPE 
 
 - intent: out_of_scope
