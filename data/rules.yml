@@ -10,7 +10,7 @@ rules:
   - action: utter_it_was_a_pleasure
 #  - action: utter_feel_free_come_back 
   - action: utter_goodbye
-  wait_for_user_input: false
+  #wait_for_user_input: false
 
 # - rule: Respond to thank you # with questions
 #   steps:

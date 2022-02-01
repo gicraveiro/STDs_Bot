@@ -91,11 +91,11 @@ stories:
   - intent: deny 
   - checkpoint: check_flow_finished
 
-# - story: Respond to thank you # with questions
-#   steps:
-#   - intent: thank 
-#   - action: utter_thank_response
-#   - action: utter_any_questions
+- story: Respond to thank you # with questions
+  steps:
+  - intent: thank 
+  - action: utter_thank_response
+  - action: utter_any_questions
 
 - story: user has questions - when user answers positively
   steps:
