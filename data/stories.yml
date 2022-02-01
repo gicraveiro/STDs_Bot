@@ -144,7 +144,7 @@ stories:
   - action: utter_prevention_STD
   - checkpoint: check_flow_finished
 
-- story: user stops bot initiative flow to ask prevention which was what the bot was going to say
+- story: user stops bot initiative flow to ask definition which was what the bot was going to say
   steps:
   - intent: express_amusement
   - action: utter_shall_i_continue
@@ -180,14 +180,22 @@ stories:
   - action: action_set_entity_none
   - slot_was_set:
     - STD_name: null
+  - or:
+    - intent: affirm
+    - intent: thank
+  - action: utter_testing_recommendations
+  - checkpoint: check_flow_finished
+
+- story: user stops bot initiative flow to ask testing recommendations which was what the bot was going to say
+  steps:
+  - intent: bot_initiative_start
+  - action: utter_definition_STD # TO DO: CHANGE TO SPECIFIC ACTION
+  - action: utter_shall_i_continue
   - intent: affirm
-  # - action: utter_prevention_STD
-  # - action: utter_shall_i_continue
-  # - intent: nlu_fallback
-  # - action: utter_did_not_understand
-  # - action: utter_by_the_way
-  # - action: utter_scope
-  # - intent: affirm
+  - action: utter_prevention_STD  # TO DO: CHANGE TO SPECIFIC ACTION
+  - action: utter_shall_i_continue
+  - intent: affirm
+  - intent: testing_recommendations
   - action: utter_testing_recommendations
   - checkpoint: check_flow_finished
 
