@@ -90,7 +90,7 @@ stories:
 #   - action: utter_thank_response
 #   - action: utter_any_questions
 
-- story: user has questions
+- story: user has questions - when user answers positively
   steps:
   - action: utter_any_questions
   - or:
@@ -101,13 +101,13 @@ stories:
 #  - action: validate_std_name
   - action: utter_feel_free_to_ask
 
-- story: pick up from a deviation from story with asking if the user has questions 
-  steps: 
-  - or:
-    - intent: thank 
-    - intent: affirm 
-    - intent: express_amusement
-  - action: utter_any_questions
+# - story: pick up from a deviation from story with asking if the user has questions 
+#   steps: 
+#   - or:
+#     - intent: thank 
+#     - intent: affirm 
+#     - intent: express_amusement
+#   - action: utter_any_questions
 
 
 # - story: thanking story # with questions
