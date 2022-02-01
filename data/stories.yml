@@ -9,85 +9,67 @@ stories:
   - intent: deny
   - action: utter_conclusion
   - action: utter_feel_free_come_back
-  # - intent: goodbye
-  # - action: utter_goodbye
+
+- story: user has a specific question
+  steps:
+  - action: utter_any_questions
+  - or:
+    - intent: affirm
+    - intent: I_have_questions
+    # intent: thank
+    # TO DO: MAYBE CREATE TWO: ONE ESTABLISHING THE ENTITY, OTHER ONE IGNORING IT?
+#  - action: validate_std_name
+  - action: utter_feel_free_to_ask
+
+- story: thanking story # with questions
+  steps:
+  - intent: thank 
+  - action: utter_thank_response
+  # - action: utter_any_questions
+  # - or:
+  #   - intent: affirm 
+  #   - intent: I_have_questions
+  # - action: utter_feel_free_to_ask
+
+# - story: thanking story without questions
+#   steps:
+#   - intent: thank 
+#   - action: utter_thank_response
+#   - checkpoint: check_flow_finished
 
 - story: bot_initiative_full with no std established starting by bot start
   steps:
-  # - intent: greet
-  # - action: utter_greet
-  # - action: utter_intro
   - intent: bot_initiative_start
-#  - action: validate_std_name
-  - action: utter_definition_STD
+  - action: utter_definition_STD # TO DO: CHANGE TO SPECIFIC ACTION
   - action: utter_shall_i_continue
   - intent: affirm
-#  - action: validate_std_name
-  - action: utter_prevention_STD #utter_transmission_STD
+  - action: utter_prevention_STD  # TO DO: CHANGE TO SPECIFIC ACTION
   - action: utter_shall_i_continue
   - intent: affirm
-  - action: utter_testing_recommendations #utter_prevention_STD
+  - action: utter_testing_recommendations 
   - checkpoint: check_flow_finished
-  # - action: utter_any_questions
-  # - intent: deny
-  # - action: utter_conclusion
-  # - action: utter_feel_free_come_back
-  # - action: utter_source
-  # - action: utter_additionally_cant_answer
-  # - action: utter_find_more_info
-  # - action: utter_it_was_a_pleasure
-  # - action: utter_goodbye
 
 - story: bot_initiative_full with no std established starting by expression of amusement
   steps:
-  # - intent: greet
-  # - action: utter_greet
-  # - action: utter_intro
   - intent: express_amusement
   - action: utter_shall_i_continue
   - intent: affirm
-#  - action: validate_std_name
   - action: utter_definition_STD
   - action: utter_shall_i_continue
   - intent: affirm
-#  - action: validate_std_name
-  - action: utter_prevention_STD # utter_transmission_STD
+  - action: utter_prevention_STD 
   - action: utter_shall_i_continue
   - intent: affirm
-  - action: utter_testing_recommendations #utter_prevention_STD
+  - action: utter_testing_recommendations 
   - checkpoint: check_flow_finished
-  # - action: utter_any_questions
-  # - intent: deny
-  # - action: utter_conclusion
-  # - action: utter_feel_free_come_back
-  # - action: utter_source
-  # - action: utter_additionally_cant_answer
-  # - action: utter_find_more_info
-  # - intent: affirm
-  # - action: utter_it_was_a_pleasure
-  # - action: utter_goodbye
-
 
 - story: bot_initiative_stopped1
   steps:
-  # - intent: greet
-  # - action: utter_greet
-  # - action: utter_intro
   - intent: bot_initiative_start
-#  - action: validate_std_name
   - action: utter_definition_STD
   - action: utter_shall_i_continue
   - intent: deny
   - checkpoint: check_flow_finished
-  # - action: utter_any_questions
-  # - intent: deny
-  # - action: utter_conclusion
-  # - action: utter_feel_free_come_back
-  # - action: utter_source
-  # - action: utter_additionally_cant_answer
-  # - action: utter_find_more_info
-  # - action: utter_it_was_a_pleasure
-  # - action: utter_goodbye
 
 # - story: bot_initiative_stopped2
 #   steps:
@@ -106,15 +88,7 @@ stories:
 #   - action: validate_std_name
 #   - action: utter_feel_free_to_ask
 
-- story: user has a specific question
-  steps:
-  - action: utter_any_questions
-  - or:
-    - intent: affirm
-    - intent: I_have_questions
-    # TO DO: MAYBE CREATE TWO: ONE ESTABLISHING THE ENTITY, OTHER ONE IGNORING IT?
-#  - action: validate_std_name
-  - action: utter_feel_free_to_ask
+
 
 # - story: bot_initiative_stopped3
 #   steps:
@@ -152,9 +126,6 @@ stories:
 
 - story: user starts by saying they have questions, establish an std, but want bot initiative
   steps:
-  # - intent: greet
-  # - action: utter_greet
-  # - action: utter_intro
   - intent: I_have_questions
     entities:
     - STD_name 
@@ -162,7 +133,7 @@ stories:
   - action: utter_feel_free_to_ask
   - intent: bot_initiative_start # TO DO: include entity establishment?
   - action: validate_std_name
-  - action: utter_definition_STD #utter_transmission_STD
+  - action: utter_definition_STD 
   - action: utter_shall_i_continue
   - intent: affirm
   - action: validate_std_name
@@ -170,32 +141,54 @@ stories:
   - action: utter_shall_i_continue
   - intent: affirm
   - action: validate_std_name
-  - action: utter_prevention_STD #utter_prevention_STD
+  - action: utter_prevention_STD
   - checkpoint: check_flow_finished
-  # - action: utter_any_questions
-  # - intent: deny
-  # - action: utter_conclusion
-  # - action: utter_feel_free_come_back
-  # - action: utter_source
-  # - action: utter_additionally_cant_answer
-  # - action: utter_find_more_info
-  # - action: utter_it_was_a_pleasure
-  # - action: utter_goodbye
 
-- story: thanking story with questions
+- story: user stops bot initiative flow to ask prevention which was what the bot was going to say
   steps:
-  - intent: thank 
-  - action: utter_thank_response
-  - action: utter_any_questions
+  - intent: express_amusement
+  - action: utter_shall_i_continue
+  - intent: definition_STD
+  - action: validate_std_name
+  - action: action_specific_definition
+  - action: action_set_entity_none
+  - slot_was_set:
+    - STD_name: null
   - or:
-    - intent: affirm 
-    - intent: I_have_questions
-  - action: utter_feel_free_to_ask
+    - intent: affirm
+    - intent: thank
+  - action: utter_shall_i_continue
+  - intent: affirm
+  - action: utter_prevention_STD 
+  - action: utter_shall_i_continue
+  - or:
+    - intent: affirm
+    - intent: thank
+  - action: utter_testing_recommendations
+  - checkpoint: check_flow_finished
 
-- story: thanking story without questions
+- story: user stops bot initiative flow to ask prevention which was what the bot was going to say
   steps:
-  - intent: thank 
-  - action: utter_thank_response
+  - intent: express_amusement
+  - action: utter_shall_i_continue
+  - intent: affirm
+  - action: utter_definition_STD
+  - action: utter_shall_i_continue
+  - intent: prevention_STD
+  - action: validate_std_name
+  - action: action_specific_prevention
+  - action: action_set_entity_none
+  - slot_was_set:
+    - STD_name: null
+  - intent: affirm
+  # - action: utter_prevention_STD
+  # - action: utter_shall_i_continue
+  # - intent: nlu_fallback
+  # - action: utter_did_not_understand
+  # - action: utter_by_the_way
+  # - action: utter_scope
+  # - intent: affirm
+  - action: utter_testing_recommendations
   - checkpoint: check_flow_finished
 
 
@@ -236,31 +229,3 @@ stories:
 #   # - action: utter_it_was_a_pleasure
 #   # - action: utter_goodbye
 
-# # TO DO: TREAT THANK YOU !!
-
-# # - story: happy path
-# #   steps:
-# #   - intent: greet
-# #   - action: utter_greet
-# #   - intent: mood_great
-# #   - action: utter_happy
-
-# - story: sad path 1
-#   steps:
-#   - intent: greet
-#   - action: utter_greet
-#   - intent: mood_unhappy
-#   - action: utter_cheer_up
-#   - action: utter_did_that_help
-#   - intent: affirm
-#   - action: utter_happy
-
-# - story: sad path 2
-#   steps:
-#   - intent: greet
-#   - action: utter_greet
-#   - intent: mood_unhappy
-#   - action: utter_cheer_up
-#   - action: utter_did_that_help
-#   - intent: deny
-#   - action: utter_goodbye

@@ -8,7 +8,7 @@ rules:
   steps:
   - intent: goodbye
   - action: utter_it_was_a_pleasure
-  - action: utter_feel_free_come_back 
+#  - action: utter_feel_free_come_back 
   - action: utter_goodbye
 
 - rule: Introduce ourselves at the beginning of a conversation
@@ -24,13 +24,6 @@ rules:
   - intent: greet
   - action: utter_greet
   - action: utter_any_questions
-#- rule: Respond to second greeting # TO DO: add position of rule not in beginning
-#  steps:
-#  - intent: greeting
-#  - action: utter_intro
-#  - intent: greeting
-#  - action: utter_second_greeting
-# Questions
 
 - rule: Answer scope everytime user asks for it or the user seems lost
   steps:
@@ -106,13 +99,7 @@ rules:
 #  - or:
 #    - intent: affirm
   - intent: I_have_questions 
-#  - action: validate_std_name
   - action: utter_feel_free_to_ask
-
-# - rule: Incentivate the user to ask a question everytime the user says they have questions 2
-#   steps: 
-#   - intent: I_have_questions
-#   - action: utter_feel_free_to_ask
 
 - rule: Answer source whenever user asks for it
   steps:
@@ -129,22 +116,9 @@ rules:
 #   - action: validate_std_name
 #   - action: utter_std_established
 
-- rule: Handle nlu fallback (a message with low NLU confidence ) gracefully
-  steps:
-  - intent: nlu_fallback
-  - action: utter_did_not_understand
-  - action: utter_by_the_way
-  - action: utter_scope
-  # - action: utter_cannot_help_with_that
-  # - action: utter_intro
+
 ###
 # Out of scope
-
-#### TO DO: ACTIVATE WHEN BOT BECOMES BETTER
-- rule: Answer that insults are not tolerated whenever an insult is identified
-  steps:
-  - intent: insults
-  - action: utter_handle_insults
 
 - rule: Handle out of scope questions gracefully
   steps:
@@ -153,6 +127,23 @@ rules:
   - action: utter_scope
   - action: utter_but
   - action: utter_find_more_info
+
+- rule: Handle nlu fallback (a message with low NLU confidence ) gracefully
+  steps:
+  - intent: nlu_fallback
+  - action: utter_did_not_understand
+  # - action: utter_by_the_way
+  # - action: utter_scope
+  # - action: utter_cannot_help_with_that
+  # - action: utter_intro
+
+- rule: Answer that insults are not tolerated whenever an insult is identified
+  steps:
+  - intent: insults
+  - action: utter_handle_insults
+
+
+#### TO DO: ACTIVATE WHEN BOT BECOMES BETTER
 
 # - rule: radically_out_of_scope
 #   steps:

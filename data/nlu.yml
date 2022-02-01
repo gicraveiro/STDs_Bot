@@ -128,6 +128,15 @@ nlu:
     - uhum
     - right, but only about [bv](STD_name)
     - ok, but specifically about [pid](STD_name)
+    - I guess so
+    - obviously 
+    - please
+    - makes sense
+    - I mean, if you think you should
+    - If you want to
+    - yes, thank you 
+    - I do, actually, tks for asking
+    - i do
 - intent: deny
   examples: |
     - no
@@ -146,6 +155,11 @@ nlu:
     - nope
     - please don't
     - stop
+    - no, thanks
+    - No, thank you 
+    - no, that's all
+    - not anymore 
+    - i do not
 - intent: I_have_questions
   examples: |
     - I have a question
