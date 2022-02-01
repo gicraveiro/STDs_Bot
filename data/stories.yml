@@ -10,7 +10,13 @@ stories:
   - action: utter_conclusion
   - action: utter_feel_free_come_back
 
-- story: user has a specific question
+- story: interruption
+  steps:
+  - action: utter_shall_i_continue
+  - intent: deny 
+  - action: check_flow_finished
+
+- story: user has questions
   steps:
   - action: utter_any_questions
   - or:
@@ -21,10 +27,10 @@ stories:
 #  - action: validate_std_name
   - action: utter_feel_free_to_ask
 
-- story: thanking story # with questions
-  steps:
-  - intent: thank 
-  - action: utter_thank_response
+# - story: thanking story # with questions
+#   steps:
+#   - intent: thank 
+#   - action: utter_thank_response
   # - action: utter_any_questions
   # - or:
   #   - intent: affirm 
@@ -37,39 +43,94 @@ stories:
 #   - action: utter_thank_response
 #   - checkpoint: check_flow_finished
 
-- story: bot_initiative_full with no std established starting by bot start
+- story: begin with bot initiative start
   steps:
-  - intent: bot_initiative_start
-  - action: utter_definition_STD # TO DO: CHANGE TO SPECIFIC ACTION
-  - action: utter_shall_i_continue
-  - intent: affirm
-  - action: utter_prevention_STD  # TO DO: CHANGE TO SPECIFIC ACTION
-  - action: utter_shall_i_continue
-  - intent: affirm
-  - action: utter_testing_recommendations 
-  - checkpoint: check_flow_finished
+  - action: utter_intro
+  - or:
+    - intent: bot_initiative_start
+    - intent: definition_STD
+  - checkpoint: continue_flow_with_definition_of_STD
 
-- story: bot_initiative_full with no std established starting by expression of amusement
+- story: begin with express amusement
   steps:
+  - action: utter_intro
   - intent: express_amusement
   - action: utter_shall_i_continue
-  - intent: affirm
-  - action: utter_definition_STD
+  - or:
+    - intent: affirm
+    - intent: definition_STD
+  - checkpoint: continue_flow_with_definition_of_STD
+
+- story: begin with user has questions, establish an std, but want bot initiative
+  steps:
+  - intent: I_have_questions
+    entities:
+    - STD_name 
+  - action: utter_feel_free_to_ask
+  - or: 
+    - intent: bot_initiative_start 
+    - intent: definition_STD
+  - action: validate_std_name
+  - checkpoint: continue_flow_with_definition_of_STD
+  # - action: utter_definition_STD 
+  # - action: utter_shall_i_continue
+  # - intent: affirm
+  # - action: validate_std_name
+  # - action: action_specific_transmission  
+  # - action: utter_shall_i_continue
+  # - intent: affirm
+  # - action: validate_std_name
+  # - action: action_specific_prevention #utter_prevention_STD
+  # - checkpoint: check_flow_finished
+
+- story: bot initiative full  #with no std established
+  steps:
+  - checkpoint: continue_flow_with_definition_of_STD
+  - action: validate_std_name
+  - action: action_specific_definition
+  - action: action_set_entity_none # CHANGE IT?
+  - or:
+    - intent: affirm
+    - intent: thank 
+    - intent: express_amusement
   - action: utter_shall_i_continue
-  - intent: affirm
-  - action: utter_prevention_STD 
+  - or:
+    - intent: affirm
+    - intent: prevention_STD
+  - action: validate_std_name
+  - action: action_specific_prevention
+  - action: action_set_entity_none
+  - action: utter_prevention_STD  # TO DO: CHANGE TO SPECIFIC ACTION
   - action: utter_shall_i_continue
-  - intent: affirm
+  - or:
+    - intent: affirm
+    - intent: testing_recommendations
   - action: utter_testing_recommendations 
   - checkpoint: check_flow_finished
 
-- story: bot_initiative_stopped1
-  steps:
-  - intent: bot_initiative_start
-  - action: utter_definition_STD
-  - action: utter_shall_i_continue
-  - intent: deny
-  - checkpoint: check_flow_finished
+# - story: bot_initiative_full with no std established starting by expression of amusement
+#   steps:
+#   - intent: express_amusement
+#   - action: utter_shall_i_continue
+#   - intent: affirm
+#   - action: utter_definition_STD
+#   - action: utter_shall_i_continue
+#   - intent: affirm
+#   - action: utter_prevention_STD 
+#   - action: utter_shall_i_continue
+#   - intent: affirm
+#   - action: utter_testing_recommendations 
+#   - checkpoint: check_flow_finished
+
+# story starts with questions ?
+
+# - story: bot_initiative_stopped1
+#   steps:
+#   - intent: bot_initiative_start
+#   - action: utter_definition_STD
+#   - action: utter_shall_i_continue
+#   - intent: deny
+#   - checkpoint: check_flow_finished
 
 # - story: bot_initiative_stopped2
 #   steps:
@@ -124,80 +185,62 @@ stories:
   #- intent: affirm
   #- action: utter_feel_free_to_ask
 
-- story: user starts by saying they have questions, establish an std, but want bot initiative
-  steps:
-  - intent: I_have_questions
-    entities:
-    - STD_name 
-  #- action: validate_std_name
-  - action: utter_feel_free_to_ask
-  - intent: bot_initiative_start # TO DO: include entity establishment?
-  - action: validate_std_name
-  - action: utter_definition_STD 
-  - action: utter_shall_i_continue
-  - intent: affirm
-  - action: validate_std_name
-  - action: action_specific_transmission  
-  - action: utter_shall_i_continue
-  - intent: affirm
-  - action: validate_std_name
-  - action: utter_prevention_STD
-  - checkpoint: check_flow_finished
 
-- story: user stops bot initiative flow to ask definition which was what the bot was going to say
-  steps:
-  - intent: express_amusement
-  - action: utter_shall_i_continue
-  - intent: definition_STD
-  - action: validate_std_name
-  - action: action_specific_definition
-  - action: action_set_entity_none
-  - slot_was_set:
-    - STD_name: null
-  - or:
-    - intent: affirm
-    - intent: thank
-  - action: utter_shall_i_continue
-  - intent: affirm
-  - action: utter_prevention_STD 
-  - action: utter_shall_i_continue
-  - or:
-    - intent: affirm
-    - intent: thank
-  - action: utter_testing_recommendations
-  - checkpoint: check_flow_finished
 
-- story: user stops bot initiative flow to ask prevention which was what the bot was going to say
-  steps:
-  - intent: express_amusement
-  - action: utter_shall_i_continue
-  - intent: affirm
-  - action: utter_definition_STD
-  - action: utter_shall_i_continue
-  - intent: prevention_STD
-  - action: validate_std_name
-  - action: action_specific_prevention
-  - action: action_set_entity_none
-  - slot_was_set:
-    - STD_name: null
-  - or:
-    - intent: affirm
-    - intent: thank
-  - action: utter_testing_recommendations
-  - checkpoint: check_flow_finished
+# - story: user stops bot initiative flow to ask definition which was what the bot was going to say
+#   steps:
+#   - intent: express_amusement
+#   - action: utter_shall_i_continue
+#   - intent: definition_STD
+#   - action: validate_std_name
+#   - action: action_specific_definition
+#   - action: action_set_entity_none
+#   - slot_was_set:
+#     - STD_name: null
+#   - or:
+#     - intent: affirm
+#     - intent: thank
+#   - action: utter_shall_i_continue
+#   - intent: affirm
+#   - action: utter_prevention_STD 
+#   - action: utter_shall_i_continue
+#   - or:
+#     - intent: affirm
+#     - intent: thank
+#   - action: utter_testing_recommendations
+#   - checkpoint: check_flow_finished
 
-- story: user stops bot initiative flow to ask testing recommendations which was what the bot was going to say
-  steps:
-  - intent: bot_initiative_start
-  - action: utter_definition_STD # TO DO: CHANGE TO SPECIFIC ACTION
-  - action: utter_shall_i_continue
-  - intent: affirm
-  - action: utter_prevention_STD  # TO DO: CHANGE TO SPECIFIC ACTION
-  - action: utter_shall_i_continue
-  - intent: affirm
-  - intent: testing_recommendations
-  - action: utter_testing_recommendations
-  - checkpoint: check_flow_finished
+# - story: user stops bot initiative flow to ask prevention which was what the bot was going to say
+#   steps:
+#   - intent: express_amusement
+#   - action: utter_shall_i_continue
+#   - intent: affirm
+#   - action: utter_definition_STD
+#   - action: utter_shall_i_continue
+#   - intent: prevention_STD
+#   - action: validate_std_name
+#   - action: action_specific_prevention
+#   - action: action_set_entity_none
+#   - slot_was_set:
+#     - STD_name: null
+#   - or:
+#     - intent: affirm
+#     - intent: thank
+#   - action: utter_testing_recommendations
+#   - checkpoint: check_flow_finished
+
+# - story: user stops bot initiative flow to ask testing recommendations which was what the bot was going to say
+#   steps:
+#   - intent: bot_initiative_start
+#   - action: utter_definition_STD # TO DO: CHANGE TO SPECIFIC ACTION
+#   - action: utter_shall_i_continue
+#   - intent: affirm
+#   - action: utter_prevention_STD  # TO DO: CHANGE TO SPECIFIC ACTION
+#   - action: utter_shall_i_continue
+#   - intent: affirm
+#   - intent: testing_recommendations
+#   - action: utter_testing_recommendations
+#   - checkpoint: check_flow_finished
 
 
 # - story: mixed_initiative

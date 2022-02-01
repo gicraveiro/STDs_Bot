@@ -137,6 +137,7 @@ nlu:
     - yes, thank you 
     - I do, actually, tks for asking
     - i do
+    - yes, continue
 - intent: deny
   examples: |
     - no

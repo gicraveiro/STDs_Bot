@@ -10,6 +10,13 @@ rules:
   - action: utter_it_was_a_pleasure
 #  - action: utter_feel_free_come_back 
   - action: utter_goodbye
+  wait_for_user_input: false
+
+- rule: Respond to thank you # with questions
+  steps:
+  - intent: thank 
+  - action: utter_thank_response
+  wait_for_user_input: false
 
 - rule: Introduce ourselves at the beginning of a conversation
   conversation_start: true
@@ -31,11 +38,13 @@ rules:
     - intent: ask_scope
     - intent: lost_user
   - action: utter_scope
+  #wait_for_user_input: false
 
 - rule: Give testing recommendations everytime user asks for it
   steps:
   - intent: testing_recommendations
   - action: utter_testing_recommendations
+  wait_for_user_input: false
 
 - rule: Answer the definition of STDs anytime the user asks for it 
   steps: 
@@ -43,6 +52,7 @@ rules:
   - action: validate_std_name
   - action: action_specific_definition
   - action: action_set_entity_none
+  #wait_for_user_input: false
 
 - rule: Answer the list of STDs anytime the user asks for it 
   steps: 
@@ -50,6 +60,7 @@ rules:
   - action: utter_list_STD_intro
   - action: action_list_names 
   - action: utter_list_STD_conclusion
+  #wait_for_user_input: false
 
 - rule: Answer the transmission of STDs anytime the user asks for it 
   steps: 
@@ -57,6 +68,7 @@ rules:
   - action: validate_std_name
   - action: action_specific_transmission  
   - action: action_set_entity_none
+  #wait_for_user_input: false
 
 - rule: Answer the prevention of STDs anytime the user asks for it 
   steps: 
@@ -64,6 +76,7 @@ rules:
   - action: validate_std_name
   - action: action_specific_prevention
   - action: action_set_entity_none
+  #wait_for_user_input: false
 
 - rule: Answer the diagnosis of STDs anytime the user asks for it 
   steps: 
@@ -71,6 +84,7 @@ rules:
   - action: validate_std_name
   - action: action_specific_diagnosis
   - action: action_set_entity_none
+  #wait_for_user_input: false
 
 - rule: Answer the symptoms of STDs anytime the user asks for it 
   steps: 
@@ -78,6 +92,7 @@ rules:
   - action: validate_std_name
   - action: action_specific_symptoms
   - action: action_set_entity_none
+  #wait_for_user_input: false
 
 - rule: Answer the treatment of STDs anytime the user asks for it 
   steps: 
@@ -85,6 +100,7 @@ rules:
   - action: validate_std_name
   - action: action_specific_treatment
   - action: action_set_entity_none
+  #wait_for_user_input: false
 
 - rule: Answer the consequences of STDs anytime the user asks for it 
   steps: 
@@ -92,6 +108,7 @@ rules:
   - action: validate_std_name
   - action: action_specific_consequences
   - action: action_set_entity_none
+  #wait_for_user_input: false
 
 - rule: Incentivate the user to ask a question everytime the user says they have questions
   steps: 
