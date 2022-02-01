@@ -130,6 +130,9 @@ responses:
   utter_shall_i_continue:
   - text: "Shall I continue?\n"
 
+  utter_would_like_to_begin_flow:
+  - text: "Would you like me to tell you some important information?\n"
+
   utter_any_questions:
   - text: "Do you have any questions?\n"
 

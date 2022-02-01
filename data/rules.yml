@@ -12,11 +12,11 @@ rules:
   - action: utter_goodbye
   wait_for_user_input: false
 
-- rule: Respond to thank you # with questions
-  steps:
-  - intent: thank 
-  - action: utter_thank_response
-  wait_for_user_input: false
+# - rule: Respond to thank you # with questions
+#   steps:
+#   - intent: thank 
+#   - action: utter_thank_response
+#   wait_for_user_input: false
 
 - rule: Introduce ourselves at the beginning of a conversation
   conversation_start: true
@@ -76,7 +76,7 @@ rules:
   - action: validate_std_name
   - action: action_specific_prevention
   - action: action_set_entity_none
-  #wait_for_user_input: false
+  wait_for_user_input: false
 
 - rule: Answer the diagnosis of STDs anytime the user asks for it 
   steps: 
