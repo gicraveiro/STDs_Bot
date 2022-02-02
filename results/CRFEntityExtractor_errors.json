@@ -1,21 +1,21 @@
 [
   {
-    "text": "what info can you tell me on HEPATITIS",
+    "text": "what's the recommended frequency to do tests for GONORRHEA",
     "entities": [
       {
-        "start": 29,
-        "end": 38,
-        "value": "HEPATITIS",
+        "start": 49,
+        "end": 58,
+        "value": "GONORRHEA",
         "entity": "STD_name"
       }
     ],
     "predicted_entities": [
       {
         "entity": "STD_name",
-        "start": 29,
-        "end": 38,
-        "confidence_entity": 0.9940005540847778,
-        "value": "HEPATITIS",
+        "start": 49,
+        "end": 58,
+        "confidence_entity": 0.9996143579483032,
+        "value": "GONORRHEA",
         "extractor": "DIETClassifier"
       }
     ]
@@ -35,7 +35,7 @@
         "entity": "STD_name",
         "start": 35,
         "end": 38,
-        "confidence_entity": 0.9979015588760376,
+        "confidence_entity": 0.9981953501701355,
         "value": "AIDs",
         "extractor": "DIETClassifier",
         "processors": [
@@ -45,16 +45,25 @@
     ]
   },
   {
-    "text": "I have questions about Chancroid",
+    "text": "my partner passed me syphilis. What do I do?",
     "entities": [
       {
-        "start": 23,
-        "end": 32,
-        "value": "Chancroid",
+        "start": 21,
+        "end": 29,
+        "value": "syphilis",
         "entity": "STD_name"
       }
     ],
-    "predicted_entities": []
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 21,
+        "end": 29,
+        "confidence_entity": 0.9995879530906677,
+        "value": "syphilis",
+        "extractor": "DIETClassifier"
+      }
+    ]
   },
   {
     "text": "is it possible to catch hpv with just skin contact?",
@@ -71,7 +80,7 @@
         "entity": "STD_name",
         "start": 24,
         "end": 27,
-        "confidence_entity": 0.8224027752876282,
+        "confidence_entity": 0.6610397696495056,
         "value": "HPV Infection",
         "extractor": "DIETClassifier",
         "processors": [
@@ -81,43 +90,44 @@
     ]
   },
   {
-    "text": "which are the complications if you don't treat Hepatitis B?",
-    "entities": [
-      {
-        "start": 47,
-        "end": 58,
-        "value": "Hepatitis B",
-        "entity": "STD_name"
-      }
-    ],
+    "text": "can I get [HPV infection] from oral sex?",
+    "entities": [],
     "predicted_entities": [
       {
         "entity": "STD_name",
-        "start": 47,
-        "end": 56,
-        "confidence_entity": 0.932128369808197,
-        "value": "Hepatitis",
+        "start": 11,
+        "end": 24,
+        "confidence_entity": 0.9813838601112366,
+        "value": "HPV infection",
         "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "STD_name",
+        "start": 11,
+        "end": 24,
+        "confidence_entity": 0.7221357928317081,
+        "value": "HPV infection",
+        "extractor": "CRFEntityExtractor"
       }
     ]
   },
   {
-    "text": "what if I am hiv positive",
+    "text": "are there more dangerous stds, other than PID?",
     "entities": [
       {
-        "start": 13,
-        "end": 16,
-        "value": "hiv",
+        "start": 42,
+        "end": 45,
+        "value": "PID",
         "entity": "STD_name"
       }
     ],
     "predicted_entities": [
       {
         "entity": "STD_name",
-        "start": 13,
-        "end": 16,
-        "confidence_entity": 0.9999352693557739,
-        "value": "AIDs",
+        "start": 42,
+        "end": 45,
+        "confidence_entity": 0.999916672706604,
+        "value": "Pelvic Inflammatory Disease",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"
@@ -140,55 +150,75 @@
         "entity": "STD_name",
         "start": 17,
         "end": 21,
-        "confidence_entity": 0.999894380569458,
+        "confidence_entity": 0.9997084736824036,
         "value": "AIDs",
         "extractor": "DIETClassifier"
       }
     ]
   },
   {
-    "text": "can I get [HPV infection] from oral sex?",
-    "entities": [],
-    "predicted_entities": [
-      {
-        "entity": "STD_name",
-        "start": 11,
-        "end": 24,
-        "confidence_entity": 0.9056774377822876,
-        "value": "HPV infection",
-        "extractor": "DIETClassifier"
-      },
-      {
-        "entity": "STD_name",
-        "start": 11,
-        "end": 24,
-        "confidence_entity": 0.8240684429532912,
-        "value": "HPV infection",
-        "extractor": "CRFEntityExtractor"
-      }
-    ]
-  },
-  {
-    "text": "are there more dangerous stds, other than PID?",
+    "text": "what info can you tell me on HEPATITIS",
     "entities": [
       {
-        "start": 42,
-        "end": 45,
-        "value": "PID",
+        "start": 29,
+        "end": 38,
+        "value": "HEPATITIS",
         "entity": "STD_name"
       }
     ],
     "predicted_entities": [
       {
         "entity": "STD_name",
-        "start": 42,
-        "end": 45,
-        "confidence_entity": 0.9999094009399414,
-        "value": "Pelvic Inflammatory Disease",
+        "start": 29,
+        "end": 38,
+        "confidence_entity": 0.9916439652442932,
+        "value": "HEPATITIS",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "what if I am hiv positive",
+    "entities": [
+      {
+        "start": 13,
+        "end": 16,
+        "value": "hiv",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 13,
+        "end": 16,
+        "confidence_entity": 0.9996063113212585,
+        "value": "AIDs",
         "extractor": "DIETClassifier",
         "processors": [
           "EntitySynonymMapper"
         ]
+      }
+    ]
+  },
+  {
+    "text": "which are the complications if you don't treat Hepatitis B?",
+    "entities": [
+      {
+        "start": 47,
+        "end": 58,
+        "value": "Hepatitis B",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 47,
+        "end": 56,
+        "confidence_entity": 0.958238422870636,
+        "value": "Hepatitis",
+        "extractor": "DIETClassifier"
       }
     ]
   }

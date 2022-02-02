@@ -494,23 +494,22 @@ nlu:
     - how can I diagnose an std?
     - how will I know if I have it
     - find out if I have [pid](STD_name)
-    - are there any tests that show the presence of an infection
+    - are there any tests that diagnose sexually transmitted infections?
     - how to tell if I'm contaminated
     - what are the tests to be diagnosed with an sti
     - how do I know if I have an std
-    - how to test myself
-    - do pharmacys perform tests?
+    - how to test myself for [bacterial vaginosis](STD_name)
     - how can my doctor find out if I have an std
     - show me how to discover if I'm infected
     - how to diagnose [hepatitis b]["entity": "STD_name"]
     - how to know if I'm [HIV]["entity": "STD_name"] positive
-    - how can I test for [bv]["entity": "STD_name"]
+    - how can I find out if I have [bv]["entity": "STD_name"]
     - I had sex with someone who had [chlamydia](STD_name). Am I infected?
     - My boyfriend has [hpv infection](STD_name). How do I know if I do too?
-    - I think I have [pid](STD_name)
     - I might be infected with [gonorrhea](STD_name)
-    - I'm worried I might have an sti
-    - is there a test for [hpv](STD_name)?
+    - is there a test to diagnose [hpv](STD_name)?
+    - tests to find out if I have stds
+    - how to know if I have [Chlamydia](STD_name)
 
 - intent: symptoms_STD
   examples: |
@@ -652,28 +651,42 @@ nlu:
     - which stds can be diagnosed with tests?
     - is it free to get a diagnosis?
     - where can I go for testing?
+    - where in the world are stds common?
+    - is the vaccine for [HPV](STD_name) free?
+    - how much does it cost medicine for [Chlamydia](STD_name)
 
 - intent: insults
   examples: |
-    - stupid bot
+    - stupid
     - piece of shit
     - fuck you
+    - useless
+    - ridiculous
+    - slave
+    - bitch
+    - you idiot
+    - you slave
+    - ridiculous bitch
+    - blow me
+    - slut
+    - go to hell 
+    - stupid shitty slut 
+    - useless slave 
+    - blow me, idiot
+    - you're useless 
+    - stupid bot
     - useless robot
     - you are ridiculous
     - you're my slave
     - why are you so stupid
-    - bitch
-    - you idiot
-    - ridiculous bitch
-    - you're awful
-    - blow me
-    - slut
     - bots are slaves of humans
-    - go to hell 
-    - go fuck yourself 
-    - stupid shitty bot
+    - go fuck yourself
     - you're such an idiot
     - YOU ARE A SLUT
+  # - you're awful
+  # - stupid shitty bot
+  # - bitch please 
+  # - that was an awful answer, like you
   #  - show me your ass
   #  - how do you know so much, you must be a slut
   #  - I bet you've had a lot of sex
