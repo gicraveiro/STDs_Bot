@@ -14,19 +14,19 @@ stories:
     - intent: definition_STD
   - checkpoint: start_flow_with_no_STD_established
 
-- story: begin with bot initiative start - specific std
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - action: utter_intro
-  - or:
-    - intent: advance_plot
-      entities:
-      - STD_name
-    - intent: definition_STD
-      entities:
-      - STD_name
-  - checkpoint: start_flow_with_specific_STD
+# - story: begin with bot initiative start - specific std
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - action: utter_intro
+#   - or:
+#     - intent: advance_plot
+#       entities:
+#       - STD_name
+#     - intent: definition_STD
+#       entities:
+#       - STD_name
+#   - checkpoint: start_flow_with_specific_STD
 
 - story: begin with express amusement - no stds 
   steps:
@@ -42,23 +42,23 @@ stories:
     - intent: definition_STD
   - checkpoint: start_flow_with_no_STD_established
 
-- story: begin with express amusement - specific std
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - action: utter_intro
-  - or:
-    - intent: express_amusement
-    - intent: affirm
-  - action: utter_shall_i_continue
-  - or:
-    - intent: affirm
-      entities:
-      - STD_name
-    - intent: definition_STD
-      entities:
-      - STD_name
-  - checkpoint: start_flow_with_specific_STD
+# - story: begin with express amusement - specific std
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - action: utter_intro
+#   - or:
+#     - intent: express_amusement
+#     - intent: affirm
+#   - action: utter_shall_i_continue
+#   - or:
+#     - intent: affirm
+#       entities:
+#       - STD_name
+#     - intent: definition_STD
+#       entities:
+#       - STD_name
+#   - checkpoint: start_flow_with_specific_STD
 
 - story: begin with user has questions - no stds
   steps:
@@ -69,17 +69,17 @@ stories:
     - intent: definition_STD
   - checkpoint: start_flow_with_no_STD_established
 
-- story: begin with user has questions, establish an std, but want bot initiative
-  steps:
-  - intent: I_have_questions
-    entities:
-    - STD_name 
-#  - action: validate_std_name
-  - action: utter_feel_free_to_ask
-  - or: 
-    - intent: advance_plot 
-    - intent: definition_STD
-  - checkpoint: start_flow_with_specific_STD
+# - story: begin with user has questions, establish an std, but want bot initiative
+#   steps:
+#   - intent: I_have_questions
+#     entities:
+#     - STD_name 
+# #  - action: validate_std_name
+#   - action: utter_feel_free_to_ask
+#   - or: 
+#     - intent: advance_plot 
+#     - intent: definition_STD
+#   - checkpoint: start_flow_with_specific_STD
 
 # HAPPY PATH WITH BOT INITIATIVE - CORE
 
@@ -124,42 +124,42 @@ stories:
 
 ##
 
-- story: bot initiative full with an std established
-  steps:
-  - checkpoint: start_flow_with_specific_STD
-  - action: validate_std_name
-  - action: action_specific_definition
-#  - action: action_set_entity_none # CHANGE IT?
-  - or:
-    - intent: affirm
-    - intent: thank 
-    - intent: express_amusement
-    - intent: advance_plot
-  - action: utter_shall_i_continue
-  - or:
-    - intent: affirm
-    - intent: transmission_STD
-    - intent: advance_plot
-  - action: validate_std_name
-  - action: action_specific_transmission
-#  - action: action_set_entity_none
-  - action: utter_shall_i_continue
-  - or:
-    - intent: affirm
-    - intent: prevention_STD
-    - intent: advance_plot
-  - action: validate_std_name
-  - action: action_specific_prevention
-#  - action: action_set_entity_none
-#  - checkpoint: check_flow_finished
-  - action: utter_any_questions
-  - intent: deny
-  - action: utter_conclusion
-  - action: utter_feel_free_come_back
-  - or:
-    - intent: goodbye
-    - intent: thank 
-    - intent: affirm
+# - story: bot initiative full with an std established
+#   steps:
+#   - checkpoint: start_flow_with_specific_STD
+#   - action: validate_std_name
+#   - action: action_specific_definition
+# #  - action: action_set_entity_none # CHANGE IT?
+#   - or:
+#     - intent: affirm
+#     - intent: thank 
+#     - intent: express_amusement
+#     - intent: advance_plot
+#   - action: utter_shall_i_continue
+#   - or:
+#     - intent: affirm
+#     - intent: transmission_STD
+#     - intent: advance_plot
+#   - action: validate_std_name
+#   - action: action_specific_transmission
+# #  - action: action_set_entity_none
+#   - action: utter_shall_i_continue
+#   - or:
+#     - intent: affirm
+#     - intent: prevention_STD
+#     - intent: advance_plot
+#   - action: validate_std_name
+#   - action: action_specific_prevention
+# #  - action: action_set_entity_none
+# #  - checkpoint: check_flow_finished
+#   - action: utter_any_questions
+#   - intent: deny
+#   - action: utter_conclusion
+#   - action: utter_feel_free_come_back
+#   - or:
+#     - intent: goodbye
+#     - intent: thank 
+#     - intent: affirm
 
 ###
 
