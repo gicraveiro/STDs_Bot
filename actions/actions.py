@@ -5,7 +5,7 @@
 # https://rasa.com/docs/rasa/custom-actions
 
 from typing import Any, Text, Dict, List
-from rasa_sdk import Action, Tracker, FormValidationAction
+from rasa_sdk import Action, Tracker #, FormValidationAction
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet #, FollowupAction
 #from rasa_sdk import ValidationAction
@@ -23,7 +23,7 @@ class ActionValidate_STD(Action):
     domain: Dict[Text, Any]) -> List[Dict[Text,Any]]:
 
         slot_value = tracker.get_slot('STD_name')
-        df = pd.read_csv('data/STDSDatabase.csv')
+        df = pd.read_csv('data/STDSDatabase.csv', sep=',')
 
         if (slot_value is not None):
             best_match = 0
@@ -67,7 +67,7 @@ class ActionListNames(Action):
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
             #df = pd.read_csv('FinalProject/data/STDSDatabase.csv')
-            df = pd.read_csv('data/STDSDatabase.csv')
+            df = pd.read_csv('data/STDSDatabase.csv', sep=',')
 
             for i, j in df.iterrows():
                 dispatcher.utter_message(text=j['Name'])
@@ -88,7 +88,7 @@ class ActionTransmission(Action):
             dispatcher.utter_message(response="utter_transmission_STD")
             return []
 
-        df = pd.read_csv('data/STDSDatabase.csv')
+        df = pd.read_csv('data/STDSDatabase.csv', sep=',')
         flag = 0
         for i, j in df.iterrows():
 
@@ -118,7 +118,7 @@ class ActionPrevention(Action):
             dispatcher.utter_message(response="utter_prevention_STD")
             return []
 
-        df = pd.read_csv('data/STDSDatabase.csv')
+        df = pd.read_csv('data/STDSDatabase.csv', sep=',')
         flag = 0
         for i, j in df.iterrows():
 
@@ -148,7 +148,7 @@ class ActionDefinition(Action):
             dispatcher.utter_message(response="utter_definition_STD")
             return []
 
-        df = pd.read_csv('data/STDSDatabase.csv')
+        df = pd.read_csv('data/STDSDatabase.csv', sep=',')
         flag = 0
         for i, j in df.iterrows():
 
@@ -178,7 +178,7 @@ class ActionDiagnosis(Action):
             dispatcher.utter_message(response="utter_diagnosis_STD")
             return []
 
-        df = pd.read_csv('data/STDSDatabase.csv')
+        df = pd.read_csv('data/STDSDatabase.csv', sep=',')
         flag = 0
         for i, j in df.iterrows():
 
@@ -208,7 +208,7 @@ class ActionSymptoms(Action):
             dispatcher.utter_message(response="utter_symptoms_STD")
             return []
 
-        df = pd.read_csv('data/STDSDatabase.csv')
+        df = pd.read_csv('data/STDSDatabase.csv', sep=',')
         flag = 0
         for i, j in df.iterrows():
 
@@ -238,7 +238,7 @@ class ActionTreatment(Action):
             dispatcher.utter_message(response="utter_treatment_STD")
             return []
 
-        df = pd.read_csv('data/STDSDatabase.csv')
+        df = pd.read_csv('data/STDSDatabase.csv', sep=',')
         flag = 0
         for i, j in df.iterrows():
 
@@ -268,7 +268,7 @@ class ActionConsequences(Action):
             dispatcher.utter_message(response="utter_consequences_STD")
             return []
 
-        df = pd.read_csv('data/STDSDatabase.csv')
+        df = pd.read_csv('data/STDSDatabase.csv', sep=',')
         flag = 0
         for i, j in df.iterrows():
 

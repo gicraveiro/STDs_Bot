@@ -4,25 +4,60 @@ rules:
 
 # Greetings
 
+- rule: user wants to remove entity set 
+  steps: 
+  - intent: set_entity_none
+  - action: action_set_entity_none
+
 - rule: Say goodbye anytime the user says goodbye
   steps:
   - intent: goodbye
+  - action: utter_it_was_a_pleasure
+#  - action: utter_feel_free_come_back 
   - action: utter_goodbye
+  #wait_for_user_input: false
 
-#- rule: Respond to second greeting # TO DO: add position of rule not in beginning
-#  steps:
-#  - intent: greeting
-#  - action: utter_intro
-#  - intent: greeting
-#  - action: utter_second_greeting
-# Questions
+# - rule: Respond to thank you # with questions
+#   steps:
+#   - intent: thank 
+#   - action: utter_thank_response
+#   wait_for_user_input: false
+
+- rule: Introduce ourselves at the beginning of a conversation
+  conversation_start: true
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_intro
+
+- rule: Respond greeting and ask if the user has any questions if the user greets at the middle of a conversation
+  conversation_start: false
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_any_questions
+
+- rule: Answer scope everytime user asks for it or the user seems lost
+  steps:
+  - or: 
+    - intent: ask_scope
+    - intent: lost_user
+  - action: utter_scope
+  #wait_for_user_input: false
+
+- rule: Give testing recommendations everytime user asks for it
+  steps:
+  - intent: testing_recommendations
+  - action: utter_testing_recommendations
+  wait_for_user_input: false
 
 - rule: Answer the definition of STDs anytime the user asks for it 
   steps: 
   - intent: definition_STD
   - action: validate_std_name
   - action: action_specific_definition
-  - action: action_set_entity_none
+#  - action: action_set_entity_none
+  wait_for_user_input: false
 
 - rule: Answer the list of STDs anytime the user asks for it 
   steps: 
@@ -30,48 +65,55 @@ rules:
   - action: utter_list_STD_intro
   - action: action_list_names 
   - action: utter_list_STD_conclusion
+  #wait_for_user_input: false
 
 - rule: Answer the transmission of STDs anytime the user asks for it 
   steps: 
   - intent: transmission_STD
   - action: validate_std_name
   - action: action_specific_transmission  
-  - action: action_set_entity_none
+ # - action: action_set_entity_none
+  wait_for_user_input: false
 
 - rule: Answer the prevention of STDs anytime the user asks for it 
   steps: 
   - intent: prevention_STD
   - action: validate_std_name
   - action: action_specific_prevention
-  - action: action_set_entity_none
+ # - action: action_set_entity_none
+  wait_for_user_input: false
 
 - rule: Answer the diagnosis of STDs anytime the user asks for it 
   steps: 
   - intent: diagnosis_STD
   - action: validate_std_name
   - action: action_specific_diagnosis
-  - action: action_set_entity_none
+#  - action: action_set_entity_none
+  #wait_for_user_input: false
 
 - rule: Answer the symptoms of STDs anytime the user asks for it 
   steps: 
   - intent: symptoms_STD
   - action: validate_std_name
   - action: action_specific_symptoms
-  - action: action_set_entity_none
+#  - action: action_set_entity_none
+  #wait_for_user_input: false
 
 - rule: Answer the treatment of STDs anytime the user asks for it 
   steps: 
   - intent: treatment_STD
   - action: validate_std_name
   - action: action_specific_treatment
-  - action: action_set_entity_none
+#  - action: action_set_entity_none
+  #wait_for_user_input: false
 
 - rule: Answer the consequences of STDs anytime the user asks for it 
   steps: 
   - intent: consequences_STD
   - action: validate_std_name
   - action: action_specific_consequences
-  - action: action_set_entity_none
+#  - action: action_set_entity_none
+  #wait_for_user_input: false
 
 - rule: Incentivate the user to ask a question everytime the user says they have questions
   steps: 
@@ -79,13 +121,7 @@ rules:
 #  - or:
 #    - intent: affirm
   - intent: I_have_questions 
-  - action: validate_std_name
   - action: utter_feel_free_to_ask
-
-# - rule: Incentivate the user to ask a question everytime the user says they have questions 2
-#   steps: 
-#   - intent: I_have_questions
-#   - action: utter_feel_free_to_ask
 
 - rule: Answer source whenever user asks for it
   steps:
@@ -102,20 +138,34 @@ rules:
 #   - action: validate_std_name
 #   - action: utter_std_established
 
-- rule: Handle nlu fallback (a message with low NLU confidence ) gracefully
-  steps:
-  - intent: nlu_fallback
-  - action: utter_cannot_help_with_that
-  - action: utter_but
-  - action: utter_find_more_info
+
 ###
 # Out of scope
 
+- rule: Handle out of scope questions gracefully
+  steps:
+  - intent: out_of_scope
+  - action: utter_cannot_help_with_that
+  - action: utter_scope
+  - action: utter_but
+  - action: utter_find_more_info
+
+- rule: Handle nlu fallback (a message with low NLU confidence ) gracefully
+  steps:
+  - intent: nlu_fallback
+  - action: utter_did_not_understand
+  # - action: utter_by_the_way
+  # - action: utter_scope
+  # - action: utter_cannot_help_with_that
+  # - action: utter_intro
+
+- rule: Answer that insults are not tolerated whenever an insult is identified
+  steps:
+  - intent: insults
+  - action: utter_handle_insults
+
+
 #### TO DO: ACTIVATE WHEN BOT BECOMES BETTER
-# - rule: handle_insults
-#   steps:
-#   - intent: insults
-#   - action: utter_handle_insults
 
 # - rule: radically_out_of_scope
 #   steps:

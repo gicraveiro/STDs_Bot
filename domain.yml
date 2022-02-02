@@ -8,9 +8,10 @@ intents:
   - express_amusement
   - I_have_questions
   - thank
-  - bot_initiative_start   # General questions  # - intro
+  - advance_plot   # General questions  # - intro
+  - ask_scope
   - list_STD
-  - testing_STD
+  - testing_recommendations
   - ask_source
   - find_more_info
   - definition_STD
@@ -20,6 +21,12 @@ intents:
   - diagnosis_STD
   - symptoms_STD
   - consequences_STD
+  # out of scope
+  - out_of_scope
+  - insults
+  - set_entity_none
+  - lost_user 
+  - nlu_fallback
   #- source # bacteria, fungus, virus
   
   #   - establish_std_name:
@@ -45,8 +52,8 @@ slots:
 responses:
 
 # TEST
-  utter_std_established:
-  - text: "Sure! Feel free to ask questions about {STD_name}"
+#   utter_std_established:
+#   - text: "Sure! Feel free to ask questions about {STD_name}"
 
 #####
 # General questions
@@ -77,25 +84,33 @@ responses:
   - text: "My answer for questions of general prevention of STDs were composed by extracting and putting together information from these 2 links:\n\n\n   - https://www.cdc.gov/std/prevention/default.htm\n\n\n  - https://www.cdc.gov/std/prevention/lowdown/lowdown-text-only.htm\n\n\n"
   
   utter_diagnosis_STD:
-  - text: "Diagnosis" 
+  - text: |-
+      If you are sexually active, getting tested for STDs is one of the most important things you can do to protect your health.
+
+      Make sure you have an open and honest conversation about your sexual history and STD testing with your doctor and ask whether you should be tested for STDs.
+
+      Many STDs don’t have symptoms, but they can still cause health problems. The only way to know for sure if you have an STD is to get tested.
 #   utter_diagnosis_source:
 #   - text: "My answer for questions of general transmission of STDs was composed by extracting and putting together information from this link: https://www.cdc.gov/std/general/default.htm\n\n\n"
   
   utter_symptoms_STD:
-  - text: "Sypmtoms" 
+  - text: STDs don’t always cause symptoms or may only cause mild symptoms. Therefore, it is possible to have an infection and not know it. That is why getting an STD test is important if you are having sex. 
 #   utter_symptoms_source:
 #   - text: "My answer for questions of general transmission of STDs was composed by extracting and putting together information from this link: https://www.cdc.gov/std/general/default.htm\n\n\n"
   
   utter_treatment_STD:
-  - text: "Treatment" 
+  - text: Getting an STD is not the end! Many STDs are curable and all are treatable. If either you or your partner is infected with an STD that can be cured, both of you need to start treatment immediately to avoid getting re-infected.
 #   utter_treatment_source:
 #   - text: "My answer for questions of general transmission of STDs was composed by extracting and putting together information from this link: https://www.cdc.gov/std/general/default.htm\n\n\n"
   
-  utter_consequences_STD:
-  - text:  "Consequences" 
+  utter_treatment_source:
+  - text: |+
+      My answer for questions of general transmission of STDs was composed by extracting and putting together information from this link: https://www.cdc.gov/std/prevention/lowdown/lowdown-text-only.htm
 #   utter_consequences_source:
 #   - text: "My answer for questions of general transmission of STDs was composed by extracting and putting together information from this link: https://www.cdc.gov/std/general/default.htm\n\n\n"
-  
+  utter_consequences_STD:
+  - text: STDs don’t always cause symptoms or may only cause mild symptoms. Therefore, it is possible to have an infection and not know it. That is why getting an STD test is important if you are having sex. If you receive a positive STD diagnosis, know that all are treatable with medicine and some are curable entirely.
+
 
   # utter_treatment_STD:
   # - text: 
@@ -118,6 +133,9 @@ responses:
   utter_shall_i_continue:
   - text: "Shall I continue?\n"
 
+  utter_would_like_to_begin_flow:
+  - text: "Would you like me to tell you some important information?\n"
+
   utter_any_questions:
   - text: "Do you have any questions?\n"
 
@@ -127,8 +145,14 @@ responses:
   utter_did_not_understand:
   - text: "I'm sorry. I couldn't understand what you just said. Can you rephrase it, please?\n"
 
+  utter_by_the_way:
+  - text: By the way
+
   utter_cannot_help_with_that:
   - text: "I'm sorry. I can't help you with that.\n"
+
+  utter_thank_response:
+  - text: "You're welcome!"
 
   utter_but:
   - text: "But"
@@ -142,6 +166,8 @@ responses:
   utter_find_more_info: 
   - text: "You can find more information here: https://www.cdc.gov/std/default.htm\n\n" # TO DO: ADD SOURCE
 
+  utter_scope:
+  - text: "I can answer questions regarding definition, transmission, prevention, treatment, diagnosis, symptoms and possible health consequences of the stds in my database.\n\nI can also answer these questions without specifying an std, list the stis in my database and give testing recommendations.\n\nFinally, I can tell you the source of my database."
   
   # utter_did_that_help:
   # - text: "Did that help you?"
@@ -149,25 +175,24 @@ responses:
 #####
 # Out of scope
 
-# HANDLE INSULTS/HARASSMENT
-  utter_handle_insults:
-  - text: "I do not tolerate being disrespected. Talk to me when you are ready to be polite."
-
-
 #####
 # Greetings
 
+# HANDLE INSULTS/HARASSMENT
+  utter_handle_insults:
+  - text: I do not tolerate being disrespected. Talk to me when you are ready to be polite.
   utter_intro:
-  - text: "My name is Sexy. I was built to spread knowledge about STDs, so that everyone can have a healthy, safe and happy sex life."
-
+  - text: My name is Sexy. I was built to spread knowledge about STDs, so that everyone can have a healthy, safe and happy sex life.
   utter_greet:
-  - text: "Hey there!" #" How are you?"
-
+  - text: Hey there!
   utter_conclusion:
-  - text: "Then, that is all for now. If anything comes to mind, feel free to come back!"
-
+  - text: Then, that is all for now.
+  utter_feel_free_come_back:
+  - text: If anything comes to mind, feel free to come back!
+  utter_it_was_a_pleasure:
+  - text: Thanks for dropping by. It was a pleasure to talk to you.
   utter_goodbye:
-  - text: "Bye-bye!" # If anything comes to mind, feel free to come back!"
+  - text: Bye-bye!
 
 
 #####
@@ -199,3 +224,6 @@ actions:
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+
+
+
