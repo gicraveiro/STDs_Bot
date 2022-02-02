@@ -37,6 +37,7 @@ policies:
 # # If you'd like to customize them, uncomment and adjust the policies.
 # # See https://rasa.com/docs/rasa/policies for more information.
   - name: MemoizationPolicy # try augmented memoization policy!!! to forget some steps of the story, here is the place where we'll try to not repeat explanations
+    #max_history: None
   - name: RulePolicy
     core_fallback_thereshold: 0.3 # 0.4
     core_fallback_action_name: "action_default_fallback"

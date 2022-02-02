@@ -134,6 +134,8 @@ nlu:
     - yes, thank you 
     - I do, actually, tks for asking
     - i do
+    - I understood 
+    - got it
 
 - intent: deny
   examples: |
@@ -192,7 +194,8 @@ nlu:
     - But, how are you useful?
     - how can you help me
     - what??
-  
+    - my friend got [herpes](STD_name)
+
   # BOT GENERAL
 - intent: ask_scope
   examples: |
@@ -294,6 +297,7 @@ nlu:
     - give me recommendations
     - I'm worried because there is a red spot in my penis
     - I don't have any symptoms, do I still need to test myself?
+
 
 - intent: list_STD
   examples: |
@@ -408,6 +412,8 @@ nlu:
     - how can I avoid diseases transmitted through oral sex?
     - is oral sex with preservatives effective?
     - are preservatives enough to prevent an sti infection?
+    - what should I do regarding not getting an std?
+    - what are preservatives for?
 
 - intent: diagnosis_STD
   examples: |
@@ -428,6 +434,9 @@ nlu:
     - how can I test for [bv]["entity": "STD_name"]
     - I had sex with someone who had [chlamydia](STD_name). Am I infected?
     - My boyfriend has [hpv infection](STD_name). How do I know if I do too?
+    - I think I have [pid](STD_name)
+    - I might be infected with [gonorrhea](STD_name)
+    - I'm worried I might have an sti
 
 - intent: symptoms_STD
   examples: |
@@ -476,6 +485,7 @@ nlu:
     - my partner passed me [syphilis](STD_name). What do I do?
     - I had sex with someone who had [chlamydia](STD_name). How do I heal?
     - I'm worried, is it bad?
+    - I have [trichomoniasis](STD_name)
 
 - intent: consequences_STD
   examples: |
@@ -544,6 +554,8 @@ nlu:
     - whats the source of [hpv infection](STD_name)? bacteria?
     - whats the death rate for [trichomoniasis](STD_name)
     - whats the death rate for who catches stds
+    - what is tantra?
+    - can I have sex if I have an std?
 
 - intent: insults
   examples: |

@@ -21,6 +21,8 @@ stories:
   - action: utter_intro
   - or:
     - intent: advance_plot
+      entities:
+      - STD_name
     - intent: definition_STD
       entities:
       - STD_name
@@ -51,6 +53,8 @@ stories:
   - action: utter_shall_i_continue
   - or:
     - intent: affirm
+      entities:
+      - STD_name
     - intent: definition_STD
       entities:
       - STD_name
@@ -63,7 +67,7 @@ stories:
   - or: 
     - intent: advance_plot 
     - intent: definition_STD
-  - checkpoint: start_flow_with_specific_STD
+  - checkpoint: start_flow_with_no_STD_established
 
 - story: begin with user has questions, establish an std, but want bot initiative
   steps:
@@ -108,13 +112,7 @@ stories:
     - intent: testing_recommendations
     - intent: advance_plot
   - action: utter_testing_recommendations 
-  - checkpoint: check_flow_finished
-
-# FINISHING FLOW
-
-- story: finish flow
-  steps:
-  - checkpoint: check_flow_finished
+#  - checkpoint: check_flow_finished
   - action: utter_any_questions
   - intent: deny
   - action: utter_conclusion
@@ -153,7 +151,15 @@ stories:
   - action: validate_std_name
   - action: action_specific_prevention
 #  - action: action_set_entity_none
-  - checkpoint: check_flow_finished
+#  - checkpoint: check_flow_finished
+  - action: utter_any_questions
+  - intent: deny
+  - action: utter_conclusion
+  - action: utter_feel_free_come_back
+  - or:
+    - intent: goodbye
+    - intent: thank 
+    - intent: affirm
 
 ###
 
@@ -161,7 +167,29 @@ stories:
   steps:
   - action: utter_shall_i_continue
   - intent: deny 
-  - checkpoint: check_flow_finished
+  - action: utter_any_questions
+  - intent: deny
+  - action: utter_conclusion
+  - action: utter_feel_free_come_back
+  - or:
+    - intent: goodbye
+    - intent: thank 
+    - intent: affirm
+  #- checkpoint: check_flow_finished
+
+# FINISHING FLOW
+
+# - story: finish flow
+#   steps:
+#   - checkpoint: check_flow_finished
+#   - action: utter_any_questions
+#   - intent: deny
+#   - action: utter_conclusion
+#   - action: utter_feel_free_come_back
+#   - or:
+#     - intent: goodbye
+#     - intent: thank 
+#     - intent: affirm
 
 
 
