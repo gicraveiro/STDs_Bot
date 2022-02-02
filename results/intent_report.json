@@ -1,0 +1,245 @@
+{
+  "express_amusement": {
+    "precision": 0.2857142857142857,
+    "recall": 0.18181818181818182,
+    "f1-score": 0.2222222222222222,
+    "support": 22,
+    "confused_with": {
+      "goodbye": 4,
+      "lost_user": 3
+    }
+  },
+  "set_entity_none": {
+    "precision": 0.3157894736842105,
+    "recall": 0.35294117647058826,
+    "f1-score": 0.33333333333333337,
+    "support": 17,
+    "confused_with": {
+      "affirm": 2,
+      "out_of_scope": 2
+    }
+  },
+  "testing_recommendations": {
+    "precision": 0.5833333333333334,
+    "recall": 0.5384615384615384,
+    "f1-score": 0.5599999999999999,
+    "support": 13,
+    "confused_with": {
+      "out_of_scope": 2,
+      "diagnosis_STD": 1
+    }
+  },
+  "thank": {
+    "precision": 0.5333333333333333,
+    "recall": 0.5714285714285714,
+    "f1-score": 0.5517241379310344,
+    "support": 14,
+    "confused_with": {
+      "express_amusement": 3,
+      "affirm": 1
+    }
+  },
+  "symptoms_STD": {
+    "precision": 0.5,
+    "recall": 0.4782608695652174,
+    "f1-score": 0.4888888888888889,
+    "support": 23,
+    "confused_with": {
+      "diagnosis_STD": 4,
+      "out_of_scope": 3
+    }
+  },
+  "treatment_STD": {
+    "precision": 0.5238095238095238,
+    "recall": 0.55,
+    "f1-score": 0.5365853658536585,
+    "support": 20,
+    "confused_with": {
+      "diagnosis_STD": 3,
+      "testing_recommendations": 2
+    }
+  },
+  "insults": {
+    "precision": 0.6666666666666666,
+    "recall": 0.47619047619047616,
+    "f1-score": 0.5555555555555556,
+    "support": 21,
+    "confused_with": {
+      "greet": 3,
+      "lost_user": 2
+    }
+  },
+  "definition_STD": {
+    "precision": 0.4838709677419355,
+    "recall": 0.625,
+    "f1-score": 0.5454545454545454,
+    "support": 24,
+    "confused_with": {
+      "set_entity_none": 2,
+      "list_STD": 2
+    }
+  },
+  "deny": {
+    "precision": 0.6153846153846154,
+    "recall": 0.7619047619047619,
+    "f1-score": 0.6808510638297872,
+    "support": 21,
+    "confused_with": {
+      "express_amusement": 1,
+      "thank": 1
+    }
+  },
+  "prevention_STD": {
+    "precision": 0.7428571428571429,
+    "recall": 0.896551724137931,
+    "f1-score": 0.8125,
+    "support": 29,
+    "confused_with": {
+      "transmission_STD": 2,
+      "out_of_scope": 1
+    }
+  },
+  "out_of_scope": {
+    "precision": 0.21739130434782608,
+    "recall": 0.2,
+    "f1-score": 0.20833333333333331,
+    "support": 25,
+    "confused_with": {
+      "consequences_STD": 4,
+      "treatment_STD": 3
+    }
+  },
+  "consequences_STD": {
+    "precision": 0.5789473684210527,
+    "recall": 0.5789473684210527,
+    "f1-score": 0.5789473684210527,
+    "support": 19,
+    "confused_with": {
+      "out_of_scope": 2,
+      "diagnosis_STD": 1
+    }
+  },
+  "transmission_STD": {
+    "precision": 0.6428571428571429,
+    "recall": 0.6666666666666666,
+    "f1-score": 0.6545454545454545,
+    "support": 27,
+    "confused_with": {
+      "out_of_scope": 2,
+      "treatment_STD": 1
+    }
+  },
+  "affirm": {
+    "precision": 0.4666666666666667,
+    "recall": 0.42424242424242425,
+    "f1-score": 0.4444444444444445,
+    "support": 33,
+    "confused_with": {
+      "thank": 3,
+      "advance_plot": 2
+    }
+  },
+  "advance_plot": {
+    "precision": 0.48,
+    "recall": 0.36363636363636365,
+    "f1-score": 0.41379310344827586,
+    "support": 33,
+    "confused_with": {
+      "affirm": 7,
+      "ask_scope": 3
+    }
+  },
+  "diagnosis_STD": {
+    "precision": 0.44,
+    "recall": 0.55,
+    "f1-score": 0.48888888888888893,
+    "support": 20,
+    "confused_with": {
+      "symptoms_STD": 3,
+      "transmission_STD": 2
+    }
+  },
+  "lost_user": {
+    "precision": 0.5333333333333333,
+    "recall": 0.5,
+    "f1-score": 0.5161290322580646,
+    "support": 16,
+    "confused_with": {
+      "treatment_STD": 1,
+      "affirm": 1
+    }
+  },
+  "ask_source": {
+    "precision": 0.75,
+    "recall": 0.375,
+    "f1-score": 0.5,
+    "support": 24,
+    "confused_with": {
+      "definition_STD": 3,
+      "greet": 2
+    }
+  },
+  "ask_scope": {
+    "precision": 0.5416666666666666,
+    "recall": 0.6842105263157895,
+    "f1-score": 0.6046511627906976,
+    "support": 19,
+    "confused_with": {
+      "I_have_questions": 2,
+      "advance_plot": 2
+    }
+  },
+  "list_STD": {
+    "precision": 0.6206896551724138,
+    "recall": 0.782608695652174,
+    "f1-score": 0.6923076923076923,
+    "support": 23,
+    "confused_with": {
+      "affirm": 1,
+      "ask_scope": 1
+    }
+  },
+  "greet": {
+    "precision": 0.5517241379310345,
+    "recall": 0.6666666666666666,
+    "f1-score": 0.6037735849056604,
+    "support": 24,
+    "confused_with": {
+      "insults": 2,
+      "goodbye": 2
+    }
+  },
+  "I_have_questions": {
+    "precision": 0.3333333333333333,
+    "recall": 0.35714285714285715,
+    "f1-score": 0.3448275862068965,
+    "support": 14,
+    "confused_with": {
+      "advance_plot": 3,
+      "ask_scope": 2
+    }
+  },
+  "goodbye": {
+    "precision": 0.6666666666666666,
+    "recall": 0.6,
+    "f1-score": 0.631578947368421,
+    "support": 30,
+    "confused_with": {
+      "greet": 3,
+      "advance_plot": 2
+    }
+  },
+  "accuracy": 0.5322896281800391,
+  "macro avg": {
+    "precision": 0.5249580703443992,
+    "recall": 0.5296382116835331,
+    "f1-score": 0.5204059005212133,
+    "support": 511
+  },
+  "weighted avg": {
+    "precision": 0.531506842696854,
+    "recall": 0.5322896281800391,
+    "f1-score": 0.5245978571591416,
+    "support": 511
+  }
+}

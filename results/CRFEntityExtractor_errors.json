@@ -1,0 +1,255 @@
+[
+  {
+    "text": "I did a blowjob to someone who was HIV positive. Am I at risk?",
+    "entities": [
+      {
+        "start": 35,
+        "end": 38,
+        "value": "HIV",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 35,
+        "end": 38,
+        "confidence_entity": 0.9989653825759888,
+        "value": "AIDs",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "can I get [HPV infection] from oral sex?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 11,
+        "end": 24,
+        "confidence_entity": 0.9801949262619019,
+        "value": "HPV infection",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "STD_name",
+        "start": 11,
+        "end": 24,
+        "confidence_entity": 0.5928981385680032,
+        "value": "HPV infection",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "I have questions about Chancroid",
+    "entities": [
+      {
+        "start": 23,
+        "end": 32,
+        "value": "Chancroid",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "is BV in your database?",
+    "entities": [
+      {
+        "start": 3,
+        "end": 5,
+        "value": "BV",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 3,
+        "end": 5,
+        "confidence_entity": 0.9957029223442078,
+        "value": "Bacterial Vaginosis",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "is it possible to catch hpv with just skin contact?",
+    "entities": [
+      {
+        "start": 24,
+        "end": 27,
+        "value": "hpv",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 24,
+        "end": 27,
+        "confidence_entity": 0.8901680111885071,
+        "value": "HPV Infection",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "what will I feel if I have bv",
+    "entities": [
+      {
+        "start": 27,
+        "end": 29,
+        "value": "bv",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 27,
+        "end": 29,
+        "confidence_entity": 0.9991558790206909,
+        "value": "Bacterial Vaginosis",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "what's the recommended frequency to do tests for GONORRHEA",
+    "entities": [
+      {
+        "start": 49,
+        "end": 58,
+        "value": "GONORRHEA",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 49,
+        "end": 58,
+        "confidence_entity": 0.9997624754905701,
+        "value": "GONORRHEA",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "are there more dangerous stds, other than PID?",
+    "entities": [
+      {
+        "start": 42,
+        "end": 45,
+        "value": "PID",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 42,
+        "end": 45,
+        "confidence_entity": 0.9997761845588684,
+        "value": "Pelvic Inflammatory Disease",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "can you get pelvic inflammatory disease without having sex",
+    "entities": [
+      {
+        "start": 12,
+        "end": 39,
+        "value": "pelvic inflammatory disease",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 12,
+        "end": 39,
+        "confidence_entity": 0.9915716648101807,
+        "value": "pelvic inflammatory disease",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "what if I am hiv positive",
+    "entities": [
+      {
+        "start": 13,
+        "end": 16,
+        "value": "hiv",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 13,
+        "end": 16,
+        "confidence_entity": 0.9993755221366882,
+        "value": "AIDs",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "what info can you tell me on HEPATITIS",
+    "entities": [
+      {
+        "start": 29,
+        "end": 38,
+        "value": "HEPATITIS",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "can I get aids from kissing?",
+    "entities": [
+      {
+        "start": 10,
+        "end": 14,
+        "value": "aids",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 10,
+        "end": 14,
+        "confidence_entity": 0.9997660517692566,
+        "value": "aids",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]
