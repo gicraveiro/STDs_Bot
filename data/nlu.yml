@@ -63,6 +63,8 @@ nlu:
     - enjoy your day
     - Have a good week!
     - gotta go
+    - Have a nice night 
+    - I wish you a good weekend
 
 - intent: thank
   examples: |
@@ -117,6 +119,10 @@ nlu:
     - Sounds amazing 
     - this is good 
     - ok, excellent! 
+    - I think this is awesome
+    - This is great!
+    - good, I'm glad
+    - good
 
 - intent: affirm
   examples: |
@@ -124,7 +130,6 @@ nlu:
     - y
     - indeed
     - of course
-    - that sounds good
     - correct
     - sure
     - absolutely
@@ -132,13 +137,11 @@ nlu:
     - alright
     - all right
     - YES
-    - anything you think I should know
     - please do
     - agreed
-    - yes, more about [trichomoniasis](STD_name)
-    - please tell me about [AIDS](STD_name)
-    - sure, but focus on [genital herpes](STD_name)
     - uhum
+    - yes, more about [trichomoniasis](STD_name)
+    - sure, but focus on [genital herpes](STD_name)
     - right, but only about [bv](STD_name)
     - ok, but specifically about [pid](STD_name)
     - I guess so
@@ -153,6 +156,7 @@ nlu:
     - I understood 
     - got it
     - I will
+    - yes, thanks
 
 - intent: deny
   examples: |
@@ -187,7 +191,6 @@ nlu:
     - I have a question
     - I have some doubts
     - so many
-    - yes, i have
     - i do have something to ask
     - i wanna ask you one thing
     - I have questions about [Chancroid](STD_name)
@@ -303,6 +306,7 @@ nlu:
 
 - intent: advance_plot
   examples: |
+    - tell me anything you think I should know
     - what should I know?
     - tell me everything
     - what can you do
@@ -337,6 +341,10 @@ nlu:
     - what else can you tell me?
     - is there any other info I should know?
     - What can you tell me about [hepatitis](STD_name)?
+    - give me the important facts, please
+    - any relevant remarks?
+    - please tell me about [AIDS](STD_name)
+    - I want to know about [Chancroid](STD_name)
 
 - intent: testing_recommendations
   examples: |
@@ -550,8 +558,10 @@ nlu:
     - what should I do now that I'm infected?
     - my partner passed me [syphilis](STD_name). What do I do?
     - I had sex with someone who had [chlamydia](STD_name). How do I heal?
-    - I'm worried, is it bad?
-    - I have [trichomoniasis](STD_name)
+    - is [BV](STD_name) treatable?
+    - How can I treat [Trichomoniasis](STD_name)?
+    - How can I avoid consequences?
+    - Is it possible to avoid consequences?
 
 - intent: consequences_STD
   examples: |
@@ -584,6 +594,7 @@ nlu:
     - are there permanent losses with [gonorrhea](STD_name)?
     - are there any permanent consequences?
     - does [HPV Infection](STD_name) bring side effects for life?
+    - I'm worried, is it bad?
 
 - intent: set_entity_none
   examples: |
@@ -629,8 +640,6 @@ nlu:
     - how common is to have [gonorrhea](STD_name)
     - can I get reinfected?
     - when can I have sex again after being cured from [syphilis](STD_name)
-    - what happens if I'm pregnant and get an std?
-    - which medicine should I take for [herpes](STD_name)
     - is [bacterial vaginosis](STD_name) from a virus?
     - is it a fungus that causes [pelvic inflammatory disease](STD_name)
     - whats the source of [hpv infection](STD_name)? bacteria?
@@ -640,6 +649,9 @@ nlu:
     - can I have sex if I have an std?
     - which stds are asymptomatic?
     - which stis have vaccines?
+    - which stds can be diagnosed with tests?
+    - is it free to get a diagnosis?
+    - where can I go for testing?
 
 - intent: insults
   examples: |
