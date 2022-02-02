@@ -342,6 +342,40 @@ stories:
   - action: utter_conclusion
   - action: utter_feel_free_come_back
 
+- story: Insult than one question and goodbye (Conversation ID d55c8306069a4261b081deea6d01d58b)
+  steps:
+  - intent: insults
+    user: |-
+      hey stupid
+  - action: utter_handle_insults
+  - intent: greet
+    user: |-
+      sorry, hello
+  - action: utter_greet
+  - action: utter_any_questions
+  - intent: affirm
+    user: |-
+      I do
+  - action: utter_feel_free_to_ask
+  - intent: diagnosis_STD
+    user: |-
+      how is [pid]{"entity": "STD_name", "value": "Pelvic Inflammatory Disease"} diagnosed?
+  - slot_was_set:
+    - STD_name: Pelvic Inflammatory Disease
+  - action: validate_std_name
+  - slot_was_set:
+    - STD_name: Pelvic Inflammatory Disease
+  - action: action_specific_diagnosis
+  - intent: affirm
+    user: |-
+      got it
+  - action: utter_shall_i_continue
+  - intent: goodbye
+    user: |-
+      goodbye
+  - action: utter_it_was_a_pleasure
+  - action: utter_goodbye
+
 
 # - story: happy path 1
 #   steps:
