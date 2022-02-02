@@ -136,6 +136,7 @@ nlu:
     - i do
     - I understood 
     - got it
+    - I will
 
 - intent: deny
   examples: |
@@ -160,6 +161,7 @@ nlu:
     - no, that's all
     - not anymore 
     - i do not
+
 - intent: I_have_questions
   examples: |
     - I have a question
@@ -323,6 +325,8 @@ nlu:
     - interesting, now give me a list of diseases
     - and which are the stis
     - show me names of stds
+    - what are all stds?
+
 
 # STD QUESTIONS THAT CAN BE GENERAL AND FOR AN SPECIFIC STD
 
@@ -556,6 +560,8 @@ nlu:
     - whats the death rate for who catches stds
     - what is tantra?
     - can I have sex if I have an std?
+    - which stds are asymptomatic?
+    - which stis have vaccines?
 
 - intent: insults
   examples: |

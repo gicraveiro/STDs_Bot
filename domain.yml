@@ -25,6 +25,8 @@ intents:
   - out_of_scope
   - insults
   - set_entity_none
+  - lost_user 
+  - nlu_fallback
   #- source # bacteria, fungus, virus
   
   #   - establish_std_name:
