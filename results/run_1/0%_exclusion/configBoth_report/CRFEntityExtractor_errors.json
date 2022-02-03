@@ -1,0 +1,47 @@
+[
+  {
+    "text": "is the vaccine for HPV free?",
+    "entities": [
+      {
+        "start": 19,
+        "end": 22,
+        "value": "HPV",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 19,
+        "end": 22,
+        "confidence_entity": 0.9433714747428894,
+        "value": "HPV Infection",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "what info can you tell me on HEPATITIS",
+    "entities": [
+      {
+        "start": 29,
+        "end": 38,
+        "value": "HEPATITIS",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 29,
+        "end": 38,
+        "confidence_entity": 0.9968430995941162,
+        "value": "HEPATITIS",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

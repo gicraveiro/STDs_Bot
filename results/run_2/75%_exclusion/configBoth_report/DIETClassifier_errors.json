@@ -1,0 +1,385 @@
+[
+  {
+    "text": "how to know if I'm [HIV][\"entity\": \"STD_name\"] positive",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 20,
+        "end": 25,
+        "confidence_entity": 0.9339492321014404,
+        "value": "HIV][",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I might be infected with gonorrhea",
+    "entities": [
+      {
+        "start": 25,
+        "end": 34,
+        "value": "gonorrhea",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I know there's aids, chlamydia and hpv infection but are there others?",
+    "entities": [
+      {
+        "start": 15,
+        "end": 19,
+        "value": "aids",
+        "entity": "STD_name"
+      },
+      {
+        "start": 21,
+        "end": 30,
+        "value": "chlamydia",
+        "entity": "STD_name"
+      },
+      {
+        "start": 35,
+        "end": 48,
+        "value": "hpv infection",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 21,
+        "end": 30,
+        "confidence_entity": 0.9996169805526733,
+        "value": "chlamydia",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "STD_name",
+        "start": 35,
+        "end": 48,
+        "confidence_entity": 0.6862034201622009,
+        "value": "hpv infection",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "STD_name",
+        "start": 21,
+        "end": 30,
+        "confidence_entity": 0.9969086635549554,
+        "value": "chlamydia",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "STD_name",
+        "start": 35,
+        "end": 38,
+        "confidence_entity": 0.9405752104082702,
+        "value": "HPV Infection",
+        "extractor": "CRFEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "list stis, like AIDS",
+    "entities": [
+      {
+        "start": 16,
+        "end": 20,
+        "value": "AIDS",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 16,
+        "end": 20,
+        "confidence_entity": 0.959157314138718,
+        "value": "AIDS",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "what in my body could indicate an infection",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 34,
+        "end": 43,
+        "confidence_entity": 0.922989547252655,
+        "value": "infection",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I have diarrhea, is it a symptom for gonorrhea",
+    "entities": [
+      {
+        "start": 37,
+        "end": 46,
+        "value": "gonorrhea",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I'm not interested in aids anymore",
+    "entities": [
+      {
+        "start": 22,
+        "end": 26,
+        "value": "aids",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "can I get [HPV infection] from oral sex?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 11,
+        "end": 24,
+        "confidence_entity": 0.7804120182991028,
+        "value": "HPV infection",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "STD_name",
+        "start": 11,
+        "end": 14,
+        "confidence_entity": 0.931173537687659,
+        "value": "HPV Infection",
+        "extractor": "CRFEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "can I catch genital herpes from anal sex?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 26,
+        "value": "genital herpes",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 20,
+        "end": 26,
+        "confidence_entity": 0.9990492463111877,
+        "value": "Genital Herpes",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "STD_name",
+        "start": 20,
+        "end": 26,
+        "confidence_entity": 0.9957185730721321,
+        "value": "Genital Herpes",
+        "extractor": "CRFEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "I know someone who had syphilis",
+    "entities": [
+      {
+        "start": 23,
+        "end": 31,
+        "value": "syphilis",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "how can I be protected from Genital Herpes",
+    "entities": [
+      {
+        "start": 28,
+        "end": 42,
+        "value": "Genital Herpes",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 36,
+        "end": 42,
+        "confidence_entity": 0.9976581335067749,
+        "value": "Genital Herpes",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "STD_name",
+        "start": 28,
+        "end": 42,
+        "confidence_entity": 0.9999889887781389,
+        "value": "Genital Herpes",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "whats the source of hpv infection? bacteria?",
+    "entities": [
+      {
+        "start": 20,
+        "end": 33,
+        "value": "hpv infection",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 20,
+        "end": 33,
+        "confidence_entity": 0.6137797832489014,
+        "value": "hpv infection",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "STD_name",
+        "start": 35,
+        "end": 43,
+        "confidence_entity": 0.9932236671447754,
+        "value": "bacteria",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "STD_name",
+        "start": 20,
+        "end": 23,
+        "confidence_entity": 0.9984348050619182,
+        "value": "HPV Infection",
+        "extractor": "CRFEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "is it free to get a diagnosis?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 20,
+        "end": 29,
+        "confidence_entity": 0.7073016166687012,
+        "value": "diagnosis",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "when can I have sex again after being cured from syphilis",
+    "entities": [
+      {
+        "start": 49,
+        "end": 57,
+        "value": "syphilis",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "which are the complications if you don't treat Hepatitis B?",
+    "entities": [
+      {
+        "start": 47,
+        "end": 58,
+        "value": "Hepatitis B",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 47,
+        "end": 58,
+        "confidence_entity": 0.9998426076452641,
+        "value": "Hepatitis B",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "what happens if you don't know you have syphilis",
+    "entities": [
+      {
+        "start": 40,
+        "end": 48,
+        "value": "syphilis",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "sure, but focus on genital herpes",
+    "entities": [
+      {
+        "start": 19,
+        "end": 33,
+        "value": "genital herpes",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 27,
+        "end": 33,
+        "confidence_entity": 0.9992616772651672,
+        "value": "Genital Herpes",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "STD_name",
+        "start": 27,
+        "end": 33,
+        "confidence_entity": 0.9999805441951781,
+        "value": "Genital Herpes",
+        "extractor": "CRFEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]

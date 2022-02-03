@@ -1,0 +1,73 @@
+[
+  {
+    "text": "how to diagnose [hepatitis b][\"entity\": \"STD_name\"]",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 17,
+        "end": 26,
+        "confidence_entity": 0.9690744876861572,
+        "value": "hepatitis",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "are there visible signs of the disease?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 31,
+        "end": 38,
+        "confidence_entity": 0.9374053478240967,
+        "value": "disease",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "what in my body could indicate an infection",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 34,
+        "end": 43,
+        "confidence_entity": 0.9829549193382263,
+        "value": "infection",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "whats the source of hpv infection? bacteria?",
+    "entities": [
+      {
+        "start": 20,
+        "end": 33,
+        "value": "hpv infection",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 20,
+        "end": 33,
+        "confidence_entity": 0.9948849081993103,
+        "value": "hpv infection",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "STD_name",
+        "start": 35,
+        "end": 43,
+        "confidence_entity": 0.99681156873703,
+        "value": "bacteria",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

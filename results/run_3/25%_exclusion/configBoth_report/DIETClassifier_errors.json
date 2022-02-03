@@ -1,0 +1,39 @@
+[
+  {
+    "text": "I have diarrhea, is it a symptom for gonorrhea",
+    "entities": [
+      {
+        "start": 37,
+        "end": 46,
+        "value": "gonorrhea",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 7,
+        "end": 15,
+        "confidence_entity": 0.9700674414634705,
+        "value": "diarrhea",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "STD_name",
+        "start": 37,
+        "end": 46,
+        "confidence_entity": 0.9996374845504761,
+        "value": "gonorrhea",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "STD_name",
+        "start": 37,
+        "end": 46,
+        "confidence_entity": 0.9999999983103757,
+        "value": "gonorrhea",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  }
+]

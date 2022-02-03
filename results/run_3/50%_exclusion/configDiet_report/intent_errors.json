@@ -1,0 +1,538 @@
+[
+  {
+    "text": "I don't have any symptoms, do I still need to test myself?",
+    "intent": "testing_recommendations",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.32189372181892395
+    }
+  },
+  {
+    "text": "do I need to test for stds",
+    "intent": "testing_recommendations",
+    "intent_prediction": {
+      "name": "diagnosis_STD",
+      "confidence": 0.509222686290741
+    }
+  },
+  {
+    "text": "what are the available tests?",
+    "intent": "testing_recommendations",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.6540985703468323
+    }
+  },
+  {
+    "text": "I might be infected with gonorrhea",
+    "intent": "diagnosis_STD",
+    "intent_prediction": {
+      "name": "transmission_STD",
+      "confidence": 0.4432893395423889
+    }
+  },
+  {
+    "text": "how to know if I have Chlamydia",
+    "intent": "diagnosis_STD",
+    "intent_prediction": {
+      "name": "treatment_STD",
+      "confidence": 0.3622492849826813
+    }
+  },
+  {
+    "text": "how will I know if I have it",
+    "intent": "diagnosis_STD",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.24934613704681396
+    }
+  },
+  {
+    "text": "Makes sense, thank youu",
+    "intent": "thank",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.7466834783554077
+    }
+  },
+  {
+    "text": "what medicine can I take",
+    "intent": "treatment_STD",
+    "intent_prediction": {
+      "name": "ask_scope",
+      "confidence": 0.4587904214859009
+    }
+  },
+  {
+    "text": "has the cure for hpv been invented yet?",
+    "intent": "treatment_STD",
+    "intent_prediction": {
+      "name": "prevention_STD",
+      "confidence": 0.6617790460586548
+    }
+  },
+  {
+    "text": "what do I do if I have an sti",
+    "intent": "treatment_STD",
+    "intent_prediction": {
+      "name": "diagnosis_STD",
+      "confidence": 0.8544678688049316
+    }
+  },
+  {
+    "text": "names of sexually transmitted infections",
+    "intent": "list_STD",
+    "intent_prediction": {
+      "name": "definition_STD",
+      "confidence": 0.6415658593177795
+    }
+  },
+  {
+    "text": "what about in general?",
+    "intent": "set_entity_none",
+    "intent_prediction": {
+      "name": "ask_scope",
+      "confidence": 0.8153676986694336
+    }
+  },
+  {
+    "text": "I want to know in general",
+    "intent": "set_entity_none",
+    "intent_prediction": {
+      "name": "advance_plot",
+      "confidence": 0.25518032908439636
+    }
+  },
+  {
+    "text": "for the most common ones",
+    "intent": "set_entity_none",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.9870918393135071
+    }
+  },
+  {
+    "text": "Can you give a general answer?",
+    "intent": "set_entity_none",
+    "intent_prediction": {
+      "name": "ask_scope",
+      "confidence": 0.3540107011795044
+    }
+  },
+  {
+    "text": "whats the center for disease control",
+    "intent": "ask_source",
+    "intent_prediction": {
+      "name": "consequences_STD",
+      "confidence": 0.435872882604599
+    }
+  },
+  {
+    "text": "where did you learn that?",
+    "intent": "ask_source",
+    "intent_prediction": {
+      "name": "advance_plot",
+      "confidence": 0.3685144782066345
+    }
+  },
+  {
+    "text": "where can I find more information",
+    "intent": "ask_source",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.726121723651886
+    }
+  },
+  {
+    "text": "generally describe them",
+    "intent": "definition_STD",
+    "intent_prediction": {
+      "name": "set_entity_none",
+      "confidence": 0.7523626685142517
+    }
+  },
+  {
+    "text": "whats AIDS",
+    "intent": "definition_STD",
+    "intent_prediction": {
+      "name": "ask_scope",
+      "confidence": 0.7114958763122559
+    }
+  },
+  {
+    "text": "never",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "testing_recommendations",
+      "confidence": 0.7148452401161194
+    }
+  },
+  {
+    "text": "no, that's all",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "set_entity_none",
+      "confidence": 0.41336771845817566
+    }
+  },
+  {
+    "text": "why are you so stupid",
+    "intent": "insults",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.8289648294448853
+    }
+  },
+  {
+    "text": "piece of shit",
+    "intent": "insults",
+    "intent_prediction": {
+      "name": "express_amusement",
+      "confidence": 0.37203091382980347
+    }
+  },
+  {
+    "text": "stupid shitty slut",
+    "intent": "insults",
+    "intent_prediction": {
+      "name": "diagnosis_STD",
+      "confidence": 0.17239007353782654
+    }
+  },
+  {
+    "text": "slut",
+    "intent": "insults",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.8508979678153992
+    }
+  },
+  {
+    "text": "am I talking to a human",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "set_entity_none",
+      "confidence": 0.5822709202766418
+    }
+  },
+  {
+    "text": "who are you?",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "ask_source",
+      "confidence": 0.7900527715682983
+    }
+  },
+  {
+    "text": "goodevening",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.6986164450645447
+    }
+  },
+  {
+    "text": "How do you help people?",
+    "intent": "ask_scope",
+    "intent_prediction": {
+      "name": "lost_user",
+      "confidence": 0.7614285945892334
+    }
+  },
+  {
+    "text": "I don't know what to ask...",
+    "intent": "ask_scope",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.6078236699104309
+    }
+  },
+  {
+    "text": "what can you tell me",
+    "intent": "ask_scope",
+    "intent_prediction": {
+      "name": "advance_plot",
+      "confidence": 0.8571983575820923
+    }
+  },
+  {
+    "text": "What can I ask that is not related to stds?",
+    "intent": "ask_scope",
+    "intent_prediction": {
+      "name": "definition_STD",
+      "confidence": 0.23557399213314056
+    }
+  },
+  {
+    "text": "Can you diagnose me?",
+    "intent": "ask_scope",
+    "intent_prediction": {
+      "name": "diagnosis_STD",
+      "confidence": 0.3835935890674591
+    }
+  },
+  {
+    "text": "I had sex with someone who had chlamydia. Could I be infected?",
+    "intent": "transmission_STD",
+    "intent_prediction": {
+      "name": "diagnosis_STD",
+      "confidence": 0.9199989438056946
+    }
+  },
+  {
+    "text": "I did a blowjob to someone who was HIV positive. Am I at risk?",
+    "intent": "transmission_STD",
+    "intent_prediction": {
+      "name": "diagnosis_STD",
+      "confidence": 0.2596154808998108
+    }
+  },
+  {
+    "text": "are stds only transmitted through sex?",
+    "intent": "transmission_STD",
+    "intent_prediction": {
+      "name": "prevention_STD",
+      "confidence": 0.7567755579948425
+    }
+  },
+  {
+    "text": "can I catch genital herpes from anal sex?",
+    "intent": "transmission_STD",
+    "intent_prediction": {
+      "name": "prevention_STD",
+      "confidence": 0.49026086926460266
+    }
+  },
+  {
+    "text": "But, how are you useful?",
+    "intent": "lost_user",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.4263078272342682
+    }
+  },
+  {
+    "text": "I'm lost",
+    "intent": "lost_user",
+    "intent_prediction": {
+      "name": "diagnosis_STD",
+      "confidence": 0.4506779909133911
+    }
+  },
+  {
+    "text": "how does this work",
+    "intent": "lost_user",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.2093573361635208
+    }
+  },
+  {
+    "text": "what can I do?",
+    "intent": "lost_user",
+    "intent_prediction": {
+      "name": "ask_scope",
+      "confidence": 0.5665382146835327
+    }
+  },
+  {
+    "text": "cool, and whats a way to avoid it",
+    "intent": "prevention_STD",
+    "intent_prediction": {
+      "name": "express_amusement",
+      "confidence": 0.4271644055843353
+    }
+  },
+  {
+    "text": "can I pass  chlamydia if I wear a condom",
+    "intent": "prevention_STD",
+    "intent_prediction": {
+      "name": "diagnosis_STD",
+      "confidence": 0.613140881061554
+    }
+  },
+  {
+    "text": "how much does it cost medicine for Chlamydia",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "list_STD",
+      "confidence": 0.258925199508667
+    }
+  },
+  {
+    "text": "what are the statistics for stds in Brazil?",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "definition_STD",
+      "confidence": 0.4505414068698883
+    }
+  },
+  {
+    "text": "is the vaccine for HPV free?",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "prevention_STD",
+      "confidence": 0.971505880355835
+    }
+  },
+  {
+    "text": "what is the rate of contamination",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "consequences_STD",
+      "confidence": 0.712862491607666
+    }
+  },
+  {
+    "text": "what are the consequences",
+    "intent": "consequences_STD",
+    "intent_prediction": {
+      "name": "ask_source",
+      "confidence": 0.2993757724761963
+    }
+  },
+  {
+    "text": "does it go away with time?",
+    "intent": "consequences_STD",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.5227956175804138
+    }
+  },
+  {
+    "text": "do I become more vulnerable to more stds if I already have one",
+    "intent": "consequences_STD",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.48262664675712585
+    }
+  },
+  {
+    "text": "congrats!",
+    "intent": "express_amusement",
+    "intent_prediction": {
+      "name": "I_have_questions",
+      "confidence": 0.45460063219070435
+    }
+  },
+  {
+    "text": "amazing",
+    "intent": "express_amusement",
+    "intent_prediction": {
+      "name": "transmission_STD",
+      "confidence": 0.2206200659275055
+    }
+  },
+  {
+    "text": "I like this so much",
+    "intent": "express_amusement",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.36250513792037964
+    }
+  },
+  {
+    "text": "awesomeeee",
+    "intent": "express_amusement",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.5552528500556946
+    }
+  },
+  {
+    "text": "yes, thank you",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "thank",
+      "confidence": 0.8402788639068604
+    }
+  },
+  {
+    "text": "got it",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "thank",
+      "confidence": 0.2874957323074341
+    }
+  },
+  {
+    "text": "of course",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "insults",
+      "confidence": 0.39467984437942505
+    }
+  },
+  {
+    "text": "I mean, if you think you should",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "testing_recommendations",
+      "confidence": 0.5400686264038086
+    }
+  },
+  {
+    "text": "enjoy your day",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "ask_scope",
+      "confidence": 0.49795302748680115
+    }
+  },
+  {
+    "text": "I'm glad we talked",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "express_amusement",
+      "confidence": 0.871285617351532
+    }
+  },
+  {
+    "text": "what can you do",
+    "intent": "advance_plot",
+    "intent_prediction": {
+      "name": "ask_scope",
+      "confidence": 0.9749413132667542
+    }
+  },
+  {
+    "text": "what should I know?",
+    "intent": "advance_plot",
+    "intent_prediction": {
+      "name": "testing_recommendations",
+      "confidence": 0.4428858458995819
+    }
+  },
+  {
+    "text": "play",
+    "intent": "advance_plot",
+    "intent_prediction": {
+      "name": "express_amusement",
+      "confidence": 0.16951356828212738
+    }
+  },
+  {
+    "text": "give me the important facts, please",
+    "intent": "advance_plot",
+    "intent_prediction": {
+      "name": "symptoms_STD",
+      "confidence": 0.49147480726242065
+    }
+  },
+  {
+    "text": "all I need to know please",
+    "intent": "advance_plot",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.4606531262397766
+    }
+  },
+  {
+    "text": "I don't have any questions",
+    "intent": "advance_plot",
+    "intent_prediction": {
+      "name": "I_have_questions",
+      "confidence": 0.7254878282546997
+    }
+  }
+]

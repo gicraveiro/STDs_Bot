@@ -1,0 +1,67 @@
+[
+  {
+    "text": "does kissing pass herpes?",
+    "entities": [
+      {
+        "start": 18,
+        "end": 24,
+        "value": "herpes",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 18,
+        "end": 24,
+        "confidence_entity": 0.9969623684883118,
+        "value": "Genital Herpes",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "whats the source of hpv infection? bacteria?",
+    "entities": [
+      {
+        "start": 20,
+        "end": 33,
+        "value": "hpv infection",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 20,
+        "end": 33,
+        "confidence_entity": 0.9739185571670532,
+        "value": "hpv infection",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "STD_name",
+        "start": 35,
+        "end": 43,
+        "confidence_entity": 0.9962218999862671,
+        "value": "bacteria",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "what info can you tell me on HEPATITIS",
+    "entities": [
+      {
+        "start": 29,
+        "end": 38,
+        "value": "HEPATITIS",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

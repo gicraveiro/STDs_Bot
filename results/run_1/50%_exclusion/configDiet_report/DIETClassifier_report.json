@@ -1,0 +1,27 @@
+{
+  "STD_name": {
+    "precision": 0.7916666666666666,
+    "recall": 0.95,
+    "f1-score": 0.8636363636363635,
+    "support": 20,
+    "confused_with": {}
+  },
+  "micro avg": {
+    "precision": 0.7916666666666666,
+    "recall": 0.95,
+    "f1-score": 0.8636363636363635,
+    "support": 20
+  },
+  "macro avg": {
+    "precision": 0.7916666666666666,
+    "recall": 0.95,
+    "f1-score": 0.8636363636363635,
+    "support": 20
+  },
+  "weighted avg": {
+    "precision": 0.7916666666666666,
+    "recall": 0.95,
+    "f1-score": 0.8636363636363635,
+    "support": 20
+  }
+}

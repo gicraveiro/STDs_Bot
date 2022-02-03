@@ -1,0 +1,141 @@
+[
+  {
+    "text": "what in my body could indicate an infection",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 34,
+        "end": 43,
+        "confidence_entity": 0.7311156988143921,
+        "value": "infection",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I have diarrhea, is it a symptom for gonorrhea",
+    "entities": [
+      {
+        "start": 37,
+        "end": 46,
+        "value": "gonorrhea",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 7,
+        "end": 15,
+        "confidence_entity": 0.992489218711853,
+        "value": "diarrhea",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "STD_name",
+        "start": 37,
+        "end": 46,
+        "confidence_entity": 0.9998576641082764,
+        "value": "gonorrhea",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "STD_name",
+        "start": 37,
+        "end": 46,
+        "confidence_entity": 0.9999999947877484,
+        "value": "gonorrhea",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "can I get [HPV infection] from oral sex?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 11,
+        "end": 24,
+        "confidence_entity": 0.982165515422821,
+        "value": "HPV infection",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "STD_name",
+        "start": 11,
+        "end": 24,
+        "confidence_entity": 0.9999014480301498,
+        "value": "HPV infection",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "whats the source of hpv infection? bacteria?",
+    "entities": [
+      {
+        "start": 20,
+        "end": 33,
+        "value": "hpv infection",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 20,
+        "end": 33,
+        "confidence_entity": 0.9804946184158325,
+        "value": "hpv infection",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "STD_name",
+        "start": 35,
+        "end": 43,
+        "confidence_entity": 0.9994245767593384,
+        "value": "bacteria",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "STD_name",
+        "start": 20,
+        "end": 33,
+        "confidence_entity": 0.9984784516015381,
+        "value": "hpv infection",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "which are the complications if you don't treat Hepatitis B?",
+    "entities": [
+      {
+        "start": 47,
+        "end": 58,
+        "value": "Hepatitis B",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 47,
+        "end": 56,
+        "confidence_entity": 0.6535229086875916,
+        "value": "Hepatitis",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "STD_name",
+        "start": 47,
+        "end": 58,
+        "confidence_entity": 0.9994439738319527,
+        "value": "Hepatitis B",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  }
+]

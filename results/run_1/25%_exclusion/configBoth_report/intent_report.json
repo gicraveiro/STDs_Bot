@@ -1,0 +1,237 @@
+{
+  "set_entity_none": {
+    "precision": 0.5,
+    "recall": 0.6,
+    "f1-score": 0.5454545454545454,
+    "support": 5,
+    "confused_with": {
+      "I_have_questions": 1,
+      "ask_scope": 1
+    }
+  },
+  "treatment_STD": {
+    "precision": 0.5,
+    "recall": 0.5,
+    "f1-score": 0.5,
+    "support": 4,
+    "confused_with": {
+      "out_of_scope": 1,
+      "lost_user": 1
+    }
+  },
+  "thank": {
+    "precision": 0.6,
+    "recall": 0.6,
+    "f1-score": 0.6,
+    "support": 5,
+    "confused_with": {
+      "affirm": 1,
+      "express_amusement": 1
+    }
+  },
+  "ask_scope": {
+    "precision": 0.14285714285714285,
+    "recall": 0.2,
+    "f1-score": 0.16666666666666666,
+    "support": 5,
+    "confused_with": {
+      "advance_plot": 2,
+      "ask_source": 2
+    }
+  },
+  "advance_plot": {
+    "precision": 0.4444444444444444,
+    "recall": 0.5,
+    "f1-score": 0.47058823529411764,
+    "support": 8,
+    "confused_with": {
+      "I_have_questions": 3,
+      "ask_scope": 1
+    }
+  },
+  "I_have_questions": {
+    "precision": 0.2857142857142857,
+    "recall": 0.4,
+    "f1-score": 0.3333333333333333,
+    "support": 5,
+    "confused_with": {
+      "ask_scope": 3
+    }
+  },
+  "greet": {
+    "precision": 0.3333333333333333,
+    "recall": 0.4,
+    "f1-score": 0.3636363636363636,
+    "support": 5,
+    "confused_with": {
+      "affirm": 1,
+      "definition_STD": 1
+    }
+  },
+  "express_amusement": {
+    "precision": 0.4,
+    "recall": 0.3333333333333333,
+    "f1-score": 0.3636363636363636,
+    "support": 6,
+    "confused_with": {
+      "prevention_STD": 1,
+      "out_of_scope": 1
+    }
+  },
+  "deny": {
+    "precision": 0.3333333333333333,
+    "recall": 0.4,
+    "f1-score": 0.3636363636363636,
+    "support": 5,
+    "confused_with": {
+      "thank": 1,
+      "set_entity_none": 1
+    }
+  },
+  "testing_recommendations": {
+    "precision": 0.6,
+    "recall": 0.75,
+    "f1-score": 0.6666666666666665,
+    "support": 4,
+    "confused_with": {
+      "express_amusement": 1
+    }
+  },
+  "diagnosis_STD": {
+    "precision": 0.5714285714285714,
+    "recall": 1.0,
+    "f1-score": 0.7272727272727273,
+    "support": 4,
+    "confused_with": {}
+  },
+  "ask_source": {
+    "precision": 0.42857142857142855,
+    "recall": 0.6,
+    "f1-score": 0.5,
+    "support": 5,
+    "confused_with": {
+      "greet": 1,
+      "ask_scope": 1
+    }
+  },
+  "definition_STD": {
+    "precision": 0.3333333333333333,
+    "recall": 0.5,
+    "f1-score": 0.4,
+    "support": 4,
+    "confused_with": {
+      "advance_plot": 1,
+      "set_entity_none": 1
+    }
+  },
+  "consequences_STD": {
+    "precision": 0.6666666666666666,
+    "recall": 0.3333333333333333,
+    "f1-score": 0.4444444444444444,
+    "support": 6,
+    "confused_with": {
+      "treatment_STD": 1,
+      "advance_plot": 1
+    }
+  },
+  "out_of_scope": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 6,
+    "confused_with": {
+      "testing_recommendations": 1,
+      "prevention_STD": 1,
+      "ask_source": 1
+    }
+  },
+  "lost_user": {
+    "precision": 0.5,
+    "recall": 0.6,
+    "f1-score": 0.5454545454545454,
+    "support": 5,
+    "confused_with": {
+      "greet": 2
+    }
+  },
+  "prevention_STD": {
+    "precision": 0.6666666666666666,
+    "recall": 0.6666666666666666,
+    "f1-score": 0.6666666666666666,
+    "support": 6,
+    "confused_with": {
+      "testing_recommendations": 1,
+      "set_entity_none": 1
+    }
+  },
+  "symptoms_STD": {
+    "precision": 1.0,
+    "recall": 0.75,
+    "f1-score": 0.8571428571428571,
+    "support": 4,
+    "confused_with": {
+      "advance_plot": 1
+    }
+  },
+  "insults": {
+    "precision": 1.0,
+    "recall": 0.8333333333333334,
+    "f1-score": 0.9090909090909091,
+    "support": 6,
+    "confused_with": {
+      "greet": 1
+    }
+  },
+  "list_STD": {
+    "precision": 0.6666666666666666,
+    "recall": 0.4,
+    "f1-score": 0.5,
+    "support": 5,
+    "confused_with": {
+      "definition_STD": 2,
+      "transmission_STD": 1
+    }
+  },
+  "goodbye": {
+    "precision": 1.0,
+    "recall": 0.5714285714285714,
+    "f1-score": 0.7272727272727273,
+    "support": 7,
+    "confused_with": {
+      "treatment_STD": 1,
+      "deny": 1
+    }
+  },
+  "transmission_STD": {
+    "precision": 0.8333333333333334,
+    "recall": 0.8333333333333334,
+    "f1-score": 0.8333333333333334,
+    "support": 6,
+    "confused_with": {
+      "diagnosis_STD": 1
+    }
+  },
+  "affirm": {
+    "precision": 0.5,
+    "recall": 0.3333333333333333,
+    "f1-score": 0.4,
+    "support": 6,
+    "confused_with": {
+      "deny": 2,
+      "thank": 1
+    }
+  },
+  "accuracy": 0.5163934426229508,
+  "macro avg": {
+    "precision": 0.5350586611456177,
+    "recall": 0.5262939958592133,
+    "f1-score": 0.5167085543044622,
+    "support": 122
+  },
+  "weighted avg": {
+    "precision": 0.540385115794952,
+    "recall": 0.5163934426229508,
+    "f1-score": 0.5143760932092658,
+    "support": 122
+  }
+}

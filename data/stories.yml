@@ -12,13 +12,12 @@ stories:
 
 - story: bot_initiative_full with no std established starting by bot start
   steps:
-  - or: 
-    - intent: advance_plot
+  - intent: advance_plot #   - or: - intent: definition_STD
   - action: utter_definition_STD
   - action: utter_shall_i_continue
   - or: 
     - intent: affirm
-    - intent: advance_plot
+    - intent: advance_plot # - intent: prevention_STD
   - action: utter_prevention_STD 
   - action: utter_shall_i_continue
   - or: 
@@ -94,6 +93,9 @@ stories:
   steps:
   - intent: thank 
   - action: utter_thank_response
+
+# - story: user has questions then bot has to bring them to the flow
+#   steps:
 
 
 # - story: mixed_initiative

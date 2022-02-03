@@ -1,0 +1,99 @@
+[
+  {
+    "text": "I have diarrhea, is it a symptom for gonorrhea",
+    "entities": [
+      {
+        "start": 37,
+        "end": 46,
+        "value": "gonorrhea",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 7,
+        "end": 15,
+        "confidence_entity": 0.9862475991249084,
+        "value": "diarrhea",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "STD_name",
+        "start": 37,
+        "end": 46,
+        "confidence_entity": 0.9996745586395264,
+        "value": "gonorrhea",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "whats the center for disease control",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 21,
+        "end": 28,
+        "confidence_entity": 0.7786509394645691,
+        "value": "disease",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "what is sexually transmitted infection",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 29,
+        "end": 38,
+        "confidence_entity": 0.9835841059684753,
+        "value": "infection",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "why are you so stupid",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 15,
+        "end": 21,
+        "confidence_entity": 0.991046130657196,
+        "value": "stupid",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I did a blowjob to someone who was HIV positive. Am I at risk?",
+    "entities": [
+      {
+        "start": 35,
+        "end": 38,
+        "value": "HIV",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "what are the statistics for stds in Brazil?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 36,
+        "end": 42,
+        "confidence_entity": 0.9343096017837524,
+        "value": "Brazil",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

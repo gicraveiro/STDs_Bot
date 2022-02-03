@@ -1,0 +1,23 @@
+[
+  {
+    "text": "what info can you tell me on HEPATITIS",
+    "entities": [
+      {
+        "start": 29,
+        "end": 38,
+        "value": "HEPATITIS",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 29,
+        "end": 38,
+        "confidence_entity": 0.9986410737037659,
+        "value": "HEPATITIS",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

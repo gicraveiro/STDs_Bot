@@ -13,7 +13,6 @@ intents:
   - list_STD
   - testing_recommendations
   - ask_source
-  - find_more_info
   - definition_STD
   - transmission_STD
   - prevention_STD
@@ -111,10 +110,6 @@ responses:
   utter_consequences_STD:
   - text: STDs don’t always cause symptoms or may only cause mild symptoms. Therefore, it is possible to have an infection and not know it. That is why getting an STD test is important if you are having sex. If you receive a positive STD diagnosis, know that all are treatable with medicine and some are curable entirely.
 
-
-  # utter_treatment_STD:
-  # - text: 
-
   utter_testing_recommendations:
   - text: "If you are sexually active, getting tested for STDs is one of the most important things you can do to protect your health. Make sure you have an open and honest conversation about your sexual history and STD testing with your doctor and ask whether you should be tested for STDs.\n\n\nBelow is a brief overview of STD testing recommendations:\n\n\n  - All adults and adolescents from ages 13 to 64 should be tested at least once for HIV.\n\n\n  - All sexually active women younger than 25 years should be tested for gonorrhea and chlamydia every year. Women 25 years and older with risk factors such as new or multiple sex partners or a sex partner who has an STD should also be tested for gonorrhea and chlamydia every year.\n\n\n  - Everyone who is pregnant should be tested for syphilis, HIV, hepatitis B, and hepatitis C starting early in pregnancy. Those at risk for infection should also be tested for chlamydia and gonorrhea starting early in pregnancy. Repeat testing may be needed in some cases.\n\n\n  - Anyone who engages in sexual behaviors that could place them at risk for infection or shares injection drug equipment should get tested for HIV at least once a year.\n\n\n  - People who have had oral or anal sex should talk with their healthcare provider about throat and rectal testing options.\n\n\n  - All sexually active gay, bisexual, and other men who have sex with men should be tested:\n\n\n    - At least once a year for syphilis, chlamydia, and gonorrhea. Those who have multiple or anonymous partners should be tested more frequently (e.g., every 3 to 6 months).\n\n\n    - At least once a year for HIV and may benefit from more frequent HIV testing (e.g., every 3 to 6 months).\n\n\n    - At least once a year for hepatitis C, if living with HIV.\n\n\n"
   # Source: https://www.cdc.gov/std/prevention/screeningreccs.htm
@@ -168,9 +163,7 @@ responses:
 
   utter_scope:
   - text: "I can answer questions regarding definition, transmission, prevention, treatment, diagnosis, symptoms and possible health consequences of the stds in my database.\n\nI can also answer these questions without specifying an std, list the stis in my database and give testing recommendations.\n\nFinally, I can tell you the source of my database."
-  
-  # utter_did_that_help:
-  # - text: "Did that help you?"
+
 
 #####
 # Out of scope
@@ -194,19 +187,7 @@ responses:
   utter_goodbye:
   - text: Bye-bye!
 
-
-#####
-# Others 
-
-  # utter_cheer_up:
-  # - text: "Here is something to cheer you up:"
-  #   image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  # utter_happy:
-  # - text: "Great, carry on!"
-
-  # utter_iamabot:
-  # - text: "I am a bot, powered by Rasa."
+####
 
 
 actions:

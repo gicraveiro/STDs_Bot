@@ -1,0 +1,81 @@
+[
+  {
+    "text": "how to diagnose [hepatitis b][\"entity\": \"STD_name\"]",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 17,
+        "end": 26,
+        "confidence_entity": 0.9945270419120789,
+        "value": "hepatitis",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "are there visible signs of the disease?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 31,
+        "end": 38,
+        "confidence_entity": 0.8443803191184998,
+        "value": "disease",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "which are all the fluids that contaminate with an std",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 18,
+        "end": 24,
+        "confidence_entity": 0.7875721454620361,
+        "value": "fluids",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "whats the source of hpv infection? bacteria?",
+    "entities": [
+      {
+        "start": 20,
+        "end": 33,
+        "value": "hpv infection",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 20,
+        "end": 33,
+        "confidence_entity": 0.9411526322364807,
+        "value": "hpv infection",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "STD_name",
+        "start": 35,
+        "end": 43,
+        "confidence_entity": 0.9981968998908997,
+        "value": "bacteria",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "STD_name",
+        "start": 20,
+        "end": 33,
+        "confidence_entity": 0.9991998390352327,
+        "value": "hpv infection",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  }
+]

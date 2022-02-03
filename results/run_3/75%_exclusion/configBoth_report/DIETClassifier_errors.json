@@ -1,0 +1,126 @@
+[
+  {
+    "text": "I have diarrhea, is it a symptom for gonorrhea",
+    "entities": [
+      {
+        "start": 37,
+        "end": 46,
+        "value": "gonorrhea",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 7,
+        "end": 15,
+        "confidence_entity": 0.9355156421661377,
+        "value": "diarrhea",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "STD_name",
+        "start": 37,
+        "end": 46,
+        "confidence_entity": 0.9995126724243164,
+        "value": "gonorrhea",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "STD_name",
+        "start": 37,
+        "end": 46,
+        "confidence_entity": 0.9999942625445187,
+        "value": "gonorrhea",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "what is sexually transmitted infection",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 29,
+        "end": 38,
+        "confidence_entity": 0.9340653419494629,
+        "value": "infection",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I have lots of doubts about HIV",
+    "entities": [
+      {
+        "start": 28,
+        "end": 31,
+        "value": "HIV",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "why are you so stupid",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 15,
+        "end": 21,
+        "confidence_entity": 0.7707942724227905,
+        "value": "stupid",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I did a blowjob to someone who was HIV positive. Am I at risk?",
+    "entities": [
+      {
+        "start": 35,
+        "end": 38,
+        "value": "HIV",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "can I catch genital herpes from anal sex?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 26,
+        "value": "genital herpes",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 20,
+        "end": 26,
+        "confidence_entity": 0.9975830316543579,
+        "value": "Genital Herpes",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "STD_name",
+        "start": 20,
+        "end": 26,
+        "confidence_entity": 0.8080349697071152,
+        "value": "Genital Herpes",
+        "extractor": "CRFEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]

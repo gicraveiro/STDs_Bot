@@ -1,0 +1,134 @@
+[
+  {
+    "text": "I did a blowjob to someone who was HIV positive. Am I at risk?",
+    "entities": [
+      {
+        "start": 35,
+        "end": 38,
+        "value": "HIV",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 35,
+        "end": 38,
+        "confidence_entity": 0.9979263544082642,
+        "value": "AIDs",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "can I get [HPV infection] from oral sex?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 11,
+        "end": 24,
+        "confidence_entity": 0.5127289891242981,
+        "value": "HPV infection",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "STD_name",
+        "start": 11,
+        "end": 24,
+        "confidence_entity": 0.9999704733835626,
+        "value": "HPV infection",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "can I catch genital herpes from anal sex?",
+    "entities": [
+      {
+        "start": 12,
+        "end": 26,
+        "value": "genital herpes",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 12,
+        "end": 19,
+        "confidence_entity": 0.985798716545105,
+        "value": "genital",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "STD_name",
+        "start": 20,
+        "end": 26,
+        "confidence_entity": 0.7768808007240295,
+        "value": "Genital Herpes",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "STD_name",
+        "start": 20,
+        "end": 26,
+        "confidence_entity": 0.9838976285786427,
+        "value": "Genital Herpes",
+        "extractor": "CRFEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "sure, but focus on genital herpes",
+    "entities": [
+      {
+        "start": 19,
+        "end": 33,
+        "value": "genital herpes",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 19,
+        "end": 26,
+        "confidence_entity": 0.987407922744751,
+        "value": "genital",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "STD_name",
+        "start": 27,
+        "end": 33,
+        "confidence_entity": 0.8894369602203369,
+        "value": "Genital Herpes",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "STD_name",
+        "start": 27,
+        "end": 33,
+        "confidence_entity": 0.9916403929327592,
+        "value": "Genital Herpes",
+        "extractor": "CRFEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]

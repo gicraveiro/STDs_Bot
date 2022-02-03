@@ -1,0 +1,386 @@
+[
+  {
+    "text": "testing recommendations",
+    "intent": "testing_recommendations",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.7692047953605652
+    }
+  },
+  {
+    "text": "how to tell if I'm contaminated",
+    "intent": "diagnosis_STD",
+    "intent_prediction": {
+      "name": "transmission_STD",
+      "confidence": 0.5993269085884094
+    }
+  },
+  {
+    "text": "I might be infected with gonorrhea",
+    "intent": "diagnosis_STD",
+    "intent_prediction": {
+      "name": "transmission_STD",
+      "confidence": 0.6554453372955322
+    }
+  },
+  {
+    "text": "Makes sense, thank youu",
+    "intent": "thank",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.7111943364143372
+    }
+  },
+  {
+    "text": "can I heal from hpv infection",
+    "intent": "treatment_STD",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.8001203536987305
+    }
+  },
+  {
+    "text": "I had sex with someone who had chlamydia. How do I heal?",
+    "intent": "treatment_STD",
+    "intent_prediction": {
+      "name": "diagnosis_STD",
+      "confidence": 0.6212227940559387
+    }
+  },
+  {
+    "text": "I know there's aids, chlamydia and hpv infection but are there others?",
+    "intent": "list_STD",
+    "intent_prediction": {
+      "name": "set_entity_none",
+      "confidence": 0.28343266248703003
+    }
+  },
+  {
+    "text": "what about all stds?",
+    "intent": "set_entity_none",
+    "intent_prediction": {
+      "name": "list_STD",
+      "confidence": 0.3890303373336792
+    }
+  },
+  {
+    "text": "I'm not interested in aids anymore",
+    "intent": "set_entity_none",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.9492776393890381
+    }
+  },
+  {
+    "text": "about stds",
+    "intent": "set_entity_none",
+    "intent_prediction": {
+      "name": "I_have_questions",
+      "confidence": 0.39569124579429626
+    }
+  },
+  {
+    "text": "generally describe them",
+    "intent": "definition_STD",
+    "intent_prediction": {
+      "name": "set_entity_none",
+      "confidence": 0.9080334305763245
+    }
+  },
+  {
+    "text": "can I ask you?",
+    "intent": "I_have_questions",
+    "intent_prediction": {
+      "name": "ask_scope",
+      "confidence": 0.9966070055961609
+    }
+  },
+  {
+    "text": "how does this work? can I start asking?",
+    "intent": "I_have_questions",
+    "intent_prediction": {
+      "name": "lost_user",
+      "confidence": 0.9587780237197876
+    }
+  },
+  {
+    "text": "may I start?",
+    "intent": "I_have_questions",
+    "intent_prediction": {
+      "name": "advance_plot",
+      "confidence": 0.5435459017753601
+    }
+  },
+  {
+    "text": "you're such an idiot",
+    "intent": "insults",
+    "intent_prediction": {
+      "name": "express_amusement",
+      "confidence": 0.7801238894462585
+    }
+  },
+  {
+    "text": "go to hell",
+    "intent": "insults",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.7107421159744263
+    }
+  },
+  {
+    "text": "blow me, idiot",
+    "intent": "insults",
+    "intent_prediction": {
+      "name": "lost_user",
+      "confidence": 0.9745500087738037
+    }
+  },
+  {
+    "text": "blow me",
+    "intent": "insults",
+    "intent_prediction": {
+      "name": "lost_user",
+      "confidence": 0.8762474060058594
+    }
+  },
+  {
+    "text": "whats your name",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "ask_source",
+      "confidence": 0.49096864461898804
+    }
+  },
+  {
+    "text": "who are you?",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "ask_source",
+      "confidence": 0.6340512633323669
+    }
+  },
+  {
+    "text": "do you know about other types of diseases?",
+    "intent": "ask_scope",
+    "intent_prediction": {
+      "name": "advance_plot",
+      "confidence": 0.6423129439353943
+    }
+  },
+  {
+    "text": "what is your scope?",
+    "intent": "ask_scope",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.25727343559265137
+    }
+  },
+  {
+    "text": "what kinds of questions can I make?",
+    "intent": "ask_scope",
+    "intent_prediction": {
+      "name": "I_have_questions",
+      "confidence": 0.7308444976806641
+    }
+  },
+  {
+    "text": "can you get pelvic inflammatory disease without having sex",
+    "intent": "transmission_STD",
+    "intent_prediction": {
+      "name": "I_have_questions",
+      "confidence": 0.32346969842910767
+    }
+  },
+  {
+    "text": "I did a blowjob to someone who was HIV positive. Am I at risk?",
+    "intent": "transmission_STD",
+    "intent_prediction": {
+      "name": "treatment_STD",
+      "confidence": 0.5729343295097351
+    }
+  },
+  {
+    "text": "can I get [HPV infection] from oral sex?",
+    "intent": "transmission_STD",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.765949010848999
+    }
+  },
+  {
+    "text": "what do I do?",
+    "intent": "lost_user",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.36877018213272095
+    }
+  },
+  {
+    "text": "I know someone who had syphilis",
+    "intent": "lost_user",
+    "intent_prediction": {
+      "name": "ask_source",
+      "confidence": 0.307346373796463
+    }
+  },
+  {
+    "text": "how can I be protected from Genital Herpes",
+    "intent": "prevention_STD",
+    "intent_prediction": {
+      "name": "list_STD",
+      "confidence": 0.4522850811481476
+    }
+  },
+  {
+    "text": "whats the source of hpv infection? bacteria?",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "ask_source",
+      "confidence": 0.9513146281242371
+    }
+  },
+  {
+    "text": "which stds can be diagnosed with tests?",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "consequences_STD",
+      "confidence": 0.4346122443675995
+    }
+  },
+  {
+    "text": "when can I have sex again after being cured from syphilis",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "consequences_STD",
+      "confidence": 0.7856686115264893
+    }
+  },
+  {
+    "text": "what are the statistics for stds in Brazil?",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "definition_STD",
+      "confidence": 0.2907037138938904
+    }
+  },
+  {
+    "text": "is it lethal",
+    "intent": "consequences_STD",
+    "intent_prediction": {
+      "name": "I_have_questions",
+      "confidence": 0.44488412141799927
+    }
+  },
+  {
+    "text": "can stds kill?",
+    "intent": "consequences_STD",
+    "intent_prediction": {
+      "name": "set_entity_none",
+      "confidence": 0.49572083353996277
+    }
+  },
+  {
+    "text": "I'm glad",
+    "intent": "express_amusement",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.2099611908197403
+    }
+  },
+  {
+    "text": "yes, thanks",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "thank",
+      "confidence": 0.9809229969978333
+    }
+  },
+  {
+    "text": "sure, but focus on genital herpes",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "definition_STD",
+      "confidence": 0.8066698312759399
+    }
+  },
+  {
+    "text": "agreed",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "express_amusement",
+      "confidence": 0.6311258673667908
+    }
+  },
+  {
+    "text": "I do, actually, tks for asking",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "set_entity_none",
+      "confidence": 0.9180668592453003
+    }
+  },
+  {
+    "text": "it was a pleasure to have this conversation",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "treatment_STD",
+      "confidence": 0.32347193360328674
+    }
+  },
+  {
+    "text": "have a nice day",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "express_amusement",
+      "confidence": 0.5327847003936768
+    }
+  },
+  {
+    "text": "enjoy your day",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "ask_source",
+      "confidence": 0.235413059592247
+    }
+  },
+  {
+    "text": "good by",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "express_amusement",
+      "confidence": 0.4654819071292877
+    }
+  },
+  {
+    "text": "i gotta learn stuff about Pelvic Inflammatory Disease",
+    "intent": "advance_plot",
+    "intent_prediction": {
+      "name": "I_have_questions",
+      "confidence": 0.9636356234550476
+    }
+  },
+  {
+    "text": "teach me",
+    "intent": "advance_plot",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.29519498348236084
+    }
+  },
+  {
+    "text": "what should I know?",
+    "intent": "advance_plot",
+    "intent_prediction": {
+      "name": "ask_scope",
+      "confidence": 0.9072222113609314
+    }
+  },
+  {
+    "text": "begin",
+    "intent": "advance_plot",
+    "intent_prediction": {
+      "name": "set_entity_none",
+      "confidence": 0.32724693417549133
+    }
+  }
+]

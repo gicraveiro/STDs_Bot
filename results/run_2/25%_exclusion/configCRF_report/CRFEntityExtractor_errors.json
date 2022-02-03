@@ -1,0 +1,28 @@
+[
+  {
+    "text": "I did a blowjob to someone who was HIV positive. Am I at risk?",
+    "entities": [
+      {
+        "start": 35,
+        "end": 38,
+        "value": "HIV",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "can I get [HPV infection] from oral sex?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 11,
+        "end": 24,
+        "confidence_entity": 0.9935120997350587,
+        "value": "HPV infection",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  }
+]

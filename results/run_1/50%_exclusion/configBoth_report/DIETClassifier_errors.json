@@ -1,0 +1,137 @@
+[
+  {
+    "text": "how to diagnose [hepatitis b][\"entity\": \"STD_name\"]",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 17,
+        "end": 26,
+        "confidence_entity": 0.9926195740699768,
+        "value": "hepatitis",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "are there visible signs of the disease?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 31,
+        "end": 38,
+        "confidence_entity": 0.997421383857727,
+        "value": "disease",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "what in my body could indicate an infection",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 34,
+        "end": 43,
+        "confidence_entity": 0.8860268592834473,
+        "value": "infection",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "which are all the fluids that contaminate with an std",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 18,
+        "end": 24,
+        "confidence_entity": 0.9943138360977173,
+        "value": "fluids",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "i don't know what I'm doing here",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 28,
+        "end": 32,
+        "confidence_entity": 0.6187699437141418,
+        "value": "here",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "whats the source of hpv infection? bacteria?",
+    "entities": [
+      {
+        "start": 20,
+        "end": 33,
+        "value": "hpv infection",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 20,
+        "end": 33,
+        "confidence_entity": 0.7977811098098755,
+        "value": "hpv infection",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "STD_name",
+        "start": 35,
+        "end": 43,
+        "confidence_entity": 0.9100220799446106,
+        "value": "bacteria",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "STD_name",
+        "start": 20,
+        "end": 33,
+        "confidence_entity": 0.9998732372502197,
+        "value": "hpv infection",
+        "extractor": "CRFEntityExtractor"
+      }
+    ]
+  },
+  {
+    "text": "which fluids can infect with stds",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 6,
+        "end": 12,
+        "confidence_entity": 0.9267922639846802,
+        "value": "fluids",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I'm worried, is it bad?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 19,
+        "end": 22,
+        "confidence_entity": 0.6306024789810181,
+        "value": "bad",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

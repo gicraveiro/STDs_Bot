@@ -1,0 +1,27 @@
+{
+  "STD_name": {
+    "precision": 1.0,
+    "recall": 0.95,
+    "f1-score": 0.9743589743589743,
+    "support": 20,
+    "confused_with": {}
+  },
+  "micro avg": {
+    "precision": 1.0,
+    "recall": 0.95,
+    "f1-score": 0.9743589743589743,
+    "support": 20
+  },
+  "macro avg": {
+    "precision": 1.0,
+    "recall": 0.95,
+    "f1-score": 0.9743589743589743,
+    "support": 20
+  },
+  "weighted avg": {
+    "precision": 1.0,
+    "recall": 0.95,
+    "f1-score": 0.9743589743589742,
+    "support": 20
+  }
+}
