@@ -27,7 +27,9 @@ nlu:
     - am I talking to a human
     - Hey! How are you?
     - Hi, Sexy
-
+    - Hello! Are you a bot?
+    - What are you called?
+    - yo 
 - intent: goodbye
   examples: |
     - good afternoon
@@ -60,7 +62,8 @@ nlu:
     - enjoy your day
     - Have a good week!
     - gotta go
-
+    - Have a nice night 
+    - I wish you a good weekend
 - intent: thank
   examples: |
     - thank you
@@ -77,7 +80,13 @@ nlu:
     - cool, tks
     - perfect, thank you
     - allright, thanks
-
+    - got it, thanks a lot 
+    - thank you very very much
+    - I am thankful
+    - Tks, I appreciate it 
+    - nice, thanksss
+    - Thanks for helping me 
+    - Makes sense, thank youu
 - intent: express_amusement
   examples: |
     - cool
@@ -102,13 +111,21 @@ nlu:
     - incredible goal
     - perfect!
     - I'm glad
+    - that is so cool! 
+    - It seems perfect. 
+    - Sounds amazing 
+    - this is good 
+    - ok, excellent! 
+    - I think this is awesome
+    - This is great!
+    - good, I'm glad
+    - good
 - intent: affirm
   examples: |
     - yes
     - y
     - indeed
     - of course
-    - that sounds good
     - correct
     - sure
     - absolutely
@@ -116,13 +133,11 @@ nlu:
     - alright
     - all right
     - YES
-    - anything you think I should know
     - please do
     - agreed
-    - yes, more about [trichomoniasis](STD_name)
-    - please tell me about [AIDS](STD_name)
-    - sure, but focus on [genital herpes](STD_name)
     - uhum
+    - yes, more about [trichomoniasis](STD_name)
+    - sure, but focus on [genital herpes](STD_name)
     - right, but only about [bv](STD_name)
     - ok, but specifically about [pid](STD_name)
     - I guess so
@@ -137,7 +152,7 @@ nlu:
     - I understood 
     - got it
     - I will
-
+    - yes, thanks
 - intent: deny
   examples: |
     - no
@@ -161,13 +176,15 @@ nlu:
     - no, that's all
     - not anymore 
     - i do not
-
+    - don't you dare
+    - no, I'm good 
+    - no, please
+    - not again
 - intent: I_have_questions
   examples: |
     - I have a question
     - I have some doubts
     - so many
-    - yes, i have
     - i do have something to ask
     - i wanna ask you one thing
     - I have questions about [Chancroid](STD_name)
@@ -175,10 +192,21 @@ nlu:
     - can I ask you?
     - how does this work? can I start asking?
     - may I start?
-    - I have questions about [Genital Herpes](STD_name)
+    - I have doubts about [Genital Herpes](STD_name)
     - [syphilis](STD_name)
     - i have doubts on [syphilis](STD_name)
-
+    - I have a question about [gonorrhea](STD_name)
+    - I want to ask about [HPV Infection](STD_name)
+    - Can I ask about [pelvic inflammatory disease](STD_name)?
+    - Can I start asking questions?
+    - I'm in doubt about one thing 
+    - I have so many questions about stds
+    - I have lots of doubts about [HIV](STD_name)
+    - There is something I want to know about stis 
+    - There is one thing I want to ask about [bacterial vaginosis](STD_name)
+    - May I ask questions?
+    - I have a couple of questions
+    - a few doubts
 - intent: lost_user
   examples: | 
     - i have a problem
@@ -191,13 +219,24 @@ nlu:
     - i need help 
     - help me 
     - help me deal with my condition
-    - idk what I'm doing here 
+    - i don't know what I'm doing here 
     - I didn't follow. 
     - But, how are you useful?
     - how can you help me
     - what??
     - my friend got [herpes](STD_name)
-
+    - I'm confused
+    - I know someone who had [syphilis](STD_name)
+    - my girlfriend is infected with [trichomoniasis](STD_name)
+    - my boyfriend has [AIDs](STD_name)
+    - what am I doing here?
+    - what can I do?
+    - what do I do?
+    - how does this work
+    - i have a condition
+    - idk
+    - no idea
+    - this is confusing
   # BOT GENERAL
 - intent: ask_scope
   examples: |
@@ -220,7 +259,14 @@ nlu:
     - What can I ask you?
     - Can I ask about [Bacterial Vaginosis](STD_name)?
     - what is your scope?
-
+    - Can you answer questions that are not about stds?
+    - What do you know, besides stis?
+    - What can I ask that is not related to stds?
+    - Can I ask about pleasure in sex?
+    - Can you diagnose me?
+    - What can you do?
+    - How do you help people?
+    - How do you spread knowledge?
 - intent: ask_source
   examples: |
     - what's your source
@@ -247,9 +293,9 @@ nlu:
     - whats the link for the database
     - where did you learn that?
     - how do you know so much?
-
 - intent: advance_plot
   examples: |
+    - tell me anything you think I should know
     - what should I know?
     - tell me everything
     - what can you do
@@ -283,7 +329,11 @@ nlu:
     - anything else?
     - what else can you tell me?
     - is there any other info I should know?
-
+    - What can you tell me about [hepatitis](STD_name)?
+    - give me the important facts, please
+    - any relevant remarks?
+    - please tell me about [AIDS](STD_name)
+    - I want to know about [Chancroid](STD_name)
 - intent: testing_recommendations
   examples: |
     - when should I test myself?
@@ -295,12 +345,17 @@ nlu:
     - I never had sex, am I at risk for stds?
     - what are the risk groups for stis
     - what's the recommended frequency to do tests for [GONORRHEA](STD_name)
-    - should I test every year for [hiv](STD_name)
+    - should I test every year for [hiv](STD_name)?
     - give me recommendations
-    - I'm worried because there is a red spot in my penis
     - I don't have any symptoms, do I still need to test myself?
-
-
+    - am I at risk?
+    - should I get tested?
+    - when is it advisable to test for stds?
+    - are there any testing recommendations?
+    - what are the available tests?
+    - is it possible to test for stis?
+    - do I have to get tested?
+    - how often should I get tested?
 - intent: list_STD
   examples: |
     - Name all STDs
@@ -326,8 +381,6 @@ nlu:
     - and which are the stis
     - show me names of stds
     - what are all stds?
-
-
 # STD QUESTIONS THAT CAN BE GENERAL AND FOR AN SPECIFIC STD
 
 - intent: definition_STD
@@ -356,7 +409,6 @@ nlu:
     - generally describe them
     - makes sense, whats the definition again?
     - whats [AIDS](STD_name)
-
 - intent: transmission_STD
   examples: |
     - how are they transmitted
@@ -386,7 +438,6 @@ nlu:
     - I had sex with someone who had [chlamydia](STD_name). Could I be infected?
     - I did a blowjob to someone who was [HIV](STD_name) positive. Am I at risk?
     - can I get [HPV infection] from oral sex?
-
 - intent: prevention_STD
   examples: |
     - how can we protect ourselves?
@@ -418,30 +469,28 @@ nlu:
     - are preservatives enough to prevent an sti infection?
     - what should I do regarding not getting an std?
     - what are preservatives for?
-
 - intent: diagnosis_STD
   examples: |
     - diagnosis
     - how can I diagnose an std?
     - how will I know if I have it
     - find out if I have [pid](STD_name)
-    - are there any tests that show the presence of an infection
+    - are there any tests that diagnose sexually transmitted infections?
     - how to tell if I'm contaminated
     - what are the tests to be diagnosed with an sti
     - how do I know if I have an std
-    - how to test myself
-    - do pharmacys perform tests?
+    - how to test myself for [bacterial vaginosis](STD_name)
     - how can my doctor find out if I have an std
     - show me how to discover if I'm infected
     - how to diagnose [hepatitis b]["entity": "STD_name"]
     - how to know if I'm [HIV]["entity": "STD_name"] positive
-    - how can I test for [bv]["entity": "STD_name"]
+    - how can I find out if I have [bv]["entity": "STD_name"]
     - I had sex with someone who had [chlamydia](STD_name). Am I infected?
     - My boyfriend has [hpv infection](STD_name). How do I know if I do too?
-    - I think I have [pid](STD_name)
     - I might be infected with [gonorrhea](STD_name)
-    - I'm worried I might have an sti
-
+    - is there a test to diagnose [hpv](STD_name)?
+    - tests to find out if I have stds
+    - how to know if I have [Chlamydia](STD_name)
 - intent: symptoms_STD
   examples: |
     - what are the symptoms?
@@ -467,7 +516,6 @@ nlu:
     - is it possible to have an std without any symptoms?
     - is [chlamydia](STD_name) asymptomatic?
     - is [gonorrhea](STD_name) symptomless?
-
 - intent: treatment_STD
   examples: |
     - is there a cure?
@@ -488,9 +536,10 @@ nlu:
     - what should I do now that I'm infected?
     - my partner passed me [syphilis](STD_name). What do I do?
     - I had sex with someone who had [chlamydia](STD_name). How do I heal?
-    - I'm worried, is it bad?
-    - I have [trichomoniasis](STD_name)
-
+    - is [BV](STD_name) treatable?
+    - How can I treat [Trichomoniasis](STD_name)?
+    - How can I avoid consequences?
+    - Is it possible to avoid consequences?
 - intent: consequences_STD
   examples: |
     - am I gonna die?
@@ -501,8 +550,8 @@ nlu:
     - is it lethal
     - is it possible to live normally after getting an std
     - what happens if I don't do anything about my std?
-    - does it go away with time
-    - are there complications
+    - does it go away with time?
+    - are there complications?
     - do people die of [hpv](STD_name)
     - can it give me cancer?
     - what happens after I get an std?
@@ -512,7 +561,17 @@ nlu:
     - what are the dangers of not being diagnosed?
     - are there major problems for [pelvic inflammatory disease](STD_name)
     - is it a permanent condition?
-
+    - what are the health problems originated by [Bacterial Vaginosis](STD_name)?
+    - which are the complications if you don't treat [Hepatitis B](STD_name)?
+    - is it possible to die from [BV](STD_name)
+    - can stds kill?
+    - what happens if you don't know you have [syphilis](STD_name)
+    - can [chlamydia](STD_name) bring consequences to my pregnancy?
+    - is cancer a side effect of not treated stds?
+    - are there permanent losses with [gonorrhea](STD_name)?
+    - are there any permanent consequences?
+    - does [HPV Infection](STD_name) bring side effects for life?
+    - I'm worried, is it bad?
 - intent: set_entity_none
   examples: |
     - stop talking about [syphilis](STD_name)
@@ -532,7 +591,12 @@ nlu:
     - does it apply for all sexually transmitted infections?
     - how about others?
     - are there more dangerous stds, other than [PID](STD_name)?
-
+    - what about all stds?
+    - how is it in general?
+    - I'm asking for all stds 
+    - Can you give a general answer?
+    - Regarding all stis 
+    - How is it for other stds?
 # OUT OF SCOPE 
 
 - intent: out_of_scope
@@ -551,8 +615,6 @@ nlu:
     - how common is to have [gonorrhea](STD_name)
     - can I get reinfected?
     - when can I have sex again after being cured from [syphilis](STD_name)
-    - what happens if I'm pregnant and get an std?
-    - which medicine should I take for [herpes](STD_name)
     - is [bacterial vaginosis](STD_name) from a virus?
     - is it a fungus that causes [pelvic inflammatory disease](STD_name)
     - whats the source of [hpv infection](STD_name)? bacteria?
@@ -562,30 +624,52 @@ nlu:
     - can I have sex if I have an std?
     - which stds are asymptomatic?
     - which stis have vaccines?
-
+    - which stds can be diagnosed with tests?
+    - is it free to get a diagnosis?
+    - where can I go for testing?
+    - where in the world are stds common?
+    - is the vaccine for [HPV](STD_name) free?
+    - how much does it cost medicine for [Chlamydia](STD_name)
 - intent: insults
   examples: |
-    - stupid bot
+    - stupid
     - piece of shit
     - fuck you
-    - useless robot
-    - you are ridiculous
-    - hey slave
-    - why are you so stupid
+    - useless
+    - ridiculous
+    - slave
     - bitch
     - you idiot
-    - oh great, you can't even answer that, is there anything you're capable of at all??
+    - you slave
     - ridiculous bitch
-    - you're awful
-    - tell me, bitch, what can you do for me
-    - you're so sexy
-    - hi hottie
-    - you are hot, be my girlfriend
     - blow me
-    - show me your ass
-    - how do you know so much, you must be a slut
-    - I bet you've had a lot of sex
+    - slut
+    - go to hell 
+    - stupid shitty slut 
+    - useless slave 
+    - blow me, idiot
+    - you're useless 
+    - stupid bot
+    - useless robot
+    - you are ridiculous
+    - you're my slave
+    - why are you so stupid
     - bots are slaves of humans
+    - go fuck yourself
+    - you're such an idiot
+    - YOU ARE A SLUT
+  # - you're awful
+  # - stupid shitty bot
+  # - bitch please 
+  # - that was an awful answer, like you
+  #  - show me your ass
+  #  - how do you know so much, you must be a slut
+  #  - I bet you've had a lot of sex
+  #  - hi hottie
+  #  - you're so sexy
+  #  - you are hot, be my girlfriend
+  #  - tell me, bitch, what can you do for me
+  #  - oh great, you can't even answer that, is there anything you're capable of at all??
 
   # SYNONYMS 
 
@@ -604,7 +688,6 @@ nlu:
 - synonym: AIDs
   examples: |
     - hiv
-
   # LOOKUP TABLE
 
 - lookup: STD_name
@@ -620,3 +703,4 @@ nlu:
     - Hepatitis
     - AIDS
     - Chancroid
+

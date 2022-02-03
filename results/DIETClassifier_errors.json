@@ -1,42 +1,14 @@
 [
   {
-    "text": "how to diagnose [hepatitis b][\"entity\": \"STD_name\"]",
+    "text": "what is sexually transmitted infection",
     "entities": [],
     "predicted_entities": [
       {
         "entity": "STD_name",
-        "start": 17,
-        "end": 26,
-        "confidence_entity": 0.9993031024932861,
-        "value": "hepatitis",
-        "extractor": "DIETClassifier"
-      }
-    ]
-  },
-  {
-    "text": "why are you so stupid",
-    "entities": [],
-    "predicted_entities": [
-      {
-        "entity": "STD_name",
-        "start": 15,
-        "end": 21,
-        "confidence_entity": 0.9086739420890808,
-        "value": "stupid",
-        "extractor": "DIETClassifier"
-      }
-    ]
-  },
-  {
-    "text": "are there visible signs of the disease?",
-    "entities": [],
-    "predicted_entities": [
-      {
-        "entity": "STD_name",
-        "start": 31,
+        "start": 29,
         "end": 38,
-        "confidence_entity": 0.9262098670005798,
-        "value": "disease",
+        "confidence_entity": 0.7665069103240967,
+        "value": "infection",
         "extractor": "DIETClassifier"
       }
     ]
@@ -55,74 +27,17 @@
       {
         "entity": "STD_name",
         "start": 20,
-        "end": 23,
-        "confidence_entity": 0.5780362486839294,
-        "value": "HPV Infection",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
+        "end": 33,
+        "confidence_entity": 0.982894241809845,
+        "value": "hpv infection",
+        "extractor": "DIETClassifier"
       },
       {
         "entity": "STD_name",
         "start": 35,
         "end": 43,
-        "confidence_entity": 0.9864205121994019,
+        "confidence_entity": 0.9965025186538696,
         "value": "bacteria",
-        "extractor": "DIETClassifier"
-      }
-    ]
-  },
-  {
-    "text": "I have questions about Chancroid",
-    "entities": [
-      {
-        "start": 23,
-        "end": 32,
-        "value": "Chancroid",
-        "entity": "STD_name"
-      }
-    ],
-    "predicted_entities": []
-  },
-  {
-    "text": "which are all the fluids that contaminate with an std",
-    "entities": [],
-    "predicted_entities": [
-      {
-        "entity": "STD_name",
-        "start": 18,
-        "end": 24,
-        "confidence_entity": 0.8714627623558044,
-        "value": "fluids",
-        "extractor": "DIETClassifier"
-      }
-    ]
-  },
-  {
-    "text": "can I get [HPV infection] from oral sex?",
-    "entities": [],
-    "predicted_entities": [
-      {
-        "entity": "STD_name",
-        "start": 11,
-        "end": 24,
-        "confidence_entity": 0.9686508178710938,
-        "value": "HPV infection",
-        "extractor": "DIETClassifier"
-      }
-    ]
-  },
-  {
-    "text": "which fluids can infect with stds",
-    "entities": [],
-    "predicted_entities": [
-      {
-        "entity": "STD_name",
-        "start": 6,
-        "end": 12,
-        "confidence_entity": 0.7407125234603882,
-        "value": "fluids",
         "extractor": "DIETClassifier"
       }
     ]
@@ -140,36 +55,43 @@
     "predicted_entities": []
   },
   {
-    "text": "what is sexually transmitted infection",
+    "text": "can I get [HPV infection] from oral sex?",
     "entities": [],
     "predicted_entities": [
       {
         "entity": "STD_name",
-        "start": 29,
-        "end": 38,
-        "confidence_entity": 0.6064513325691223,
-        "value": "infection",
+        "start": 11,
+        "end": 24,
+        "confidence_entity": 0.9965370893478394,
+        "value": "HPV infection",
         "extractor": "DIETClassifier"
       }
     ]
   },
   {
-    "text": "how is HPV Infection transmitted?",
-    "entities": [
-      {
-        "start": 7,
-        "end": 20,
-        "value": "HPV Infection",
-        "entity": "STD_name"
-      }
-    ],
+    "text": "are there visible signs of the disease?",
+    "entities": [],
     "predicted_entities": [
       {
         "entity": "STD_name",
-        "start": 11,
-        "end": 20,
-        "confidence_entity": 0.940596342086792,
-        "value": "Infection",
+        "start": 31,
+        "end": 38,
+        "confidence_entity": 0.8311603665351868,
+        "value": "disease",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "whats the center for disease control",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 21,
+        "end": 28,
+        "confidence_entity": 0.8707131147384644,
+        "value": "disease",
         "extractor": "DIETClassifier"
       }
     ]
@@ -189,7 +111,7 @@
         "entity": "STD_name",
         "start": 7,
         "end": 15,
-        "confidence_entity": 0.8474236726760864,
+        "confidence_entity": 0.9908602237701416,
         "value": "diarrhea",
         "extractor": "DIETClassifier"
       },
@@ -197,9 +119,73 @@
         "entity": "STD_name",
         "start": 37,
         "end": 46,
-        "confidence_entity": 0.9998617172241211,
+        "confidence_entity": 0.9997218251228333,
         "value": "gonorrhea",
         "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I have questions about Chancroid",
+    "entities": [
+      {
+        "start": 23,
+        "end": 32,
+        "value": "Chancroid",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I know there's aids, chlamydia and hpv infection but are there others?",
+    "entities": [
+      {
+        "start": 15,
+        "end": 19,
+        "value": "aids",
+        "entity": "STD_name"
+      },
+      {
+        "start": 21,
+        "end": 30,
+        "value": "chlamydia",
+        "entity": "STD_name"
+      },
+      {
+        "start": 35,
+        "end": 48,
+        "value": "hpv infection",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 15,
+        "end": 19,
+        "confidence_entity": 0.9998693466186523,
+        "value": "aids",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "STD_name",
+        "start": 21,
+        "end": 30,
+        "confidence_entity": 0.9996721744537354,
+        "value": "chlamydia",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "STD_name",
+        "start": 35,
+        "end": 38,
+        "confidence_entity": 0.6480680108070374,
+        "value": "HPV Infection",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
       }
     ]
   }

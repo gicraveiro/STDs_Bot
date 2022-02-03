@@ -8,12 +8,11 @@ intents:
   - express_amusement
   - I_have_questions
   - thank
-  - advance_plot   # General questions  # - intro
+  - advance_plot   # General questions
   - ask_scope
   - list_STD
   - testing_recommendations
   - ask_source
-  - find_more_info
   - definition_STD
   - transmission_STD
   - prevention_STD
@@ -21,25 +20,22 @@ intents:
   - diagnosis_STD
   - symptoms_STD
   - consequences_STD
-  # out of scope
   - out_of_scope
   - insults
   - set_entity_none
   - lost_user 
   - nlu_fallback
+
+  # Future features?
+
   #- source # bacteria, fungus, virus
   
   #   - establish_std_name:
 #       use_entities: true
-  # Others
-  # - mood_great
-  # - mood_unhappy
-  # - bot_challenge
   # Out of scope
   # - radically_out_of_scope
   # - moderately_out_of_scope
   # - slightly_out_of_scope
-  # - insults
   
 entities: 
 - STD_name
@@ -168,17 +164,12 @@ responses:
 
   utter_scope:
   - text: "I can answer questions regarding definition, transmission, prevention, treatment, diagnosis, symptoms and possible health consequences of the stds in my database.\n\nI can also answer these questions without specifying an std, list the stis in my database and give testing recommendations.\n\nFinally, I can tell you the source of my database."
-  
-  # utter_did_that_help:
-  # - text: "Did that help you?"
 
 #####
 # Out of scope
 
-#####
-# Greetings
 
-# HANDLE INSULTS/HARASSMENT
+# HANDLE INSULTS
   utter_handle_insults:
   - text: I do not tolerate being disrespected. Talk to me when you are ready to be polite.
   utter_intro:
@@ -194,19 +185,6 @@ responses:
   utter_goodbye:
   - text: Bye-bye!
 
-
-#####
-# Others 
-
-  # utter_cheer_up:
-  # - text: "Here is something to cheer you up:"
-  #   image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  # utter_happy:
-  # - text: "Great, carry on!"
-
-  # utter_iamabot:
-  # - text: "I am a bot, powered by Rasa."
 
 
 actions:
