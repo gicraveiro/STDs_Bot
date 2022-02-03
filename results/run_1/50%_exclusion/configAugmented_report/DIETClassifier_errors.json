@@ -1,0 +1,45 @@
+[
+  {
+    "text": "I have diarrhea, is it a symptom for gonorrhea",
+    "entities": [
+      {
+        "start": 37,
+        "end": 46,
+        "value": "gonorrhea",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 7,
+        "end": 15,
+        "confidence_entity": 0.9455171227455139,
+        "value": "diarrhea",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "STD_name",
+        "start": 37,
+        "end": 46,
+        "confidence_entity": 0.9996150732040405,
+        "value": "gonorrhea",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "what is sexually transmitted infection",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 29,
+        "end": 38,
+        "confidence_entity": 0.5793909430503845,
+        "value": "infection",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

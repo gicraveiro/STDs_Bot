@@ -1,0 +1,16 @@
+[
+  {
+    "text": "what in my body could indicate an infection",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 34,
+        "end": 43,
+        "confidence_entity": 0.9524856805801392,
+        "value": "infection",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

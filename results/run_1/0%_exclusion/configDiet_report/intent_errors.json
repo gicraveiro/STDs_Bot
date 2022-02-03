@@ -1,10 +1,10 @@
 [
   {
-    "text": "what are the available tests?",
-    "intent": "testing_recommendations",
+    "text": "how will I know if I have it",
+    "intent": "diagnosis_STD",
     "intent_prediction": {
-      "name": "ask_source",
-      "confidence": 0.40846505761146545
+      "name": "symptoms_STD",
+      "confidence": 0.9047203063964844
     }
   },
   {
@@ -12,359 +12,231 @@
     "intent": "diagnosis_STD",
     "intent_prediction": {
       "name": "symptoms_STD",
-      "confidence": 0.6113848686218262
+      "confidence": 0.791101336479187
     }
   },
   {
-    "text": "Makes sense, thank youu",
+    "text": "allright, thanks",
     "intent": "thank",
     "intent_prediction": {
       "name": "affirm",
-      "confidence": 0.7649130821228027
+      "confidence": 0.7048470377922058
     }
   },
   {
-    "text": "perfect, thank you",
-    "intent": "thank",
-    "intent_prediction": {
-      "name": "express_amusement",
-      "confidence": 0.5266613960266113
-    }
-  },
-  {
-    "text": "what medicine can I take",
+    "text": "how to avoid complications",
     "intent": "treatment_STD",
+    "intent_prediction": {
+      "name": "prevention_STD",
+      "confidence": 0.5782825350761414
+    }
+  },
+  {
+    "text": "do you have information on which stis",
+    "intent": "list_STD",
     "intent_prediction": {
       "name": "out_of_scope",
-      "confidence": 0.99207603931427
+      "confidence": 0.23351095616817474
     }
   },
   {
-    "text": "my partner passed me syphilis. What do I do?",
-    "intent": "treatment_STD",
-    "intent_prediction": {
-      "name": "lost_user",
-      "confidence": 0.9425291419029236
-    }
-  },
-  {
-    "text": "what diseases can be transmitted through sex?",
+    "text": "how many stds are there",
     "intent": "list_STD",
-    "intent_prediction": {
-      "name": "transmission_STD",
-      "confidence": 0.4936717450618744
-    }
-  },
-  {
-    "text": "what are all sexually transmitted diseases?",
-    "intent": "list_STD",
-    "intent_prediction": {
-      "name": "definition_STD",
-      "confidence": 0.9437434077262878
-    }
-  },
-  {
-    "text": "what are all stds?",
-    "intent": "list_STD",
-    "intent_prediction": {
-      "name": "definition_STD",
-      "confidence": 0.5864149332046509
-    }
-  },
-  {
-    "text": "what in my body could indicate an infection",
-    "intent": "symptoms_STD",
-    "intent_prediction": {
-      "name": "diagnosis_STD",
-      "confidence": 0.27835822105407715
-    }
-  },
-  {
-    "text": "stop talking about syphilis",
-    "intent": "set_entity_none",
     "intent_prediction": {
       "name": "I_have_questions",
-      "confidence": 0.286077082157135
+      "confidence": 0.3453617990016937
     }
   },
   {
-    "text": "how do you know?",
+    "text": "are there more dangerous stds, other than PID?",
+    "intent": "set_entity_none",
+    "intent_prediction": {
+      "name": "consequences_STD",
+      "confidence": 0.9843154549598694
+    }
+  },
+  {
+    "text": "I'm not interested in aids anymore",
+    "intent": "set_entity_none",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.3961365520954132
+    }
+  },
+  {
+    "text": "is that info from a doctor?",
     "intent": "ask_source",
     "intent_prediction": {
-      "name": "lost_user",
-      "confidence": 0.8087467551231384
+      "name": "advance_plot",
+      "confidence": 0.6863502264022827
     }
   },
   {
-    "text": "how do you know so much?",
-    "intent": "ask_source",
-    "intent_prediction": {
-      "name": "lost_user",
-      "confidence": 0.628821074962616
-    }
-  },
-  {
-    "text": "can you talk about chlamydia",
-    "intent": "definition_STD",
-    "intent_prediction": {
-      "name": "ask_scope",
-      "confidence": 0.986902117729187
-    }
-  },
-  {
-    "text": "generally describe them",
-    "intent": "definition_STD",
-    "intent_prediction": {
-      "name": "set_entity_none",
-      "confidence": 0.36912205815315247
-    }
-  },
-  {
-    "text": "no, thanks",
-    "intent": "deny",
-    "intent_prediction": {
-      "name": "thank",
-      "confidence": 0.7925130724906921
-    }
-  },
-  {
-    "text": "not anymore",
+    "text": "stop",
     "intent": "deny",
     "intent_prediction": {
       "name": "set_entity_none",
-      "confidence": 0.9512358903884888
+      "confidence": 0.973491907119751
     }
   },
   {
-    "text": "Can I ask about pelvic inflammatory disease?",
+    "text": "no, that's all",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.2510923445224762
+    }
+  },
+  {
+    "text": "may I start?",
     "intent": "I_have_questions",
     "intent_prediction": {
-      "name": "ask_scope",
-      "confidence": 0.45551797747612
+      "name": "advance_plot",
+      "confidence": 0.8180334568023682
     }
   },
   {
-    "text": "can I ask you?",
-    "intent": "I_have_questions",
-    "intent_prediction": {
-      "name": "ask_scope",
-      "confidence": 0.9980295300483704
-    }
-  },
-  {
-    "text": "bots are slaves of humans",
+    "text": "go to hell",
     "intent": "insults",
     "intent_prediction": {
-      "name": "greet",
-      "confidence": 0.5281834602355957
+      "name": "advance_plot",
+      "confidence": 0.5790102481842041
     }
   },
   {
-    "text": "yo",
+    "text": "are you a robot",
     "intent": "greet",
     "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.5594325065612793
+      "name": "insults",
+      "confidence": 0.7074621915817261
     }
   },
   {
-    "text": "goodevening",
+    "text": "am I talking to a human",
     "intent": "greet",
     "intent_prediction": {
-      "name": "express_amusement",
-      "confidence": 0.5035557150840759
+      "name": "goodbye",
+      "confidence": 0.2676691710948944
     }
   },
   {
-    "text": "whats up",
-    "intent": "greet",
-    "intent_prediction": {
-      "name": "definition_STD",
-      "confidence": 0.8257584571838379
-    }
-  },
-  {
-    "text": "what do you know",
+    "text": "what kinds of questions can I make?",
     "intent": "ask_scope",
     "intent_prediction": {
-      "name": "lost_user",
-      "confidence": 0.49433252215385437
+      "name": "I_have_questions",
+      "confidence": 0.41071534156799316
     }
   },
   {
     "text": "which are all the fluids that contaminate with an std",
     "intent": "transmission_STD",
     "intent_prediction": {
-      "name": "list_STD",
-      "confidence": 0.626205563545227
+      "name": "out_of_scope",
+      "confidence": 0.9547446370124817
     }
   },
   {
-    "text": "I'm lost",
+    "text": "this is confusing",
     "intent": "lost_user",
     "intent_prediction": {
-      "name": "thank",
-      "confidence": 0.3492080867290497
+      "name": "express_amusement",
+      "confidence": 0.8559452891349792
     }
   },
   {
-    "text": "how does this work",
+    "text": "what can I do?",
     "intent": "lost_user",
     "intent_prediction": {
-      "name": "I_have_questions",
-      "confidence": 0.8603240251541138
+      "name": "ask_scope",
+      "confidence": 0.546445369720459
     }
   },
   {
-    "text": "if you use a condom, you are not at risk for an std, right?",
+    "text": "i have a condition",
+    "intent": "lost_user",
+    "intent_prediction": {
+      "name": "transmission_STD",
+      "confidence": 0.5479649901390076
+    }
+  },
+  {
+    "text": "how can I avoid diseases transmitted through oral sex?",
     "intent": "prevention_STD",
     "intent_prediction": {
       "name": "transmission_STD",
-      "confidence": 0.42141202092170715
+      "confidence": 0.7728719711303711
     }
   },
   {
-    "text": "what should I do regarding not getting an std?",
-    "intent": "prevention_STD",
+    "text": "what is tantra?",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "definition_STD",
+      "confidence": 0.6843699812889099
+    }
+  },
+  {
+    "text": "can stds affect my baby's health?",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "consequences_STD",
+      "confidence": 0.6851046681404114
+    }
+  },
+  {
+    "text": "is it a fungus that causes pelvic inflammatory disease",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "definition_STD",
+      "confidence": 0.47698959708213806
+    }
+  },
+  {
+    "text": "are stis more common for gay people?",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "ask_scope",
+      "confidence": 0.34743261337280273
+    }
+  },
+  {
+    "text": "is bacterial vaginosis from a virus?",
+    "intent": "out_of_scope",
     "intent_prediction": {
       "name": "set_entity_none",
-      "confidence": 0.6080177426338196
+      "confidence": 0.7278408408164978
     }
   },
   {
-    "text": "whats the source of hpv infection? bacteria?",
-    "intent": "out_of_scope",
-    "intent_prediction": {
-      "name": "ask_source",
-      "confidence": 0.8276352882385254
-    }
-  },
-  {
-    "text": "which stds can be diagnosed with tests?",
-    "intent": "out_of_scope",
-    "intent_prediction": {
-      "name": "diagnosis_STD",
-      "confidence": 0.9181302785873413
-    }
-  },
-  {
-    "text": "which fluids can infect with stds",
-    "intent": "out_of_scope",
-    "intent_prediction": {
-      "name": "list_STD",
-      "confidence": 0.7782196402549744
-    }
-  },
-  {
-    "text": "can I have stds in different parts of the body?",
-    "intent": "out_of_scope",
-    "intent_prediction": {
-      "name": "symptoms_STD",
-      "confidence": 0.6250070333480835
-    }
-  },
-  {
-    "text": "is it free to get tested for stds?",
-    "intent": "out_of_scope",
-    "intent_prediction": {
-      "name": "testing_recommendations",
-      "confidence": 0.695348858833313
-    }
-  },
-  {
-    "text": "is the vaccine for HPV free?",
-    "intent": "out_of_scope",
-    "intent_prediction": {
-      "name": "prevention_STD",
-      "confidence": 0.5799331068992615
-    }
-  },
-  {
-    "text": "what are the dangers of not being diagnosed?",
+    "text": "is cancer a side effect of not treated stds?",
     "intent": "consequences_STD",
     "intent_prediction": {
-      "name": "diagnosis_STD",
-      "confidence": 0.5711150169372559
+      "name": "treatment_STD",
+      "confidence": 0.6325761675834656
     }
   },
   {
-    "text": "I'm worried, is it bad?",
-    "intent": "consequences_STD",
-    "intent_prediction": {
-      "name": "out_of_scope",
-      "confidence": 0.29760754108428955
-    }
-  },
-  {
-    "text": "how much time do I have after catching an sti?",
-    "intent": "consequences_STD",
-    "intent_prediction": {
-      "name": "out_of_scope",
-      "confidence": 0.8591501712799072
-    }
-  },
-  {
-    "text": "such a smart idea",
+    "text": "nice",
     "intent": "express_amusement",
     "intent_prediction": {
-      "name": "lost_user",
-      "confidence": 0.9829452633857727
+      "name": "goodbye",
+      "confidence": 0.4495316743850708
     }
   },
   {
-    "text": "cool",
-    "intent": "express_amusement",
+    "text": "ok",
+    "intent": "affirm",
     "intent_prediction": {
       "name": "thank",
-      "confidence": 0.46791592240333557
+      "confidence": 0.5261708498001099
     }
   },
   {
-    "text": "congrats!",
-    "intent": "express_amusement",
-    "intent_prediction": {
-      "name": "lost_user",
-      "confidence": 0.21348531544208527
-    }
-  },
-  {
-    "text": "I'm impressed",
-    "intent": "express_amusement",
-    "intent_prediction": {
-      "name": "lost_user",
-      "confidence": 0.41311773657798767
-    }
-  },
-  {
-    "text": "love it!",
-    "intent": "express_amusement",
-    "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 0.2525275945663452
-    }
-  },
-  {
-    "text": "got it",
+    "text": "sure",
     "intent": "affirm",
     "intent_prediction": {
-      "name": "goodbye",
-      "confidence": 0.614651083946228
-    }
-  },
-  {
-    "text": "please do",
-    "intent": "affirm",
-    "intent_prediction": {
-      "name": "advance_plot",
-      "confidence": 0.8524841666221619
-    }
-  },
-  {
-    "text": "please",
-    "intent": "affirm",
-    "intent_prediction": {
-      "name": "advance_plot",
-      "confidence": 0.8644447922706604
+      "name": "treatment_STD",
+      "confidence": 0.46055230498313904
     }
   },
   {
@@ -372,71 +244,39 @@
     "intent": "affirm",
     "intent_prediction": {
       "name": "definition_STD",
-      "confidence": 0.7346163988113403
+      "confidence": 0.2414383590221405
     }
   },
   {
-    "text": "I'm done with my questions",
+    "text": "I'll come back",
     "intent": "goodbye",
     "intent_prediction": {
-      "name": "I_have_questions",
-      "confidence": 0.913501501083374
+      "name": "consequences_STD",
+      "confidence": 0.5610799193382263
     }
   },
   {
-    "text": "that's all",
+    "text": "I'm glad we talked",
     "intent": "goodbye",
     "intent_prediction": {
-      "name": "deny",
-      "confidence": 0.5714900493621826
+      "name": "express_amusement",
+      "confidence": 0.9551883339881897
     }
   },
   {
-    "text": "cu",
-    "intent": "goodbye",
-    "intent_prediction": {
-      "name": "affirm",
-      "confidence": 0.32965949177742004
-    }
-  },
-  {
-    "text": "teach me",
+    "text": "i gotta learn stuff about Pelvic Inflammatory Disease",
     "intent": "advance_plot",
     "intent_prediction": {
-      "name": "insults",
-      "confidence": 0.5997994542121887
+      "name": "definition_STD",
+      "confidence": 0.3192998468875885
     }
   },
   {
-    "text": "enlighten my doubts",
+    "text": "begin",
     "intent": "advance_plot",
     "intent_prediction": {
-      "name": "I_have_questions",
-      "confidence": 0.954086422920227
-    }
-  },
-  {
-    "text": "I'd like to know about bacterial vaginosis",
-    "intent": "advance_plot",
-    "intent_prediction": {
-      "name": "set_entity_none",
-      "confidence": 0.41419631242752075
-    }
-  },
-  {
-    "text": "I don't have any questions",
-    "intent": "advance_plot",
-    "intent_prediction": {
-      "name": "I_have_questions",
-      "confidence": 0.9731026291847229
-    }
-  },
-  {
-    "text": "i wanna learn",
-    "intent": "advance_plot",
-    "intent_prediction": {
-      "name": "ask_source",
-      "confidence": 0.49165746569633484
+      "name": "greet",
+      "confidence": 0.29772692918777466
     }
   }
 ]

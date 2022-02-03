@@ -7,94 +7,10 @@
         "entity": "STD_name",
         "start": 34,
         "end": 43,
-        "confidence_entity": 0.9980302453041077,
+        "confidence_entity": 0.8303144574165344,
         "value": "infection",
         "extractor": "DIETClassifier"
       }
     ]
-  },
-  {
-    "text": "I have diarrhea, is it a symptom for gonorrhea",
-    "entities": [
-      {
-        "start": 37,
-        "end": 46,
-        "value": "gonorrhea",
-        "entity": "STD_name"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "STD_name",
-        "start": 7,
-        "end": 15,
-        "confidence_entity": 0.9878093004226685,
-        "value": "diarrhea",
-        "extractor": "DIETClassifier"
-      },
-      {
-        "entity": "STD_name",
-        "start": 37,
-        "end": 46,
-        "confidence_entity": 0.9998238682746887,
-        "value": "gonorrhea",
-        "extractor": "DIETClassifier"
-      }
-    ]
-  },
-  {
-    "text": "can I get [HPV infection] from oral sex?",
-    "entities": [],
-    "predicted_entities": [
-      {
-        "entity": "STD_name",
-        "start": 11,
-        "end": 24,
-        "confidence_entity": 0.9703642725944519,
-        "value": "HPV infection",
-        "extractor": "DIETClassifier"
-      }
-    ]
-  },
-  {
-    "text": "whats the source of hpv infection? bacteria?",
-    "entities": [
-      {
-        "start": 20,
-        "end": 33,
-        "value": "hpv infection",
-        "entity": "STD_name"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "STD_name",
-        "start": 20,
-        "end": 33,
-        "confidence_entity": 0.9795852899551392,
-        "value": "hpv infection",
-        "extractor": "DIETClassifier"
-      },
-      {
-        "entity": "STD_name",
-        "start": 35,
-        "end": 43,
-        "confidence_entity": 0.9993579983711243,
-        "value": "bacteria",
-        "extractor": "DIETClassifier"
-      }
-    ]
-  },
-  {
-    "text": "which are the complications if you don't treat Hepatitis B?",
-    "entities": [
-      {
-        "start": 47,
-        "end": 58,
-        "value": "Hepatitis B",
-        "entity": "STD_name"
-      }
-    ],
-    "predicted_entities": []
   }
 ]

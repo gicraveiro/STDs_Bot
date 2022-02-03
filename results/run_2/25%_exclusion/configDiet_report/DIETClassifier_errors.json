@@ -1,107 +1,14 @@
 [
   {
-    "text": "I have diarrhea, is it a symptom for gonorrhea",
-    "entities": [
-      {
-        "start": 37,
-        "end": 46,
-        "value": "gonorrhea",
-        "entity": "STD_name"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "STD_name",
-        "start": 7,
-        "end": 15,
-        "confidence_entity": 0.9306811690330505,
-        "value": "diarrhea",
-        "extractor": "DIETClassifier"
-      },
-      {
-        "entity": "STD_name",
-        "start": 37,
-        "end": 46,
-        "confidence_entity": 0.999738872051239,
-        "value": "gonorrhea",
-        "extractor": "DIETClassifier"
-      }
-    ]
-  },
-  {
-    "text": "can I get [HPV infection] from oral sex?",
+    "text": "what in my body could indicate an infection",
     "entities": [],
     "predicted_entities": [
       {
         "entity": "STD_name",
-        "start": 11,
-        "end": 24,
-        "confidence_entity": 0.6819652318954468,
-        "value": "HPV infection",
-        "extractor": "DIETClassifier"
-      }
-    ]
-  },
-  {
-    "text": "whats the source of hpv infection? bacteria?",
-    "entities": [
-      {
-        "start": 20,
-        "end": 33,
-        "value": "hpv infection",
-        "entity": "STD_name"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "STD_name",
-        "start": 20,
-        "end": 33,
-        "confidence_entity": 0.5541502833366394,
-        "value": "hpv infection",
-        "extractor": "DIETClassifier"
-      },
-      {
-        "entity": "STD_name",
-        "start": 35,
+        "start": 34,
         "end": 43,
-        "confidence_entity": 0.9993236064910889,
-        "value": "bacteria",
-        "extractor": "DIETClassifier"
-      }
-    ]
-  },
-  {
-    "text": "what are the statistics for stds in Brazil?",
-    "entities": [],
-    "predicted_entities": [
-      {
-        "entity": "STD_name",
-        "start": 36,
-        "end": 42,
-        "confidence_entity": 0.7375407218933105,
-        "value": "Brazil",
-        "extractor": "DIETClassifier"
-      }
-    ]
-  },
-  {
-    "text": "which are the complications if you don't treat Hepatitis B?",
-    "entities": [
-      {
-        "start": 47,
-        "end": 58,
-        "value": "Hepatitis B",
-        "entity": "STD_name"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "STD_name",
-        "start": 47,
-        "end": 56,
-        "confidence_entity": 0.7943178415298462,
-        "value": "Hepatitis",
+        "confidence_entity": 0.9579672813415527,
+        "value": "infection",
         "extractor": "DIETClassifier"
       }
     ]

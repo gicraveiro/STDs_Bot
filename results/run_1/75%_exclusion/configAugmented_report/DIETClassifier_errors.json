@@ -1,0 +1,79 @@
+[
+  {
+    "text": "can I heal from hpv infection",
+    "entities": [
+      {
+        "start": 16,
+        "end": 29,
+        "value": "hpv infection",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 16,
+        "end": 19,
+        "confidence_entity": 0.7952036261558533,
+        "value": "HPV Infection",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "I have diarrhea, is it a symptom for gonorrhea",
+    "entities": [
+      {
+        "start": 37,
+        "end": 46,
+        "value": "gonorrhea",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 7,
+        "end": 15,
+        "confidence_entity": 0.9582386612892151,
+        "value": "diarrhea",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "STD_name",
+        "start": 37,
+        "end": 46,
+        "confidence_entity": 0.9988497495651245,
+        "value": "gonorrhea",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "can I live normally with hpv infection",
+    "entities": [
+      {
+        "start": 25,
+        "end": 38,
+        "value": "hpv infection",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 25,
+        "end": 28,
+        "confidence_entity": 0.7479121685028076,
+        "value": "HPV Infection",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]

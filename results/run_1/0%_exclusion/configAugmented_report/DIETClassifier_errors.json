@@ -1,0 +1,59 @@
+[
+  {
+    "text": "I have diarrhea, is it a symptom for gonorrhea",
+    "entities": [
+      {
+        "start": 37,
+        "end": 46,
+        "value": "gonorrhea",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 7,
+        "end": 15,
+        "confidence_entity": 0.5083083510398865,
+        "value": "diarrhea",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "STD_name",
+        "start": 37,
+        "end": 46,
+        "confidence_entity": 0.9999347925186157,
+        "value": "gonorrhea",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "which are all the fluids that contaminate with an std",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 18,
+        "end": 24,
+        "confidence_entity": 0.7695802450180054,
+        "value": "fluids",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "are preservatives enough to prevent an sti infection?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 43,
+        "end": 52,
+        "confidence_entity": 0.7464829683303833,
+        "value": "infection",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

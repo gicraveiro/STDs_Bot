@@ -1,57 +1,43 @@
 [
   {
-    "text": "how to diagnose [hepatitis b][\"entity\": \"STD_name\"]",
-    "entities": [],
-    "predicted_entities": [
-      {
-        "entity": "STD_name",
-        "start": 17,
-        "end": 26,
-        "confidence_entity": 0.9668470621109009,
-        "value": "hepatitis",
-        "extractor": "DIETClassifier"
-      }
-    ]
-  },
-  {
-    "text": "are there visible signs of the disease?",
-    "entities": [],
-    "predicted_entities": [
-      {
-        "entity": "STD_name",
-        "start": 31,
-        "end": 38,
-        "confidence_entity": 0.9524082541465759,
-        "value": "disease",
-        "extractor": "DIETClassifier"
-      }
-    ]
-  },
-  {
-    "text": "whats the source of hpv infection? bacteria?",
+    "text": "I have diarrhea, is it a symptom for gonorrhea",
     "entities": [
       {
-        "start": 20,
-        "end": 33,
-        "value": "hpv infection",
+        "start": 37,
+        "end": 46,
+        "value": "gonorrhea",
         "entity": "STD_name"
       }
     ],
     "predicted_entities": [
       {
         "entity": "STD_name",
-        "start": 20,
-        "end": 33,
-        "confidence_entity": 0.9684038758277893,
-        "value": "hpv infection",
+        "start": 7,
+        "end": 15,
+        "confidence_entity": 0.9210929274559021,
+        "value": "diarrhea",
         "extractor": "DIETClassifier"
       },
       {
         "entity": "STD_name",
-        "start": 35,
-        "end": 43,
-        "confidence_entity": 0.999049723148346,
-        "value": "bacteria",
+        "start": 37,
+        "end": 46,
+        "confidence_entity": 0.9998778104782104,
+        "value": "gonorrhea",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "which are all the fluids that contaminate with an std",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 18,
+        "end": 24,
+        "confidence_entity": 0.7515919804573059,
+        "value": "fluids",
         "extractor": "DIETClassifier"
       }
     ]

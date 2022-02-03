@@ -1,0 +1,44 @@
+[
+  {
+    "text": "what is sexually transmitted infection",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 29,
+        "end": 38,
+        "confidence_entity": 0.5886276364326477,
+        "value": "infection",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "which are all the fluids that contaminate with an std",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 18,
+        "end": 24,
+        "confidence_entity": 0.749648928642273,
+        "value": "fluids",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "are preservatives enough to prevent an sti infection?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 43,
+        "end": 52,
+        "confidence_entity": 0.6695378422737122,
+        "value": "infection",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

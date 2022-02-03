@@ -1,169 +1,169 @@
 ## intent:testing_recommendations
-- I never had sex, am I at risk for stds?
 - with which frequency should I get tested
-- should I test every year for [hiv](STD_name)?
-- do I have to get tested?
+- advice for frequency of sti testing
+- when is it advisable to test for stds?
+- testing recommendations
 
 ## intent:diagnosis_STD
-- how to know if I'm [HIV]["entity": "STD_name"] positive
-- show me how to discover if I'm infected
 - how to test myself for [bacterial vaginosis](STD_name)
+- tests to find out if I have stds
 - I might be infected with [gonorrhea](STD_name)
+- are there any tests that diagnose sexually transmitted infections?
 
 ## intent:thank
-- ok tks
-- cool, tks
-- thank you
-- thats all then, thank you so much
+- tks
+- Makes sense, thank youu
+- Ok, thank you for your help
+- I appreciate your infos
 
 ## intent:treatment_STD
-- how to heal
-- I had sex with someone who had [chlamydia](STD_name). How do I heal?
-- what can I do if I know I have an std
-- Is it possible to avoid consequences?
+- my partner passed me [syphilis](STD_name). What do I do?
 - How can I treat [Trichomoniasis](STD_name)?
+- what is the treatment
+- I had sex with someone who had [chlamydia](STD_name). How do I heal?
+- is there a cure?
 
 ## intent:list_STD
-- list all stds, then tell me about [chlamydia](STD_name)
 - can you list the STDs?
-- Name all STDs
-- names of sexually transmitted infections
+- interesting, now give me a list of diseases
+- I know there's [aids](STD_name), [chlamydia](STD_name) and [hpv infection](STD_name) but are there others?
+- help me, which stds are there
 
 ## intent:set_entity_none
-- what about in general?
-- about stds
-- what about all stds?
-- not [Bacterial Vaginosis](STD_name)
-- does it apply for all sexually transmitted infections?
+- is this for other sexually transmitted diseases as well?
+- stop talking about [syphilis](STD_name)
+- Regarding all stis
+- How is it for other stds?
+- for the most common ones
 
 ## intent:symptoms_STD
-- how do I find out by myself if I have an sti
-- A wart appeared in my vulva, is it an sti?
-- do stds give a sore throat?
-- what will I feel if I have [bv](STD_name)
-- how to know if I have an std without a doctor
+- symptoms
+- do sexually transmitted diseases have symptoms?
+- what in my body could indicate an infection
+- is it possible to have an std without any symptoms?
+- can I know if I have it
 
 ## intent:ask_source
-- source of information
-- what are the articles that sustain these informations?
-- are you based in what
-- sources
+- which are your references?
+- whats the link for the database
+- whats the center for disease control
+- where do you get this data from
 
 ## intent:definition_STD
-- whats [AIDS](STD_name)
-- uat r stds
-- makes sense, whats the definition again?
+- what is stds
 - meaning of stis
-- description of [pelvic inflammatory disease](STD_name)
+- generally describe them
+- what is [genital herpes](STD_name)
+- can you say the definition of stis
 
 ## intent:deny
-- I really don't think it is a good idea
-- stop
-- don't you dare
-- don't think so
-- No, thank you
+- no
+- I would never
+- not anymore
+- no, please
+- never
 
 ## intent:I_have_questions
-- There is something I want to know about stis
-- i wanna ask you one thing about [Chlamydia](STD_name)
-- I have so many questions about stds
-- I have questions about [Chancroid](STD_name)
-- i wanna ask you one thing
+- Can I ask about [pelvic inflammatory disease](STD_name)?
+- I have lots of doubts about [HIV](STD_name)
+- I have a couple of questions
+- I have some doubts
+- I have a question about [gonorrhea](STD_name)
 
 ## intent:insults
+- fuck you
 - YOU ARE A SLUT
+- go fuck yourself
 - useless slave
-- go to hell
-- piece of shit
-- you slave
+- useless
 
 ## intent:transmission_STD
-- in general, how are they transmitted
-- transmission of [bacterial vaginosis](STD_name)
-- I did a blowjob to someone who was [HIV](STD_name) positive. Am I at risk?
-- how is [HPV Infection](STD_name) transmitted?
 - which are all the conditions that must be met to transmit an sti
+- I did a blowjob to someone who was [HIV](STD_name) positive. Am I at risk?
 - can I catch [genital herpes](STD_name) from anal sex?
+- is it possible to catch [hpv](STD_name) with just skin contact?
+- can stis be transmitted through oral sex?
+- is touching enough to pass [syphilis](STD_name)
 
 ## intent:greet
+- let's go
+- whats up
+- hello
 - good morning
-- how r u?
-- HI
-- hi
-- Hey! How are you?
+- What are you called?
 
 ## intent:ask_scope
-- do you know about other types of diseases?
-- How do you spread knowledge?
-- Can you answer questions that are not about stds?
-- Can I ask about pleasure in sex?
-- what kinds of questions can I make?
-- can you answer sex education questions?
+- what can you tell me
+- What can you do?
+- whats in your database
+- What can I ask you?
+- How do you help people?
+- are there limits to your knowledge
 
 ## intent:lost_user
-- But, how are you useful?
-- I didn't follow.
-- what am I doing here?
-- no idea
-- how can you help me
+- i don't know
+- how does this work
+- I'm lost
+- i need help
+- I'm confused
 
 ## intent:prevention_STD
-- can I pass  [chlamydia](STD_name) if I wear a condom
-- what are the protection measures one can take?
-- is oral sex with preservatives effective?
-- do condoms protect fully from stis?
-- how to avoid stis
-- prevention in general
+- prevention of [bacterial vaginosis](STD_name)
+- what are preservatives for?
+- what is necessary for the prevention of stds?
+- prevention of sexual transmitted infections
+- prevention of [hpv](STD_name)
+- if you use a condom, you are not at risk for an std, right?
 
 ## intent:out_of_scope
+- how much does testing cost
+- when can I have sex again after being cured from [syphilis](STD_name)
+- how common is to have [gonorrhea](STD_name)
 - whats the death rate for [trichomoniasis](STD_name)
-- are std tests part of the public health system?
-- can I get reinfected?
-- is it free to get a diagnosis?
-- where in the world are stds common?
-- whats the death rate for who catches stds
+- is it free to get tested for stds?
+- which stds are asymptomatic?
 
 ## intent:consequences_STD
-- is it lethal
-- are there permanent losses with [gonorrhea](STD_name)?
+- do I become more vulnerable to more stds if I already have one
 - are there any health problems that come with [pid](STD_name)
-- what happens if you don't know you have [syphilis](STD_name)
-- is it a permanent condition?
-- is it possible to die from [BV](STD_name)
+- am I gonna die?
+- is it lethal
+- does it weaken the immune system?
+- do people die of [hpv](STD_name)
 
 ## intent:express_amusement
-- This is great!
+- very good
+- you seem super helpful
 - i like that!
-- sounds super cool
-- this is good
-- I'm glad
-- seems pretty cool
+- love it!
+- interesting
+- wow
 
 ## intent:affirm
-- i do
-- of course
-- sure
-- yes, thanks
+- YES
+- indeed
+- If you want to
+- I understood
 - yes, more about [trichomoniasis](STD_name)
 - right, but only about [bv](STD_name)
 
 ## intent:goodbye
-- goodbye
-- nice, goodbye
-- good night
-- cool, thanks, see you
-- good by
-- I'm glad we talked
+- good afternoon
+- good night then
+- cool talking with you
+- gotta go
 - thank you, bye
+- BYE
+- good night
 
 ## intent:advance_plot
-- sure, go ahead
-- any relevant remarks?
+- continue
+- I'm listening
+- tell me anything you think I should know
+- teach me
+- i wanna learn
 - please tell me about [AIDS](STD_name)
-- you can start
-- what can you do
-- tell me about [bv](STD_name)
-- begin
+- play
 
 ## synonym:AIDs
 - hiv

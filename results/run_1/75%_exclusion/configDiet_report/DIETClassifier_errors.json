@@ -1,71 +1,45 @@
 [
   {
-    "text": "are there visible signs of the disease?",
-    "entities": [],
-    "predicted_entities": [
-      {
-        "entity": "STD_name",
-        "start": 31,
-        "end": 38,
-        "confidence_entity": 0.9811062812805176,
-        "value": "disease",
-        "extractor": "DIETClassifier"
-      }
-    ]
-  },
-  {
-    "text": "what in my body could indicate an infection",
-    "entities": [],
-    "predicted_entities": [
-      {
-        "entity": "STD_name",
-        "start": 34,
-        "end": 43,
-        "confidence_entity": 0.9800412058830261,
-        "value": "infection",
-        "extractor": "DIETClassifier"
-      }
-    ]
-  },
-  {
-    "text": "whats the source of hpv infection? bacteria?",
+    "text": "I have diarrhea, is it a symptom for gonorrhea",
     "entities": [
       {
-        "start": 20,
-        "end": 33,
-        "value": "hpv infection",
+        "start": 37,
+        "end": 46,
+        "value": "gonorrhea",
         "entity": "STD_name"
       }
     ],
     "predicted_entities": [
       {
         "entity": "STD_name",
-        "start": 20,
-        "end": 33,
-        "confidence_entity": 0.9784305691719055,
-        "value": "hpv infection",
+        "start": 7,
+        "end": 15,
+        "confidence_entity": 0.9722781777381897,
+        "value": "diarrhea",
         "extractor": "DIETClassifier"
       },
       {
         "entity": "STD_name",
-        "start": 35,
-        "end": 43,
-        "confidence_entity": 0.9956187605857849,
-        "value": "bacteria",
+        "start": 37,
+        "end": 46,
+        "confidence_entity": 0.9990941286087036,
+        "value": "gonorrhea",
         "extractor": "DIETClassifier"
       }
     ]
   },
   {
-    "text": "what info can you tell me on HEPATITIS",
-    "entities": [
+    "text": "are preservatives enough to prevent an sti infection?",
+    "entities": [],
+    "predicted_entities": [
       {
-        "start": 29,
-        "end": 38,
-        "value": "HEPATITIS",
-        "entity": "STD_name"
+        "entity": "STD_name",
+        "start": 43,
+        "end": 52,
+        "confidence_entity": 0.6497397422790527,
+        "value": "infection",
+        "extractor": "DIETClassifier"
       }
-    ],
-    "predicted_entities": []
+    ]
   }
 ]

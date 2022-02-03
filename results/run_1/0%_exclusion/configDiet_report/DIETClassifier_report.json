@@ -1,27 +1,27 @@
 {
   "STD_name": {
-    "precision": 0.8333333333333334,
+    "precision": 0.8709677419354839,
     "recall": 1.0,
-    "f1-score": 0.9090909090909091,
-    "support": 20,
+    "f1-score": 0.9310344827586207,
+    "support": 27,
     "confused_with": {}
   },
   "micro avg": {
-    "precision": 0.8333333333333334,
+    "precision": 0.8709677419354839,
     "recall": 1.0,
-    "f1-score": 0.9090909090909091,
-    "support": 20
+    "f1-score": 0.9310344827586207,
+    "support": 27
   },
   "macro avg": {
-    "precision": 0.8333333333333334,
+    "precision": 0.8709677419354839,
     "recall": 1.0,
-    "f1-score": 0.9090909090909091,
-    "support": 20
+    "f1-score": 0.9310344827586207,
+    "support": 27
   },
   "weighted avg": {
-    "precision": 0.8333333333333334,
+    "precision": 0.8709677419354839,
     "recall": 1.0,
-    "f1-score": 0.909090909090909,
-    "support": 20
+    "f1-score": 0.9310344827586207,
+    "support": 27
   }
 }

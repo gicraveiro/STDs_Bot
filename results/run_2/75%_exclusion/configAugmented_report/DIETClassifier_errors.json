@@ -1,0 +1,66 @@
+[
+  {
+    "text": "How can I treat Trichomoniasis?",
+    "entities": [
+      {
+        "start": 16,
+        "end": 30,
+        "value": "Trichomoniasis",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "what in my body could indicate an infection",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 34,
+        "end": 43,
+        "confidence_entity": 0.6731687784194946,
+        "value": "infection",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "which are all the fluids that contaminate with an std",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 18,
+        "end": 24,
+        "confidence_entity": 0.55949866771698,
+        "value": "fluids",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "yes, more about trichomoniasis",
+    "entities": [
+      {
+        "start": 16,
+        "end": 30,
+        "value": "trichomoniasis",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "can you give me info on trichomoniasis",
+    "entities": [
+      {
+        "start": 24,
+        "end": 38,
+        "value": "trichomoniasis",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

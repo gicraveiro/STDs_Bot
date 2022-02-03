@@ -1,0 +1,394 @@
+[
+  {
+    "text": "how will I know if I have it",
+    "intent": "diagnosis_STD",
+    "intent_prediction": {
+      "name": "symptoms_STD",
+      "confidence": 0.8560711145401001
+    }
+  },
+  {
+    "text": "how do I know if I have an std",
+    "intent": "diagnosis_STD",
+    "intent_prediction": {
+      "name": "symptoms_STD",
+      "confidence": 0.7006480693817139
+    }
+  },
+  {
+    "text": "cool, tks",
+    "intent": "thank",
+    "intent_prediction": {
+      "name": "express_amusement",
+      "confidence": 0.5040957927703857
+    }
+  },
+  {
+    "text": "what can I do if I know I have an std",
+    "intent": "treatment_STD",
+    "intent_prediction": {
+      "name": "symptoms_STD",
+      "confidence": 0.7034330368041992
+    }
+  },
+  {
+    "text": "how many stds are there",
+    "intent": "list_STD",
+    "intent_prediction": {
+      "name": "definition_STD",
+      "confidence": 0.26280921697616577
+    }
+  },
+  {
+    "text": "how to know if I have an std without a doctor",
+    "intent": "symptoms_STD",
+    "intent_prediction": {
+      "name": "diagnosis_STD",
+      "confidence": 0.9516663551330566
+    }
+  },
+  {
+    "text": "is headache a possible side effect of having syphilis",
+    "intent": "symptoms_STD",
+    "intent_prediction": {
+      "name": "consequences_STD",
+      "confidence": 0.25469255447387695
+    }
+  },
+  {
+    "text": "does it apply for all sexually transmitted infections?",
+    "intent": "set_entity_none",
+    "intent_prediction": {
+      "name": "definition_STD",
+      "confidence": 0.5035521388053894
+    }
+  },
+  {
+    "text": "for the most common ones",
+    "intent": "set_entity_none",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.9326290488243103
+    }
+  },
+  {
+    "text": "where did you learn that?",
+    "intent": "ask_source",
+    "intent_prediction": {
+      "name": "advance_plot",
+      "confidence": 0.6829079985618591
+    }
+  },
+  {
+    "text": "is this fake news",
+    "intent": "ask_source",
+    "intent_prediction": {
+      "name": "express_amusement",
+      "confidence": 0.6494765877723694
+    }
+  },
+  {
+    "text": "how do you know so much?",
+    "intent": "ask_source",
+    "intent_prediction": {
+      "name": "ask_scope",
+      "confidence": 0.5499498844146729
+    }
+  },
+  {
+    "text": "how do you know?",
+    "intent": "ask_source",
+    "intent_prediction": {
+      "name": "ask_scope",
+      "confidence": 0.8366328477859497
+    }
+  },
+  {
+    "text": "can you talk about chlamydia",
+    "intent": "definition_STD",
+    "intent_prediction": {
+      "name": "ask_scope",
+      "confidence": 0.9677464962005615
+    }
+  },
+  {
+    "text": "description of pelvic inflammatory disease",
+    "intent": "definition_STD",
+    "intent_prediction": {
+      "name": "I_have_questions",
+      "confidence": 0.514220118522644
+    }
+  },
+  {
+    "text": "what are stis?",
+    "intent": "definition_STD",
+    "intent_prediction": {
+      "name": "list_STD",
+      "confidence": 0.5961117148399353
+    }
+  },
+  {
+    "text": "can I ask you?",
+    "intent": "I_have_questions",
+    "intent_prediction": {
+      "name": "ask_scope",
+      "confidence": 0.9940891861915588
+    }
+  },
+  {
+    "text": "whats up",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "definition_STD",
+      "confidence": 0.627726674079895
+    }
+  },
+  {
+    "text": "am I talking to a human",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.27132168412208557
+    }
+  },
+  {
+    "text": "What can you do?",
+    "intent": "ask_scope",
+    "intent_prediction": {
+      "name": "advance_plot",
+      "confidence": 0.8157640099525452
+    }
+  },
+  {
+    "text": "can you answer stuff about herpes",
+    "intent": "ask_scope",
+    "intent_prediction": {
+      "name": "advance_plot",
+      "confidence": 0.6993790864944458
+    }
+  },
+  {
+    "text": "Can I ask about Bacterial Vaginosis?",
+    "intent": "ask_scope",
+    "intent_prediction": {
+      "name": "I_have_questions",
+      "confidence": 0.5704674124717712
+    }
+  },
+  {
+    "text": "How do you help people?",
+    "intent": "ask_scope",
+    "intent_prediction": {
+      "name": "lost_user",
+      "confidence": 0.9225470423698425
+    }
+  },
+  {
+    "text": "which are all the fluids that contaminate with an std",
+    "intent": "transmission_STD",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.9952852725982666
+    }
+  },
+  {
+    "text": "are stds transmitted through sex",
+    "intent": "transmission_STD",
+    "intent_prediction": {
+      "name": "list_STD",
+      "confidence": 0.95282381772995
+    }
+  },
+  {
+    "text": "can stis be transmitted through oral sex?",
+    "intent": "transmission_STD",
+    "intent_prediction": {
+      "name": "prevention_STD",
+      "confidence": 0.5741975903511047
+    }
+  },
+  {
+    "text": "are stds only transmitted through sex?",
+    "intent": "transmission_STD",
+    "intent_prediction": {
+      "name": "list_STD",
+      "confidence": 0.5271546244621277
+    }
+  },
+  {
+    "text": "I had sex with someone who had chlamydia. Could I be infected?",
+    "intent": "transmission_STD",
+    "intent_prediction": {
+      "name": "diagnosis_STD",
+      "confidence": 0.9444423913955688
+    }
+  },
+  {
+    "text": "how does this work",
+    "intent": "lost_user",
+    "intent_prediction": {
+      "name": "I_have_questions",
+      "confidence": 0.9234287738800049
+    }
+  },
+  {
+    "text": "what??",
+    "intent": "lost_user",
+    "intent_prediction": {
+      "name": "definition_STD",
+      "confidence": 0.6015881299972534
+    }
+  },
+  {
+    "text": "no idea",
+    "intent": "lost_user",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.8210411667823792
+    }
+  },
+  {
+    "text": "are std tests part of the public health system?",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "consequences_STD",
+      "confidence": 0.39800047874450684
+    }
+  },
+  {
+    "text": "how much does it cost medicine for Chlamydia",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "treatment_STD",
+      "confidence": 0.9185184836387634
+    }
+  },
+  {
+    "text": "which stis have vaccines?",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "list_STD",
+      "confidence": 0.8625962138175964
+    }
+  },
+  {
+    "text": "how much does testing cost",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "transmission_STD",
+      "confidence": 0.5287157893180847
+    }
+  },
+  {
+    "text": "are there major problems for pelvic inflammatory disease",
+    "intent": "consequences_STD",
+    "intent_prediction": {
+      "name": "I_have_questions",
+      "confidence": 0.4109668433666229
+    }
+  },
+  {
+    "text": "what are the consequences",
+    "intent": "consequences_STD",
+    "intent_prediction": {
+      "name": "ask_source",
+      "confidence": 0.7359117269515991
+    }
+  },
+  {
+    "text": "wow",
+    "intent": "express_amusement",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.35667380690574646
+    }
+  },
+  {
+    "text": "nice",
+    "intent": "express_amusement",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.9405897855758667
+    }
+  },
+  {
+    "text": "incredible goal",
+    "intent": "express_amusement",
+    "intent_prediction": {
+      "name": "treatment_STD",
+      "confidence": 0.5901176929473877
+    }
+  },
+  {
+    "text": "interesting",
+    "intent": "express_amusement",
+    "intent_prediction": {
+      "name": "set_entity_none",
+      "confidence": 0.9426448941230774
+    }
+  },
+  {
+    "text": "love it!",
+    "intent": "express_amusement",
+    "intent_prediction": {
+      "name": "thank",
+      "confidence": 0.3374316990375519
+    }
+  },
+  {
+    "text": "uhum",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "insults",
+      "confidence": 0.6466995477676392
+    }
+  },
+  {
+    "text": "i do",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "lost_user",
+      "confidence": 0.985958456993103
+    }
+  },
+  {
+    "text": "got it",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.4913073480129242
+    }
+  },
+  {
+    "text": "cool, thanks, see you",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "thank",
+      "confidence": 0.5426035523414612
+    }
+  },
+  {
+    "text": "begin",
+    "intent": "advance_plot",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.2515314817428589
+    }
+  },
+  {
+    "text": "continue",
+    "intent": "advance_plot",
+    "intent_prediction": {
+      "name": "thank",
+      "confidence": 0.272934228181839
+    }
+  },
+  {
+    "text": "tell me about bv",
+    "intent": "advance_plot",
+    "intent_prediction": {
+      "name": "ask_scope",
+      "confidence": 0.6759175658226013
+    }
+  }
+]

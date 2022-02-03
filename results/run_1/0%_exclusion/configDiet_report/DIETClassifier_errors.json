@@ -1,71 +1,71 @@
 [
   {
-    "text": "how to diagnose [hepatitis b][\"entity\": \"STD_name\"]",
-    "entities": [],
-    "predicted_entities": [
-      {
-        "entity": "STD_name",
-        "start": 17,
-        "end": 26,
-        "confidence_entity": 0.9690744876861572,
-        "value": "hepatitis",
-        "extractor": "DIETClassifier"
-      }
-    ]
-  },
-  {
-    "text": "are there visible signs of the disease?",
-    "entities": [],
-    "predicted_entities": [
-      {
-        "entity": "STD_name",
-        "start": 31,
-        "end": 38,
-        "confidence_entity": 0.9374053478240967,
-        "value": "disease",
-        "extractor": "DIETClassifier"
-      }
-    ]
-  },
-  {
-    "text": "what in my body could indicate an infection",
-    "entities": [],
-    "predicted_entities": [
-      {
-        "entity": "STD_name",
-        "start": 34,
-        "end": 43,
-        "confidence_entity": 0.9829549193382263,
-        "value": "infection",
-        "extractor": "DIETClassifier"
-      }
-    ]
-  },
-  {
-    "text": "whats the source of hpv infection? bacteria?",
+    "text": "I have diarrhea, is it a symptom for gonorrhea",
     "entities": [
       {
-        "start": 20,
-        "end": 33,
-        "value": "hpv infection",
+        "start": 37,
+        "end": 46,
+        "value": "gonorrhea",
         "entity": "STD_name"
       }
     ],
     "predicted_entities": [
       {
         "entity": "STD_name",
-        "start": 20,
-        "end": 33,
-        "confidence_entity": 0.9948849081993103,
-        "value": "hpv infection",
+        "start": 7,
+        "end": 15,
+        "confidence_entity": 0.9805831909179688,
+        "value": "diarrhea",
         "extractor": "DIETClassifier"
       },
       {
         "entity": "STD_name",
-        "start": 35,
-        "end": 43,
-        "confidence_entity": 0.99681156873703,
-        "value": "bacteria",
+        "start": 37,
+        "end": 46,
+        "confidence_entity": 0.9998255372047424,
+        "value": "gonorrhea",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "what is sexually transmitted infection",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 29,
+        "end": 38,
+        "confidence_entity": 0.5456734895706177,
+        "value": "infection",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "which are all the fluids that contaminate with an std",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 18,
+        "end": 24,
+        "confidence_entity": 0.7399837374687195,
+        "value": "fluids",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "are preservatives enough to prevent an sti infection?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 43,
+        "end": 52,
+        "confidence_entity": 0.8534508943557739,
+        "value": "infection",
         "extractor": "DIETClassifier"
       }
     ]
