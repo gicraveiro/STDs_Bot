@@ -1,37 +1,75 @@
 [
   {
-    "text": "I'm worried because there is a red spot in my penis",
+    "text": "how to diagnose [hepatitis b][\"entity\": \"STD_name\"]",
     "entities": [],
     "predicted_entities": [
       {
         "entity": "STD_name",
-        "start": 46,
-        "end": 51,
-        "confidence_entity": 0.6827729344367981,
-        "value": "penis",
+        "start": 17,
+        "end": 26,
+        "confidence_entity": 0.9993031024932861,
+        "value": "hepatitis",
         "extractor": "DIETClassifier"
       }
     ]
   },
   {
-    "text": "can I get [HPV infection] from oral sex?",
+    "text": "why are you so stupid",
     "entities": [],
     "predicted_entities": [
       {
         "entity": "STD_name",
-        "start": 11,
-        "end": 24,
-        "confidence_entity": 0.9801949262619019,
-        "value": "HPV infection",
+        "start": 15,
+        "end": 21,
+        "confidence_entity": 0.9086739420890808,
+        "value": "stupid",
         "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "are there visible signs of the disease?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 31,
+        "end": 38,
+        "confidence_entity": 0.9262098670005798,
+        "value": "disease",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "whats the source of hpv infection? bacteria?",
+    "entities": [
+      {
+        "start": 20,
+        "end": 33,
+        "value": "hpv infection",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 20,
+        "end": 23,
+        "confidence_entity": 0.5780362486839294,
+        "value": "HPV Infection",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
       },
       {
         "entity": "STD_name",
-        "start": 11,
-        "end": 24,
-        "confidence_entity": 0.5928981385680032,
-        "value": "HPV infection",
-        "extractor": "CRFEntityExtractor"
+        "start": 35,
+        "end": 43,
+        "confidence_entity": 0.9864205121994019,
+        "value": "bacteria",
+        "extractor": "DIETClassifier"
       }
     ]
   },
@@ -48,6 +86,60 @@
     "predicted_entities": []
   },
   {
+    "text": "which are all the fluids that contaminate with an std",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 18,
+        "end": 24,
+        "confidence_entity": 0.8714627623558044,
+        "value": "fluids",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "can I get [HPV infection] from oral sex?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 11,
+        "end": 24,
+        "confidence_entity": 0.9686508178710938,
+        "value": "HPV infection",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "which fluids can infect with stds",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 6,
+        "end": 12,
+        "confidence_entity": 0.7407125234603882,
+        "value": "fluids",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "what info can you tell me on HEPATITIS",
+    "entities": [
+      {
+        "start": 29,
+        "end": 38,
+        "value": "HEPATITIS",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
     "text": "what is sexually transmitted infection",
     "entities": [],
     "predicted_entities": [
@@ -55,8 +147,29 @@
         "entity": "STD_name",
         "start": 29,
         "end": 38,
-        "confidence_entity": 0.6979588270187378,
+        "confidence_entity": 0.6064513325691223,
         "value": "infection",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "how is HPV Infection transmitted?",
+    "entities": [
+      {
+        "start": 7,
+        "end": 20,
+        "value": "HPV Infection",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 11,
+        "end": 20,
+        "confidence_entity": 0.940596342086792,
+        "value": "Infection",
         "extractor": "DIETClassifier"
       }
     ]
@@ -76,7 +189,7 @@
         "entity": "STD_name",
         "start": 7,
         "end": 15,
-        "confidence_entity": 0.8910609483718872,
+        "confidence_entity": 0.8474236726760864,
         "value": "diarrhea",
         "extractor": "DIETClassifier"
       },
@@ -84,79 +197,8 @@
         "entity": "STD_name",
         "start": 37,
         "end": 46,
-        "confidence_entity": 0.9997588992118835,
+        "confidence_entity": 0.9998617172241211,
         "value": "gonorrhea",
-        "extractor": "DIETClassifier"
-      },
-      {
-        "entity": "STD_name",
-        "start": 37,
-        "end": 46,
-        "confidence_entity": 0.9362264933207617,
-        "value": "gonorrhea",
-        "extractor": "CRFEntityExtractor"
-      }
-    ]
-  },
-  {
-    "text": "whats the source of hpv infection? bacteria?",
-    "entities": [
-      {
-        "start": 20,
-        "end": 33,
-        "value": "hpv infection",
-        "entity": "STD_name"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "STD_name",
-        "start": 20,
-        "end": 33,
-        "confidence_entity": 0.930213212966919,
-        "value": "hpv infection",
-        "extractor": "DIETClassifier"
-      },
-      {
-        "entity": "STD_name",
-        "start": 35,
-        "end": 43,
-        "confidence_entity": 0.9975095987319946,
-        "value": "bacteria",
-        "extractor": "DIETClassifier"
-      },
-      {
-        "entity": "STD_name",
-        "start": 20,
-        "end": 33,
-        "confidence_entity": 0.7739198801495469,
-        "value": "hpv infection",
-        "extractor": "CRFEntityExtractor"
-      }
-    ]
-  },
-  {
-    "text": "what info can you tell me on HEPATITIS",
-    "entities": [
-      {
-        "start": 29,
-        "end": 38,
-        "value": "HEPATITIS",
-        "entity": "STD_name"
-      }
-    ],
-    "predicted_entities": []
-  },
-  {
-    "text": "are there visible signs of the disease?",
-    "entities": [],
-    "predicted_entities": [
-      {
-        "entity": "STD_name",
-        "start": 31,
-        "end": 38,
-        "confidence_entity": 0.7493241429328918,
-        "value": "disease",
         "extractor": "DIETClassifier"
       }
     ]

@@ -3,7 +3,7 @@
 
 stories:
 
-- story: Happy path, bot initiative, no questions, express amusement (Conversation ID fcc001e2233c4a7880162c9599d5d697)
+- story: 1 - Happy path, bot initiative, no questions, express amusement (Conversation ID fcc001e2233c4a7880162c9599d5d697)
   steps:
   - intent: greet
     user: |-
@@ -46,7 +46,135 @@ stories:
   - action: utter_it_was_a_pleasure
   - action: utter_goodbye
 
-- story: Happy path specific std + asks 1 question at the end (Conversation ID 0815222b1381439ea3b53bc790ce7ad1)
+
+- story: 2 - Happy path, bot initiative, no questions, express amusement 
+  steps:
+  - intent: greet
+    user: |-
+      Hello! What is your name?
+  - action: utter_greet
+  - action: utter_intro
+  - intent: express_amusement
+    user: |-
+      That sounds amazing. I'm impressed.
+  - action: utter_shall_i_continue
+  - intent: advance_plot
+    user: |-
+      Ok, continue
+  - action: validate_std_name
+  - action: action_specific_definition
+  - action: utter_shall_i_continue
+  - intent: affirm
+    user: |-
+      Allright
+  - action: validate_std_name
+  - action: action_specific_prevention
+  - action: utter_shall_i_continue
+  - intent: affirm
+    user: |-
+      Yes, please.
+  - action: utter_testing_recommendations
+  - action: utter_any_questions
+  - intent: deny
+    user: |-
+      I don't have any questions
+  - action: utter_conclusion
+  - action: utter_feel_free_come_back
+  - intent: thank
+    user: |-
+      Thank you for the information
+  - action: utter_thank_response
+  - intent: goodbye
+    user: |-
+      Goodbye
+  - action: utter_it_was_a_pleasure
+  - action: utter_goodbye
+
+
+- story: 3 - Happy path, bot initiative, no questions, express amusement 
+  steps:
+  - intent: greet
+    user: |-
+      Hey there
+  - action: utter_greet
+  - action: utter_intro
+  - intent: affirm
+    user: |-
+      Got it
+  - action: utter_shall_i_continue
+  - intent: affirm
+    user: |-
+      Yes, you shall
+  - action: validate_std_name
+  - action: action_specific_definition
+  - action: utter_shall_i_continue
+  - intent: affirm
+    user: |-
+      ok!
+  - action: validate_std_name
+  - action: action_specific_prevention
+  - action: utter_shall_i_continue
+  - intent: affirm
+    user: |-
+      yup
+  - action: utter_testing_recommendations
+  - action: utter_any_questions
+  - intent: deny
+    user: |-
+      no questions
+  - action: utter_conclusion
+  - action: utter_feel_free_come_back
+  - intent: goodbye
+    user: |-
+      ok, tks, bye
+  - action: utter_it_was_a_pleasure
+  - action: utter_goodbye
+
+
+- story: 4 - Happy path, bot initiative, no questions, express amusement 
+  steps:
+  - intent: greet
+    user: |-
+      Hello, Sexy
+  - action: utter_greet
+  - action: utter_intro
+  - intent: express_amusement
+    user: |-
+      interesting
+  - action: utter_shall_i_continue
+  - intent: affirm
+    user: |-
+      yes
+  - action: validate_std_name
+  - action: action_specific_definition
+  - action: utter_shall_i_continue
+  - intent: advance_plot
+    user: |-
+      yes, go on
+  - action: validate_std_name
+  - action: action_specific_prevention
+  - action: utter_shall_i_continue
+  - intent: affirm
+    user: |-
+      yes, yes
+  - action: utter_testing_recommendations
+  - action: utter_any_questions
+  - intent: deny
+    user: |-
+      no, I don't
+  - action: utter_conclusion
+  - action: utter_feel_free_come_back
+  - intent: thank
+    user: |-
+      allright, thank you for helping
+  - action: utter_thank_response
+  - intent: goodbye
+    user: |-
+      bye-bye
+  - action: utter_it_was_a_pleasure
+  - action: utter_goodbye
+
+- story: 1 - Happy path specific std + asks 1 question at the end (Conversation ID 0815222b1381439ea3b53bc790ce7ad1)
   steps:
   - intent: greet
     user: |-
@@ -87,12 +215,15 @@ stories:
     user: |-
       yes
   - action: utter_feel_free_to_ask
-  - intent: nlu_fallback
+  - intent: diagnosis_STD
     user: |-
       should I get tested for [syphilis](STD_name)?
   - slot_was_set:
     - STD_name: syphilis
-  - action: utter_testing_recommendations
+  - action: validate_std_name
+  - slot_was_set:
+    - STD_name: Syphilis
+  - action: action_specific_diagnosis
   - action: utter_any_questions
   - intent: deny
     user: |-
@@ -102,6 +233,75 @@ stories:
   - intent: thank
     user: |-
       perfect, thanks
+  - action: utter_thank_response
+
+- story: 2 - Happy path specific std + asks 2 questions at the end (Conversation ID 0815222b1381439ea3b53bc790ce7ad1)
+  steps:
+  - intent: greet
+    user: |-
+      Hello
+  - action: utter_greet
+  - action: utter_intro
+  - intent: I_have_questions
+    user: |-
+      I have a question about [Bacterial Vaginosis](STD_name)
+  - slot_was_set:
+    - STD_name: Bacterial Vaginosis
+  - action: utter_feel_free_to_ask
+  - intent: advance_plot
+    user: |-
+      Tell me more about it
+  - action: validate_std_name
+  - slot_was_set:
+    - STD_name: Bacterial Vaginosis
+  - action: action_specific_definition
+  - action: utter_shall_i_continue
+  - intent: affirm
+    user: |-
+      Yes, please
+  - action: validate_std_name
+  - slot_was_set:
+    - STD_name: Bacterial Vaginosis
+  - action: action_specific_transmission
+  - action: utter_shall_i_continue
+  - intent: affirm
+    user: |-
+      Ok
+  - action: validate_std_name
+  - slot_was_set:
+    - STD_name: Bacterial Vaginosis
+  - action: action_specific_prevention
+  - action: utter_any_questions
+  - intent: affirm
+    user: |-
+      Makes sense
+  - action: utter_feel_free_to_ask
+  - intent: nlu_fallback
+    user: |-
+      How is [BV](STD_name) diagnosed?
+  - slot_was_set:
+    - STD_name: BV
+  - action: validate_std_name
+  - slot_was_set:
+    - STD_name: Bacterial Vaginosis
+  - action: utter_diagnosis_STD
+  - action: utter_any_questions
+  - intent: consequences_STD
+    user: |-
+      Yes, what happens if you don't treat it?
+  - action: validate_std_name
+  - slot_was_set:
+    - STD_name: Bacterial Vaginosis
+  - action: utter_consequences_STD
+  - action: utter_any_questions
+  - intent: deny
+    user: |-
+      No, not anymore
+  - action: utter_conclusion
+  - action: utter_feel_free_come_back
+  - intent: thank
+    user: |-
+      Perfect, thank you
   - action: utter_thank_response
 
 - story: Mixed initiative - User has a question at the beginning but bot goes back to story after answering (Conversation ID ab5d18f924d844a2adff523836863ecf)
@@ -262,7 +462,7 @@ stories:
   - action: utter_feel_free_come_back
 
 
-- story: Just questions without greeting -  (Conversation ID 87988fcb1f184e6192e049da74857dc0)
+- story: 1 Just questions without greeting -  (Conversation ID 87988fcb1f184e6192e049da74857dc0)
   steps:
   - intent: transmission_STD
     user: |-
@@ -288,6 +488,47 @@ stories:
   - intent: thank
     user: |-
       cool, thank you
+  - action: utter_thank_response
+  - intent: goodbye
+    user: |-
+      Bye
+  - action: utter_it_was_a_pleasure
+  - action: utter_goodbye
+
+- story: 2 - Just questions without greeting 
+  steps:
+  - intent: transmission_STD
+    user: |-
+      can I get [herpes](STD_name) through oral sex?
+  - slot_was_set:
+    - STD_name: herpes
+  - action: validate_std_name
+  - slot_was_set:
+    - STD_name: Genital Herpes
+  - action: action_specific_transmission
+  - intent: prevention_STD
+    user: |-
+      do condoms protect from getting herpes?
+  - slot_was_set:
+    - STD_name: herpes
+  - action: validate_std_name
+  - slot_was_set:
+    - STD_name: Genital Herpes
+  - action: action_specific_prevention
+  - intent: ask_source
+    user: |-
+      what's your source?
+  - action: utter_source
+  - action: utter_find_more_info
+  - intent: list_STD
+    user: |-
+      name all stds, please
+  - action: utter_list_STD_intro
+  - action: action_list_names
+  - action: utter_list_STD_conclusion
+  - intent: thank
+    user: |-
+      Allright, thanks a lot
   - action: utter_thank_response
   - intent: goodbye
     user: |-
@@ -342,14 +583,380 @@ stories:
   - action: utter_conclusion
   - action: utter_feel_free_come_back
 
+- story: Insult than one question and goodbye (Conversation ID d55c8306069a4261b081deea6d01d58b)
+  steps:
+  - intent: insults
+    user: |-
+      hey stupid
+  - action: utter_handle_insults
+  - intent: greet
+    user: |-
+      sorry, hello
+  - action: utter_greet
+  - action: utter_any_questions
+  - intent: affirm
+    user: |-
+      I do
+  - action: utter_feel_free_to_ask
+  - intent: diagnosis_STD
+    user: |-
+      how is [pid]{"entity": "STD_name", "value": "Pelvic Inflammatory Disease"} diagnosed?
+  - slot_was_set:
+    - STD_name: Pelvic Inflammatory Disease
+  - action: validate_std_name
+  - slot_was_set:
+    - STD_name: Pelvic Inflammatory Disease
+  - action: action_specific_diagnosis
+  - intent: affirm
+    user: |-
+      got it
+  - action: utter_shall_i_continue
+  - intent: goodbye
+    user: |-
+      goodbye
+  - action: utter_it_was_a_pleasure
+  - action: utter_goodbye
 
-# - story: happy path 1
+# #### This file contains tests to evaluate that your bot behaves as expected.
+# #### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+
+# stories:
+
+# - story: Happy path, bot initiative, no questions, express amusement (Conversation ID fcc001e2233c4a7880162c9599d5d697)
 #   steps:
-#   - user: |
-#       hello there!
-#     intent: greet
+#   - intent: greet
+#     user: |-
+#       hey
 #   - action: utter_greet
-#   - user: |
-#       amazing
-#     intent: mood_great
-#   - action: utter_happy
+#   - action: utter_intro
+#   - intent: express_amusement
+#     user: |-
+#       cool
+#   - action: utter_shall_i_continue
+#   - intent: affirm
+#     user: |-
+#       yes
+#   - action: validate_std_name
+#   - action: action_specific_definition
+#   - action: utter_shall_i_continue
+#   - intent: affirm
+#     user: |-
+#       yes
+#   - action: validate_std_name
+#   - action: action_specific_prevention
+#   - action: utter_shall_i_continue
+#   - intent: affirm
+#     user: |-
+#       yes
+#   - action: utter_testing_recommendations
+#   - action: utter_any_questions
+#   - intent: deny
+#     user: |-
+#       no
+#   - action: utter_conclusion
+#   - action: utter_feel_free_come_back
+#   - intent: thank
+#     user: |-
+#       ok, thanks
+#   - action: utter_thank_response
+#   - intent: goodbye
+#     user: |-
+#       bye
+#   - action: utter_it_was_a_pleasure
+#   - action: utter_goodbye
+
+# - story: Happy path specific std + asks 1 question at the end (Conversation ID 0815222b1381439ea3b53bc790ce7ad1)
+#   steps:
+#   - intent: greet
+#     user: |-
+#       hello
+#   - action: utter_greet
+#   - action: utter_intro
+#   - intent: I_have_questions
+#     user: |-
+#       I have a question about [syphilis](STD_name)
+#   - slot_was_set:
+#     - STD_name: syphilis
+#   - action: utter_feel_free_to_ask
+#   - intent: advance_plot
+#     user: |-
+#       what should I know about it?
+#   - action: validate_std_name
+#   - slot_was_set:
+#     - STD_name: Syphilis
+#   - action: action_specific_definition
+#   - action: utter_shall_i_continue
+#   - intent: affirm
+#     user: |-
+#       yes
+#   - action: validate_std_name
+#   - slot_was_set:
+#     - STD_name: Syphilis
+#   - action: action_specific_transmission
+#   - action: utter_shall_i_continue
+#   - intent: affirm
+#     user: |-
+#       please do
+#   - action: validate_std_name
+#   - slot_was_set:
+#     - STD_name: Syphilis
+#   - action: action_specific_prevention
+#   - action: utter_any_questions
+#   - intent: affirm
+#     user: |-
+#       yes
+#   - action: utter_feel_free_to_ask
+#   - intent: nlu_fallback
+#     user: |-
+#       should I get tested for [syphilis](STD_name)?
+#   - slot_was_set:
+#     - STD_name: syphilis
+#   - action: utter_testing_recommendations
+#   - action: utter_any_questions
+#   - intent: deny
+#     user: |-
+#       no
+#   - action: utter_conclusion
+#   - action: utter_feel_free_come_back
+#   - intent: thank
+#     user: |-
+#       perfect, thanks
+#   - action: utter_thank_response
+
+# - story: Mixed initiative - User has a question at the beginning but bot goes back to story after answering (Conversation ID ab5d18f924d844a2adff523836863ecf)
+#   steps:
+#   - intent: greet
+#     user: |-
+#       Good morning!
+#   - action: utter_greet
+#   - action: utter_intro
+#   - intent: transmission_STD
+#     user: |-
+#       how is the transmission of [Gonorrhea](STD_name)?
+#   - slot_was_set:
+#     - STD_name: Gonorrhea
+#   - action: validate_std_name
+#   - slot_was_set:
+#     - STD_name: Gonorrhea
+#   - action: action_specific_transmission
+#   - action: utter_shall_i_continue
+#   - intent: affirm
+#     user: |-
+#       yes
+#   - action: validate_std_name
+#   - slot_was_set:
+#     - STD_name: Gonorrhea
+#   - action: action_specific_prevention
+#   - action: utter_shall_i_continue
+#   - intent: affirm
+#     user: |-
+#       yes
+#   - action: utter_testing_recommendations
+#   - action: utter_any_questions
+#   - intent: deny
+#     user: |-
+#       no, thank you
+#   - action: utter_conclusion
+#   - action: utter_feel_free_come_back
+#   - intent: goodbye
+#     user: |-
+#       perfect, bye
+#   - action: utter_it_was_a_pleasure
+#   - action: utter_goodbye
+
+# - story: Interruption before start with one question, ends thanking, starts affirming (Conversation ID 1f9b3f3a9bf54c149a8b5b7953b58983)
+#   steps:
+#   - intent: greet
+#     user: |-
+#       Hey! How are you?
+#   - action: utter_greet
+#   - action: utter_intro
+#   - intent: affirm
+#     user: |-
+#       Ok
+#   - action: utter_shall_i_continue
+#   - intent: deny
+#     user: |-
+#       No
+#   - action: utter_any_questions
+#   - intent: affirm
+#     user: |-
+#       Yes
+#   - action: utter_feel_free_to_ask
+#   - intent: ask_source
+#     user: |-
+#       What are your sources?
+#   - action: utter_source
+#   - action: utter_find_more_info
+#   - intent: thank
+#     user: |-
+#       Perfect. Thank you
+#   - action: utter_thank_response
+
+# - story: User asks definition and bot picks up from middle of happy path + asks definition again at the end but bot asks questions then concludes - from (Conversation ID 41891b198eb7446b8ca6e909ea394a5f)
+#   steps:
+#   - intent: greet
+#     user: |-
+#       Hellooo
+#   - action: utter_greet
+#   - action: utter_intro
+#   - intent: express_amusement
+#     user: |-
+#       Nice to meet you
+#   - action: utter_shall_i_continue
+#   - intent: definition_STD
+#     user: |-
+#       what are STDs?
+#   - action: validate_std_name
+#   - action: action_specific_definition
+#   - action: utter_shall_i_continue
+#   - intent: affirm
+#     user: |-
+#       yesss
+#   - action: validate_std_name
+#   - action: action_specific_prevention
+#   - action: utter_shall_i_continue
+#   - intent: affirm
+#     user: |-
+#       ok
+#   - action: utter_testing_recommendations
+#   - action: utter_any_questions
+#   - intent: definition_STD
+#     user: |-
+#       what is [hiv]{"entity": "STD_name", "value": "AIDs"}?
+#   - slot_was_set:
+#     - STD_name: AIDs
+#   - action: validate_std_name
+#   - action: action_specific_definition
+#   - intent: affirm
+#     user: |-
+#       Oh ok
+#   - action: utter_any_questions
+#   - intent: deny
+#     user: |-
+#       no
+#   - action: utter_conclusion
+#   - action: utter_feel_free_come_back
+#   - intent: goodbye
+#     user: |-
+#       bye
+#   - action: utter_it_was_a_pleasure
+#   - action: utter_goodbye
+
+
+# - story: User starts asking about pid, then bot suggests to continue with more info until conclusion with no questions - (Conversation ID 62049b6f9e064c88a190af176e370912)
+#   steps:
+#   - intent: greet
+#     user: |-
+#       hi
+#   - action: utter_greet
+#   - action: utter_intro
+#   - intent: transmission_STD
+#     user: |-
+#       how is [pid]{"entity": "STD_name", "value": "Pelvic Inflammatory Disease"} transmitted?
+#   - slot_was_set:
+#     - STD_name: Pelvic Inflammatory Disease
+#   - action: validate_std_name
+#   - slot_was_set:
+#     - STD_name: Pelvic Inflammatory Disease
+#   - action: action_specific_transmission
+#   - action: utter_shall_i_continue
+#   - intent: affirm
+#     user: |-
+#       yes
+#   - action: validate_std_name
+#   - slot_was_set:
+#     - STD_name: Pelvic Inflammatory Disease
+#   - action: action_specific_prevention
+#   - action: utter_shall_i_continue
+#   - intent: affirm
+#     user: |-
+#       yes
+#   - action: utter_testing_recommendations
+#   - action: utter_any_questions
+#   - intent: deny
+#     user: |-
+#       no
+#   - action: utter_conclusion
+#   - action: utter_feel_free_come_back
+
+
+# - story: Just questions without greeting -  (Conversation ID 87988fcb1f184e6192e049da74857dc0)
+#   steps:
+#   - intent: transmission_STD
+#     user: |-
+#       can I get an std from oral sex?
+#   - action: validate_std_name
+#   - action: action_specific_transmission
+#   - intent: prevention_STD
+#     user: |-
+#       are preservatives enough to prevent them?
+#   - action: validate_std_name
+#   - action: action_specific_prevention
+#   - intent: ask_source
+#     user: |-
+#       where can I find more info?
+#   - action: utter_source
+#   - action: utter_find_more_info
+#   - intent: list_STD
+#     user: |-
+#       what are all stds?
+#   - action: utter_list_STD_intro
+#   - action: action_list_names
+#   - action: utter_list_STD_conclusion
+#   - intent: thank
+#     user: |-
+#       cool, thank you
+#   - action: utter_thank_response
+#   - intent: goodbye
+#     user: |-
+#       Bye
+#   - action: utter_it_was_a_pleasure
+#   - action: utter_goodbye
+
+# - story: Greeting + questions including one out of scope(Conversation ID e821f5e094d74d54a5aed0065ad49c05)
+#   steps:
+#   - intent: greet
+#     user: |-
+#       hi
+#   - action: utter_greet
+#   - action: utter_intro
+#   - intent: diagnosis_STD
+#     user: |-
+#       how do I know if I have an std?
+#   - action: validate_std_name
+#   - action: action_specific_diagnosis
+#   - intent: out_of_scope
+#     user: |-
+#       which stds are asymptomatic?
+#   - action: utter_cannot_help_with_that
+#   - action: utter_scope
+#   - action: utter_but
+#   - action: utter_find_more_info
+#   - intent: symptoms_STD
+#     user: |-
+#       is [chlamydia](STD_name) asymptomatic?
+#   - slot_was_set:
+#     - STD_name: chlamydia
+#   - action: validate_std_name
+#   - slot_was_set:
+#     - STD_name: Chlamydia
+#   - action: action_specific_symptoms
+#   - intent: prevention_STD
+#     user: |-
+#       is there a vaccine for [chlamydia](STD_name)?
+#   - slot_was_set:
+#     - STD_name: chlamydia
+#   - action: validate_std_name
+#   - slot_was_set:
+#     - STD_name: Chlamydia
+#   - action: action_specific_prevention
+#   - intent: affirm
+#     user: |-
+#       got it
+#   - action: utter_any_questions
+#   - intent: deny
+#     user: |-
+#       no, thank you
+#   - action: utter_conclusion
+#   - action: utter_feel_free_come_back
