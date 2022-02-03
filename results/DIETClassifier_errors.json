@@ -1,5 +1,186 @@
 [
   {
+    "text": "what info can you tell me on HEPATITIS",
+    "entities": [
+      {
+        "start": 29,
+        "end": 38,
+        "value": "HEPATITIS",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What can you tell me about hepatitis?",
+    "entities": [
+      {
+        "start": 27,
+        "end": 36,
+        "value": "hepatitis",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I have diarrhea, is it a symptom for gonorrhea",
+    "entities": [
+      {
+        "start": 37,
+        "end": 46,
+        "value": "gonorrhea",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 7,
+        "end": 15,
+        "confidence_entity": 0.9518651962280273,
+        "value": "diarrhea",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "STD_name",
+        "start": 37,
+        "end": 46,
+        "confidence_entity": 0.9998632669448853,
+        "value": "gonorrhea",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "which are the complications if you don't treat Hepatitis B?",
+    "entities": [
+      {
+        "start": 47,
+        "end": 58,
+        "value": "Hepatitis B",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I have questions about Chancroid",
+    "entities": [
+      {
+        "start": 23,
+        "end": 32,
+        "value": "Chancroid",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I want to know about Chancroid",
+    "entities": [
+      {
+        "start": 21,
+        "end": 30,
+        "value": "Chancroid",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "description of pelvic inflammatory disease",
+    "entities": [
+      {
+        "start": 15,
+        "end": 42,
+        "value": "pelvic inflammatory disease",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 0,
+        "end": 11,
+        "confidence_entity": 0.8684473037719727,
+        "value": "description",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "STD_name",
+        "start": 15,
+        "end": 42,
+        "confidence_entity": 0.9974613189697266,
+        "value": "pelvic inflammatory disease",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "what in my body could indicate an infection",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 34,
+        "end": 43,
+        "confidence_entity": 0.9381756782531738,
+        "value": "infection",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "can you get pelvic inflammatory disease without having sex",
+    "entities": [
+      {
+        "start": 12,
+        "end": 39,
+        "value": "pelvic inflammatory disease",
+        "entity": "STD_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 12,
+        "end": 31,
+        "confidence_entity": 0.9969998002052307,
+        "value": "pelvic inflammatory",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "how to diagnose [hepatitis b][\"entity\": \"STD_name\"]",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 17,
+        "end": 26,
+        "confidence_entity": 0.8376624584197998,
+        "value": "hepatitis",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "are there visible signs of the disease?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 31,
+        "end": 38,
+        "confidence_entity": 0.9867931008338928,
+        "value": "disease",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
     "text": "what is sexually transmitted infection",
     "entities": [],
     "predicted_entities": [
@@ -7,8 +188,64 @@
         "entity": "STD_name",
         "start": 29,
         "end": 38,
-        "confidence_entity": 0.7665069103240967,
+        "confidence_entity": 0.9824233055114746,
         "value": "infection",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "are preservatives enough to prevent an sti infection?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 43,
+        "end": 52,
+        "confidence_entity": 0.9043664932250977,
+        "value": "infection",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "how to know if I'm [HIV][\"entity\": \"STD_name\"] positive",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 20,
+        "end": 25,
+        "confidence_entity": 0.9861017465591431,
+        "value": "HIV][",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "how can I find out if I have [bv][\"entity\": \"STD_name\"]",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 30,
+        "end": 34,
+        "confidence_entity": 0.9669889807701111,
+        "value": "bv][",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "what are the statistics for stds in Brazil?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "STD_name",
+        "start": 36,
+        "end": 42,
+        "confidence_entity": 0.9074661731719971,
+        "value": "Brazil",
         "extractor": "DIETClassifier"
       }
     ]
@@ -28,7 +265,7 @@
         "entity": "STD_name",
         "start": 20,
         "end": 33,
-        "confidence_entity": 0.982894241809845,
+        "confidence_entity": 0.911074161529541,
         "value": "hpv infection",
         "extractor": "DIETClassifier"
       },
@@ -36,23 +273,11 @@
         "entity": "STD_name",
         "start": 35,
         "end": 43,
-        "confidence_entity": 0.9965025186538696,
+        "confidence_entity": 0.9994956254959106,
         "value": "bacteria",
         "extractor": "DIETClassifier"
       }
     ]
-  },
-  {
-    "text": "what info can you tell me on HEPATITIS",
-    "entities": [
-      {
-        "start": 29,
-        "end": 38,
-        "value": "HEPATITIS",
-        "entity": "STD_name"
-      }
-    ],
-    "predicted_entities": []
   },
   {
     "text": "can I get [HPV infection] from oral sex?",
@@ -62,130 +287,9 @@
         "entity": "STD_name",
         "start": 11,
         "end": 24,
-        "confidence_entity": 0.9965370893478394,
+        "confidence_entity": 0.9374057650566101,
         "value": "HPV infection",
         "extractor": "DIETClassifier"
-      }
-    ]
-  },
-  {
-    "text": "are there visible signs of the disease?",
-    "entities": [],
-    "predicted_entities": [
-      {
-        "entity": "STD_name",
-        "start": 31,
-        "end": 38,
-        "confidence_entity": 0.8311603665351868,
-        "value": "disease",
-        "extractor": "DIETClassifier"
-      }
-    ]
-  },
-  {
-    "text": "whats the center for disease control",
-    "entities": [],
-    "predicted_entities": [
-      {
-        "entity": "STD_name",
-        "start": 21,
-        "end": 28,
-        "confidence_entity": 0.8707131147384644,
-        "value": "disease",
-        "extractor": "DIETClassifier"
-      }
-    ]
-  },
-  {
-    "text": "I have diarrhea, is it a symptom for gonorrhea",
-    "entities": [
-      {
-        "start": 37,
-        "end": 46,
-        "value": "gonorrhea",
-        "entity": "STD_name"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "STD_name",
-        "start": 7,
-        "end": 15,
-        "confidence_entity": 0.9908602237701416,
-        "value": "diarrhea",
-        "extractor": "DIETClassifier"
-      },
-      {
-        "entity": "STD_name",
-        "start": 37,
-        "end": 46,
-        "confidence_entity": 0.9997218251228333,
-        "value": "gonorrhea",
-        "extractor": "DIETClassifier"
-      }
-    ]
-  },
-  {
-    "text": "I have questions about Chancroid",
-    "entities": [
-      {
-        "start": 23,
-        "end": 32,
-        "value": "Chancroid",
-        "entity": "STD_name"
-      }
-    ],
-    "predicted_entities": []
-  },
-  {
-    "text": "I know there's aids, chlamydia and hpv infection but are there others?",
-    "entities": [
-      {
-        "start": 15,
-        "end": 19,
-        "value": "aids",
-        "entity": "STD_name"
-      },
-      {
-        "start": 21,
-        "end": 30,
-        "value": "chlamydia",
-        "entity": "STD_name"
-      },
-      {
-        "start": 35,
-        "end": 48,
-        "value": "hpv infection",
-        "entity": "STD_name"
-      }
-    ],
-    "predicted_entities": [
-      {
-        "entity": "STD_name",
-        "start": 15,
-        "end": 19,
-        "confidence_entity": 0.9998693466186523,
-        "value": "aids",
-        "extractor": "DIETClassifier"
-      },
-      {
-        "entity": "STD_name",
-        "start": 21,
-        "end": 30,
-        "confidence_entity": 0.9996721744537354,
-        "value": "chlamydia",
-        "extractor": "DIETClassifier"
-      },
-      {
-        "entity": "STD_name",
-        "start": 35,
-        "end": 38,
-        "confidence_entity": 0.6480680108070374,
-        "value": "HPV Infection",
-        "extractor": "DIETClassifier",
-        "processors": [
-          "EntitySynonymMapper"
-        ]
       }
     ]
   }
